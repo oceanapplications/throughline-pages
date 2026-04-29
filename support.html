@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width'>
+  <title>Support &mdash; Traveler's VPN</title>
+  <style> body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding:1em; max-width: 760px; margin: 0 auto; line-height: 1.55; } h1 { margin-bottom: 0.25em; } h2 { margin-top: 2em; } h3 { margin-top: 1.5em; } code { background: #f4f4f5; padding: 1px 4px; border-radius: 3px; font-size: 0.9em; } ul { padding-left: 1.25em; } .meta { color: #6b7280; font-size: 0.9em; } hr { border: none; border-top: 1px solid #e5e7eb; margin: 2em 0; } </style>
+</head>
+<body>
+
+<h1>Traveler's VPN &mdash; Support</h1>
+<p class="meta">Last updated: 29 April 2026</p>
+
+<p>Traveler's VPN is a personal VPN client built for people who travel internationally. It routes Chinese, Japanese, and other regional services directly to local IPs (so banks, payment apps, and transit systems don't fraud-block you on a foreign IP) while sending the rest of your traffic through your own VPN server.</p>
+
+<p>It is a "bring your own server" client &mdash; the app does not sell or operate VPN servers. You connect it to a server you already have access to, using one of the supported protocols.</p>
+
+<hr>
+
+<h2>Getting Started</h2>
+
+<h3>1. Get a server</h3>
+<p>You need credentials for at least one of:</p>
+<ul>
+  <li><strong>Shadowsocks</strong> &mdash; from Outline, JustMySocks, 3X-UI panels, v2rayN, or any Shadowsocks provider.</li>
+  <li><strong>WireGuard</strong> &mdash; from Mullvad, ProtonVPN, Tailscale, wg-easy, or a self-hosted server. You can paste the config or import a <code>.conf</code> file.</li>
+  <li><strong>Trojan</strong> &mdash; from Trojan-Go, Xray, V2Ray, or 3X-UI panels.</li>
+</ul>
+
+<h3>2. Add the server in the app</h3>
+<p>Tap the <strong>&hellip;</strong> menu in the top right &rarr; <strong>Add Server</strong>, choose your protocol, and either paste your access key / config or fill in the fields manually. You can also:</p>
+<ul>
+  <li><strong>Tap a <code>ss://</code> or <code>trojan://</code> link</strong> in Mail, Messages, or Safari &mdash; it opens directly into the right form.</li>
+  <li><strong>Open a WireGuard <code>.conf</code> file</strong> from Files, Mail, or AirDrop &mdash; the app will offer to import it.</li>
+</ul>
+
+<h3>3. Pick a routing profile</h3>
+<p>Tap the <strong>Routing Profile</strong> card on the main screen and choose one:</p>
+<ul>
+  <li><strong>Travel in China</strong> &mdash; sends Chinese services (WeChat, Alipay, Baidu, Taobao, Bilibili, etc.) and Apple/iCloud direct, and routes everything else through your server. Apple services work better direct in China than through a foreign VPN.</li>
+  <li><strong>Travel in Japan</strong> &mdash; sends Japanese services (Suica, JR, Yahoo Japan, LINE, Tabelog, NHK, PayPay, etc.) direct, and US streaming and banking through your server so they don't fraud-block on a Japanese IP.</li>
+  <li><strong>VPN Only</strong> &mdash; everything goes through your server. No split routing.</li>
+</ul>
+
+<h3>4. Tap Connect</h3>
+<p>The first time you connect, iOS will ask permission to add a VPN configuration. Approve it. The shield icon at the top fills in when the tunnel is up.</p>
+
+<hr>
+
+<h2>Using the App</h2>
+
+<h3>Switching servers</h3>
+<p>Tap the <strong>Server</strong> card to choose a different server from your saved list. If the VPN is already connected, switching reconnects automatically.</p>
+
+<h3>Switching routing profiles</h3>
+<p>Tap the <strong>Routing Profile</strong> card. The tunnel reconfigures itself; you don't have to disconnect first.</p>
+
+<h3>Reachability</h3>
+<p>The <strong>Reachability</strong> card pings well-known endpoints to show you what's reachable from your current network. Useful for spotting whether you're behind a captive portal or a country-level block before you bother connecting. Tap the refresh icon to test again.</p>
+
+<h3>Live Connections</h3>
+<p>Open <strong>&hellip; menu &rarr; Live Connections</strong> to see every active TCP/UDP connection: destination, protocol, bytes up/down, and which routing rule sent it through (direct vs. proxied). Updates in real time. Useful for confirming that the right traffic is being routed direct and the rest is proxied.</p>
+
+<h3>Routing Inspector</h3>
+<p>Open <strong>&hellip; menu &rarr; Routing Inspector</strong> to test what would happen to a hostname under your active profile. Type a domain (e.g. <code>tabelog.com</code>) and the app tells you whether it would go direct or via your server.</p>
+
+<h3>Diagnostics</h3>
+<p>Open <strong>&hellip; menu &rarr; Diagnostics</strong> for tunnel logs, the generated sing-box configuration, and current rule-set state. Useful if something isn't working and you want to send us details.</p>
+
+<h3>Home Screen Widget</h3>
+<p>Add the Traveler's VPN widget from the iOS widget gallery to see connection status and active server at a glance from your home screen or lock screen.</p>
+
+<hr>
+
+<h2>Frequently Asked Questions</h2>
+
+<h3>Does Traveler's VPN provide servers?</h3>
+<p>No. It's a client only. You bring your own server (Shadowsocks, WireGuard, or Trojan). We don't sell, operate, or proxy traffic through any infrastructure of ours.</p>
+
+<h3>Where do I get a server?</h3>
+<p>For most travelers we recommend a personal-plan provider that uses Shadowsocks (works well behind aggressive firewalls like China's) or WireGuard (fastest on stable networks). Examples: <strong>JustMySocks</strong> for Shadowsocks, <strong>Mullvad</strong> or <strong>ProtonVPN</strong> for WireGuard, or your own VPS running <strong>3X-UI</strong> / <strong>wg-easy</strong>.</p>
+
+<h3>Why isn't all my traffic going through the VPN?</h3>
+<p>Because you've selected a travel profile that intentionally splits traffic. Local-region services go direct so they work properly (e.g. mobile Suica won't activate on a US IP). If you want everything through the tunnel, switch the profile to <strong>VPN Only</strong>.</p>
+
+<h3>Why doesn't iCloud / iMessage / FaceTime route through the VPN in China mode?</h3>
+<p>Apple services are deliberately routed direct in the China profile. They use Apple's local Chinese endpoints which are reliably reachable and faster, while routing them through a foreign server tends to break iCloud sync and push notifications.</p>
+
+<h3>The Connect button is disabled.</h3>
+<p>You need at least one server configured. Tap <strong>Add Server</strong> in the menu (or the <strong>Add</strong> button on the empty Server card) to add one.</p>
+
+<h3>The tunnel keeps failing to start.</h3>
+<p>A few things to check:</p>
+<ul>
+  <li>Is your server reachable from your current network? Use the <strong>Reachability</strong> card or <strong>Routing Inspector</strong>.</li>
+  <li>Are your credentials correct? Re-paste the access key or config to be sure.</li>
+  <li>Captive portal? Open Safari and complete any sign-in screen first.</li>
+  <li>Open <strong>Diagnostics</strong> and check the tunnel log for the actual error.</li>
+</ul>
+
+<h3>Can I connect to multiple servers at once?</h3>
+<p>No &mdash; only one server is active at a time. You can save many and switch between them with one tap.</p>
+
+<h3>Does it work on iPad and Mac?</h3>
+<p>Yes, the app runs on iPhone, iPad, and Mac (Apple Silicon).</p>
+
+<h3>Does it work in Airplane mode / on cellular / on hotel Wi-Fi?</h3>
+<p>It works on any network that gives your device a working internet connection. Some hotel networks block VPN protocols outright; in those cases the tunnel will fail to start. Switching to a different protocol (e.g. WireGuard &rarr; Shadowsocks) sometimes helps.</p>
+
+<h3>How much battery does it use?</h3>
+<p>Roughly the same as any always-on VPN client. The travel profiles route a lot of traffic direct (no encryption overhead for those flows), which tends to be lighter than VPN Only.</p>
+
+<h3>Does Traveler's VPN log my traffic?</h3>
+<p>No. The app does not collect, transmit, or log any data &mdash; not your traffic, not your usage, not crash reports. The tunnel statistics shown in the app are computed on-device and never leave it. See the <a href="privacy.html">Privacy Policy</a> for full details.</p>
+
+<h3>I want to send a bug report or feature request.</h3>
+<p>Email us &mdash; see Contact below. If you can include a copy of the log from <strong>Diagnostics</strong>, that helps a lot.</p>
+
+<hr>
+
+<h2>Contact</h2>
+<p>Email: <a href="mailto:support@travelersvpn.com">support@travelersvpn.com</a></p>
+
+<p class="meta"><a href="privacy.html">Privacy Policy</a> &middot; <a href="conditions.html">Terms &amp; Conditions</a></p>
+
+</body>
+</html>
