@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Traveler's VPN — Your apps work everywhere.</title>
+  <meta name="description" content="A VPN that doesn't break your bank app, your maps, or your local payments when you connect. Faster than a regular VPN. iPhone, iPad, and Mac. $2.99 once.">
+  <meta property="og:title" content="Traveler's VPN — Your apps work everywhere.">
+  <meta property="og:description" content="Apps don't break. Local stuff stays fast. Home stuff stays connected. $2.99 once, no subscription.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://travelersvpn.com/">
+  <meta property="og:image" content="https://travelersvpn.com/assets/og-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://travelersvpn.com/">
+  <link rel="icon" type="image/png" href="/assets/icon-512.png">
+  <style>
+    :root {
+      --bg: #07122B;
+      --bg-2: #0B1B3D;
+      --surface: #0E1E45;
+      --border: #1E2C50;
+      --text: #F4F7FB;
+      --text-dim: #9FB0D1;
+      --cyan: #7DE0F2;
+      --cyan-2: #5BC9E0;
+      --green: #4ADE80;
+      --red: #FF6B6B;
+      --radius: 16px;
+      --maxw: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.55;
+    }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+    nav.top {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: saturate(140%) blur(14px);
+      background: rgba(7, 18, 43, 0.75);
+      border-bottom: 1px solid var(--border);
+    }
+    nav.top .container {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    nav.top .brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; letter-spacing: -0.3px; color: var(--text);
+    }
+    nav.top .brand img { width: 28px; height: 28px; border-radius: 7px; }
+    nav.top .links a {
+      color: var(--text-dim); margin-left: 22px; font-size: 14px; font-weight: 500;
+    }
+    nav.top .links a:hover { color: var(--text); text-decoration: none; }
+    nav.top .cta {
+      background: var(--cyan); color: #062041 !important; padding: 8px 14px;
+      border-radius: 10px; font-weight: 700;
+    }
+    nav.top .cta:hover { text-decoration: none; background: var(--cyan-2); }
+
+    .hero { padding: 110px 0 72px; text-align: center; }
+    .eyebrow {
+      display: inline-block; padding: 6px 12px; border-radius: 999px;
+      background: rgba(125, 224, 242, 0.12); color: var(--cyan);
+      font-size: 13px; font-weight: 600; letter-spacing: 0.2px;
+      border: 1px solid rgba(125, 224, 242, 0.2);
+    }
+    .hero h1 {
+      font-size: clamp(40px, 6.5vw, 72px);
+      line-height: 1.02; letter-spacing: -2px; font-weight: 800;
+      margin: 22px auto 18px; max-width: 920px;
+    }
+    .hero h1 .accent { color: var(--cyan); }
+    .hero p.lead {
+      font-size: clamp(18px, 2vw, 22px);
+      color: var(--text-dim); max-width: 640px; margin: 0 auto;
+    }
+    .hero .ctas {
+      display: flex; justify-content: center; gap: 14px;
+      margin-top: 36px; flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 22px; border-radius: 12px; font-weight: 700;
+      font-size: 16px; transition: transform .12s ease, background .15s ease;
+    }
+    .btn-primary {
+      background: var(--cyan); color: #062041; box-shadow: 0 8px 24px rgba(125, 224, 242, 0.2);
+    }
+    .btn-primary:hover { background: var(--cyan-2); text-decoration: none; transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent; color: var(--text); border: 1px solid var(--border);
+    }
+    .btn-ghost:hover { background: var(--surface); text-decoration: none; }
+    .hero .meta {
+      margin-top: 18px; color: var(--text-dim); font-size: 14px;
+    }
+
+    section { padding: 88px 0; }
+    section.alt { background: rgba(14, 30, 69, 0.4); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    h2 {
+      font-size: clamp(30px, 4.4vw, 44px); line-height: 1.1; letter-spacing: -1px;
+      margin: 0 0 16px; font-weight: 800;
+    }
+    h2 .accent { color: var(--cyan); }
+    .sub {
+      color: var(--text-dim); font-size: 19px; max-width: 640px; margin: 0 0 36px;
+    }
+    .center { text-align: center; }
+    .center .sub { margin-left: auto; margin-right: auto; }
+
+    .outcomes {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;
+      margin-top: 48px;
+    }
+    @media (max-width: 720px) { .outcomes { grid-template-columns: 1fr; } }
+    .outcome {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px;
+    }
+    .outcome .big {
+      font-size: 30px; line-height: 1; font-weight: 800; letter-spacing: -0.5px;
+      color: var(--text); margin-bottom: 12px;
+    }
+    .outcome .big.green { color: var(--green); }
+    .outcome p { color: var(--text-dim); margin: 0; font-size: 15px; }
+
+    .visual {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 18px; overflow: hidden;
+    }
+    .visual img, .visual svg { display: block; width: 100%; height: auto; }
+
+    .pricing { display: flex; justify-content: center; }
+    .price-card {
+      background: var(--surface); border: 2px solid var(--cyan);
+      border-radius: 20px; padding: 40px; text-align: center;
+      max-width: 480px; width: 100%;
+      box-shadow: 0 18px 60px rgba(125, 224, 242, 0.1);
+    }
+    .price-card .price {
+      font-size: 72px; font-weight: 800; letter-spacing: -2.5px;
+      color: var(--text); margin: 12px 0 4px; line-height: 1;
+    }
+    .price-card .price .small { font-size: 22px; color: var(--text-dim); font-weight: 600; }
+    .price-card .badge {
+      display: inline-block; background: rgba(125, 224, 242, 0.12);
+      color: var(--cyan); padding: 6px 12px; border-radius: 999px;
+      font-size: 13px; font-weight: 700; letter-spacing: 0.3px;
+    }
+    .price-card ul {
+      list-style: none; padding: 0; margin: 28px 0; text-align: left;
+    }
+    .price-card li {
+      padding: 12px 0; border-bottom: 1px solid var(--border);
+      color: var(--text-dim); display: flex; align-items: center; gap: 12px;
+    }
+    .price-card li:last-child { border-bottom: none; }
+    .price-card li::before {
+      content: ""; width: 20px; height: 20px; border-radius: 50%;
+      background: rgba(74, 222, 128, 0.15);
+      flex: 0 0 20px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%234ADE80" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>');
+      background-size: 13px; background-repeat: no-repeat; background-position: center;
+    }
+    .price-card .footnote {
+      margin-top: 18px; color: var(--text-dim); font-size: 13px;
+    }
+
+    details {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 18px 22px; margin-bottom: 10px;
+    }
+    details summary {
+      cursor: pointer; font-weight: 600; font-size: 16px; color: var(--text);
+      list-style: none; display: flex; justify-content: space-between; align-items: center;
+    }
+    details summary::after { content: "+"; color: var(--cyan); font-size: 22px; line-height: 1; }
+    details[open] summary::after { content: "−"; }
+    details p { color: var(--text-dim); margin: 12px 0 0; font-size: 15px; }
+
+    footer {
+      border-top: 1px solid var(--border); padding: 48px 0 64px;
+      color: var(--text-dim); font-size: 14px;
+    }
+    footer .container {
+      display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    }
+    footer .footer-brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; }
+    footer .footer-brand img { width: 24px; height: 24px; border-radius: 6px; }
+    footer .links a { color: var(--text-dim); margin-left: 18px; }
+    footer .links a:hover { color: var(--text); }
+    footer .small { display: block; margin-top: 14px; color: #6E7FA0; font-size: 12px; }
+
+    @media (max-width: 640px) {
+      .hero { padding: 64px 0 40px; }
+      nav.top .links a:not(.cta) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top">
+    <div class="container">
+      <a href="/" class="brand">
+        <img src="/assets/icon-512.png" alt="">
+        Traveler's VPN
+      </a>
+      <div class="links">
+        <a href="#why">Why</a>
+        <a href="#pricing">Pricing</a>
+        <a href="/support.html">Support</a>
+        <a href="https://apps.apple.com/us/app/travelers-vpn/id6764288591" class="cta">Get the app</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow">iPhone · iPad · Mac</span>
+      <h1>Your apps work <span class="accent">everywhere.</span></h1>
+      <p class="lead">Land anywhere. Your bank app works. Your maps work. Your local payments work. Your home apps work. All at once — and faster.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">
+          Get it on the App Store
+        </a>
+        <a class="btn btn-ghost" href="#why">Why it's different</a>
+      </div>
+      <p class="meta">$2.99 once · No subscription · No account</p>
+    </div>
+  </header>
+
+  <section id="why">
+    <div class="container center">
+      <h2>The VPN that <span class="accent">doesn't break</span> your apps.</h2>
+      <p class="sub">Most VPNs flip one big switch. Suddenly your bank logs you out. Your maps get slow. Your local payment app refuses to load. Traveler's VPN doesn't do that.</p>
+      <div class="outcomes">
+        <div class="outcome">
+          <div class="big green">Bank works.</div>
+          <p>Your banking app sees a normal local connection. No fraud locks. No re-verification loops.</p>
+        </div>
+        <div class="outcome">
+          <div class="big green">Maps work.</div>
+          <p>Local maps, transit, ride-hailing, and delivery apps stay snappy and accurate.</p>
+        </div>
+        <div class="outcome">
+          <div class="big green">Pay works.</div>
+          <p>Local payment apps — Alipay, WeChat Pay, PayPay, your country's wallet — keep working.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="container center">
+      <h2>And it's <span class="accent">faster.</span></h2>
+      <p class="sub">A regular VPN sends every byte across the planet. Traveler's VPN doesn't. Local traffic stays local, so streaming, video calls, and quick lookups are noticeably snappier.</p>
+      <div class="visual" style="margin-top:36px;">
+        <img src="/assets/before-after-routing.svg" alt="A regular VPN tunnels everything and breaks local apps. Traveler's VPN keeps local apps working while still connecting you home.">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container center">
+      <h2>One tap. <span class="accent">It just works.</span></h2>
+      <p class="sub">Open the app. Pick where you're traveling. Connect. That's the whole flow — every time.</p>
+      <div class="visual" style="max-width:680px; margin:36px auto 0;">
+        <img src="/assets/routing-map-square.svg" alt="One-tap travel profiles for Japan, China, and elsewhere.">
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing" class="alt">
+    <div class="container">
+      <div class="center">
+        <h2>One price. <span class="accent">Forever.</span></h2>
+        <p class="sub">A single purchase covers iPhone, iPad, and Mac. No monthly bill. No account to make. No catch.</p>
+      </div>
+      <div class="pricing">
+        <div class="price-card">
+          <span class="badge">UNIVERSAL PURCHASE</span>
+          <div class="price">$2.99 <span class="small">once</span></div>
+          <ul>
+            <li>iPhone, iPad, and Mac — single purchase</li>
+            <li>Your apps don't break when you connect</li>
+            <li>Faster than a regular VPN</li>
+            <li>One-tap travel profiles</li>
+            <li>Settings sync across your Apple devices</li>
+            <li>No subscription, no account, ever</li>
+          </ul>
+          <a class="btn btn-primary" style="width:100%; justify-content:center;" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">
+            Get it on the App Store
+          </a>
+          <p class="footnote">Requires you to connect your own VPN server. <a href="/support.html">Setup details</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="container" style="max-width: 760px;">
+      <div class="center">
+        <h2>Common questions.</h2>
+      </div>
+      <details>
+        <summary>What makes this different from other VPNs?</summary>
+        <p>Other VPNs are a single on/off switch — the moment you connect, everything routes through the VPN, which is what breaks your banking app, your local maps, and your local payments. Traveler's VPN keeps your local stuff working while you stay connected to home. You get the privacy and home connection without the broken-apps tax.</p>
+      </details>
+      <details>
+        <summary>Will my banking app still work?</summary>
+        <p>Yes. That's the whole point. Your bank sees a normal connection from where you actually are, so it doesn't lock you out or trigger a fraud check.</p>
+      </details>
+      <details>
+        <summary>Is it really faster than other VPNs?</summary>
+        <p>For most things, yes — because local websites, maps, video calls, and streaming don't get rerouted around the world. Only the traffic that actually needs to come from home takes the longer path.</p>
+      </details>
+      <details>
+        <summary>Does it work on Mac?</summary>
+        <p>Yes — there's a native menu-bar Mac app included in the same $2.99 purchase. Buy once on iPhone and install it on iPad and Mac at no extra cost.</p>
+      </details>
+      <details>
+        <summary>Do I need to make an account?</summary>
+        <p>No. There's no account, no email signup, no subscription. You pay once on the App Store and that's the entire commercial relationship.</p>
+      </details>
+      <details>
+        <summary>What do I need to use it?</summary>
+        <p>You'll need access to a VPN server you can connect to (your own, your work's, or one you've set up). The app supports the common server types. Setup details are on the <a href="/support.html">support page</a>.</p>
+      </details>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div>
+        <div class="footer-brand">
+          <img src="/assets/icon-512.png" alt="">
+          Traveler's VPN
+        </div>
+        <span class="small">Built by an indie developer who travels too much. © 2026 Supra Applications Inc.</span>
+      </div>
+      <div class="links">
+        <a href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">App Store</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/support.html">Support</a>
+        <a href="/conditions.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

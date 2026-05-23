@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 1600 900"
+   font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif"
+   version="1.1"
+   id="svg51"
+   sodipodi:docname="before-after-routing.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview51"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="1.0096888"
+     inkscape:cx="708.6342"
+     inkscape:cy="532.34226"
+     inkscape:window-width="2056"
+     inkscape:window-height="1170"
+     inkscape:window-x="0"
+     inkscape:window-y="39"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg51" />
+  <!-- Brand palette: navy #0B1B3D, deep navy #07122B, cyan #7DE0F2, soft white #F4F7FB, warn red #FF6B6B, ok green #4ADE80 -->
+  <defs
+     id="defs5">
+    <linearGradient
+       id="bgGrad"
+       x1="0"
+       y1="0"
+       x2="0"
+       y2="1">
+      <stop
+         offset="0%"
+         stop-color="#07122B"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#0B1B3D"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="cyanGrad"
+       x1="0"
+       y1="0"
+       x2="1"
+       y2="0">
+      <stop
+         offset="0%"
+         stop-color="#7DE0F2"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#5BC9E0"
+         id="stop4" />
+    </linearGradient>
+    <filter
+       id="softShadow"
+       x="-20%"
+       y="-20%"
+       width="140%"
+       height="140%">
+      <feGaussianBlur
+         in="SourceAlpha"
+         stdDeviation="6"
+         id="feGaussianBlur4" />
+      <feOffset
+         dx="0"
+         dy="3"
+         result="off"
+         id="feOffset4" />
+      <feComponentTransfer
+         id="feComponentTransfer4">
+        <feFuncA
+           type="linear"
+           slope="0.35"
+           id="feFuncA4" />
+      </feComponentTransfer>
+      <feMerge
+         id="feMerge5">
+        <feMergeNode
+           id="feMergeNode4" />
+        <feMergeNode
+           in="SourceGraphic"
+           id="feMergeNode5" />
+      </feMerge>
+    </filter>
+  </defs>
+  <!-- background -->
+  <rect
+     width="1600"
+     height="900"
+     fill="url(#bgGrad)"
+     id="rect5" />
+  <!-- header -->
+  <text
+     x="800"
+     y="78"
+     fill="#F4F7FB"
+     font-size="44"
+     font-weight="700"
+     text-anchor="middle"
+     letter-spacing="-0.5"
+     id="text5">A dumb VPN routes everything. A smart one routes only what needs it.</text>
+  <text
+     x="800"
+     y="118"
+     fill="#7DE0F2"
+     font-size="22"
+     font-weight="500"
+     text-anchor="middle"
+     opacity="0.85"
+     id="text6">Traveler's VPN · smart split-tunnel routing</text>
+  <!-- divider -->
+  <line
+     x1="800"
+     y1="170"
+     x2="800"
+     y2="820"
+     stroke="#1E2C50"
+     stroke-width="2"
+     stroke-dasharray="6 8"
+     id="line6" />
+  <!-- ============================ LEFT: DUMB VPN ============================ -->
+  <g
+     transform="translate(60, 180)"
+     id="g26">
+    <rect
+       x="0"
+       y="0"
+       width="680"
+       height="640"
+       rx="28"
+       fill="#0E1E45"
+       stroke="#1E2C50"
+       stroke-width="1"
+       id="rect6" />
+    <text
+       x="34"
+       y="60"
+       fill="#FF6B6B"
+       font-size="20"
+       font-weight="700"
+       letter-spacing="2"
+       id="text7">DUMB VPN</text>
+    <text
+       x="34"
+       y="100"
+       fill="#F4F7FB"
+       font-size="32"
+       font-weight="700"
+       id="text8">One big switch. All-or-nothing.</text>
+    <text
+       x="34"
+       y="134"
+       fill="#9fb0d1"
+       font-size="18px"
+       font-weight="400"
+       id="text9"><tspan
+         sodipodi:role="line"
+         id="tspan3"
+         x="34"
+         y="134">Connect, and every app on your phone tunnels.</tspan><tspan
+         sodipodi:role="line"
+         id="tspan4"
+         x="34"
+         y="156.5">Including the ones that break when it does.</tspan></text>
+    <!-- phone -->
+    <g
+       transform="translate(34, 170)"
+       id="g18">
+      <rect
+         x="0"
+         y="0"
+         width="180"
+         height="370"
+         rx="26"
+         fill="#0B1B3D"
+         stroke="#2A3A66"
+         stroke-width="2"
+         id="rect9" />
+      <rect
+         x="14"
+         y="50"
+         width="152"
+         height="300"
+         rx="12"
+         fill="#07122B"
+         id="rect10" />
+      <circle
+         cx="90"
+         cy="28"
+         r="4"
+         fill="#2A3A66"
+         id="circle10" />
+      <!-- apps in phone -->
+      <g
+         font-size="13"
+         fill="#F4F7FB"
+         text-anchor="middle"
+         id="g17">
+        <g
+           transform="translate(48, 88)"
+           id="g11">
+          <rect
+             x="-22"
+             y="-22"
+             width="44"
+             height="44"
+             rx="10"
+             fill="#2563EB"
+             id="rect11" />
+          <text
+             y="6"
+             font-weight="600"
+             id="text11">Bank</text>
+        </g>
+        <g
+           transform="translate(132, 88)"
+           id="g12">
+          <rect
+             x="-22"
+             y="-22"
+             width="44"
+             height="44"
+             rx="10"
+             fill="#22C55E"
+             id="rect12" />
+          <text
+             y="6"
+             font-weight="600"
+             id="text12">Maps</text>
+        </g>
+        <g
+           transform="translate(48, 168)"
+           id="g13">
+          <rect
+             x="-22"
+             y="-22"
+             width="44"
+             height="44"
+             rx="10"
+             fill="#EF4444"
+             id="rect13" />
+          <text
+             y="6"
+             font-weight="600"
+             id="text13">Pay</text>
+        </g>
+        <g
+           transform="translate(132, 168)"
+           id="g14">
+          <rect
+             x="-22"
+             y="-22"
+             width="44"
+             height="44"
+             rx="10"
+             fill="#A855F7"
+             id="rect14" />
+          <text
+             y="6"
+             font-weight="600"
+             id="text14">News</text>
+        </g>
+        <g
+           transform="translate(48, 248)"
+           id="g15">
+          <rect
+             x="-22"
+             y="-22"
+             width="44"
+             height="44"
+             rx="10"
+             fill="#F59E0B"
+             id="rect15" />
+          <text
+             y="6"
+             font-weight="600"
+             id="text15">Work</text>
+        </g>
+        <g
+           transform="translate(132, 248)"
+           id="g16">
+          <rect
+             x="-22"
+             y="-22"
+             width="44"
+             height="44"
+             rx="10"
+             fill="#06B6D4"
+             id="rect16" />
+          <text
+             y="6"
+             font-weight="600"
+             id="text16">Chat</text>
+        </g>
+      </g>
+    </g>
+    <!-- one big arrow -->
+    <g
+       transform="translate(240, 340)"
+       id="g19">
+      <path
+         d="M 0 20 L 220 20"
+         stroke="#FF6B6B"
+         stroke-width="14"
+         stroke-linecap="round"
+         id="path18" />
+      <polygon
+         points="218,4 248,20 218,36"
+         fill="#FF6B6B"
+         id="polygon18" />
+      <text
+         x="124"
+         y="-8"
+         fill="#FF6B6B"
+         font-size="16"
+         font-weight="700"
+         text-anchor="middle"
+         id="text18">ALL TRAFFIC</text>
+      <text
+         x="124"
+         y="52"
+         fill="#9FB0D1"
+         font-size="13"
+         text-anchor="middle"
+         id="text19">no matter what app, no matter where</text>
+    </g>
+    <!-- server -->
+    <g
+       transform="translate(530, 290)"
+       id="g23">
+      <rect
+         x="0"
+         y="0"
+         width="110"
+         height="140"
+         rx="10"
+         fill="#0B1B3D"
+         stroke="#2A3A66"
+         stroke-width="2"
+         id="rect19" />
+      <rect
+         x="14"
+         y="20"
+         width="82"
+         height="14"
+         rx="3"
+         fill="#1E2C50"
+         id="rect20" />
+      <rect
+         x="14"
+         y="44"
+         width="82"
+         height="14"
+         rx="3"
+         fill="#1E2C50"
+         id="rect21" />
+      <rect
+         x="14"
+         y="68"
+         width="82"
+         height="14"
+         rx="3"
+         fill="#1E2C50"
+         id="rect22" />
+      <circle
+         cx="22"
+         cy="100"
+         r="4"
+         fill="#FF6B6B"
+         id="circle22" />
+      <circle
+         cx="38"
+         cy="100"
+         r="4"
+         fill="#FF6B6B"
+         id="circle23" />
+      <text
+         x="55"
+         y="160"
+         fill="#9FB0D1"
+         font-size="14"
+         text-anchor="middle"
+         font-weight="600"
+         id="text23">Your server</text>
+    </g>
+    <!-- failure callouts -->
+    <g
+       font-size="15"
+       fill="#FF9A9A"
+       id="g25">
+      <text
+         x="34"
+         y="600"
+         id="text24">✕ Bank flags the foreign IP and locks the session.</text>
+      <text
+         x="34"
+         y="624"
+         id="text25">✕ Maps and local payments break or get slow.</text>
+    </g>
+  </g>
+  <!-- ============================ RIGHT: SMART ROUTING ============================ -->
+  <g
+     transform="translate(860, 180)"
+     id="g51">
+    <rect
+       x="0"
+       y="0"
+       width="680"
+       height="640"
+       rx="28"
+       fill="#0E1E45"
+       stroke="#7DE0F2"
+       stroke-width="2"
+       opacity="1"
+       id="rect26" />
+    <text
+       x="34"
+       y="60"
+       fill="#7DE0F2"
+       font-size="20"
+       font-weight="700"
+       letter-spacing="2"
+       id="text26">SMART ROUTING</text>
+    <text
+       x="34"
+       y="100"
+       fill="#F4F7FB"
+       font-size="32"
+       font-weight="700"
+       id="text27">Per-destination, automatic.</text>
+    <text
+       x="34"
+       y="134"
+       fill="#9fb0d1"
+       font-size="18px"
+       font-weight="400"
+       id="text28"><tspan
+         sodipodi:role="line"
+         id="tspan1"
+         x="34"
+         y="134">Only what needs the server uses the server. Local apps stay direct and fast.</tspan><tspan
+         sodipodi:role="line"
+         id="tspan2"
+         x="34"
+         y="156.5">You don't touch a thing.</tspan></text>
+    <!-- phone -->
+    <g
+       transform="translate(34, 170)"
+       id="g37">
+      <rect
+         x="0"
+         y="0"
+         width="180"
+         height="370"
+         rx="26"
+         fill="#0B1B3D"
+         stroke="#2A3A66"
+         stroke-width="2"
+         id="rect28" />
+      <rect
+         x="14"
+         y="50"
+         width="152"
+         height="300"
+         rx="12"
+         fill="#07122B"
+         id="rect29" />
+      <circle
+         cx="90"
+         cy="28"
+         r="4"
+         fill="#2A3A66"
+         id="circle29" />
+      <g
+         font-size="13"
+         fill="#F4F7FB"
+         text-anchor="middle"
+         id="g36">
+        <g
+           transform="translate(48, 88)"
+           id="g30">
+          <rect
+             x="-22"
+             y="-22"
+             width="44"
+             height="44"
+             rx="10"
+             fill="#2563EB"
+             id="rect30" />
+          <text
+             y="6"
+             font-weight="600"
+             id="text30">Bank</text>
+        </g>
+        <g
+           transform="translate(132, 88)"
+           id="g31">
+          <rect
+             x="-22"
+             y="-22"
+             width="44"
+             height="44"
+             rx="10"
+             fill="#22C55E"
+             id="rect31" />
+          <text
+             y="6"
+             font-weight="600"
+             id="text31">Maps</text>
+        </g>
+        <g
+           transform="translate(48, 168)"
+           id="g32">
+          <rect
+             x="-22"
+             y="-22"
+             width="44"
+             height="44"
+             rx="10"
+             fill="#EF4444"
+             id="rect32" />
+          <text
+             y="6"
+             font-weight="600"
+             id="text32">Pay</text>
+        </g>
+        <g
+           transform="translate(132, 168)"
+           id="g33">
+          <rect
+             x="-22"
+             y="-22"
+             width="44"
+             height="44"
+             rx="10"
+             fill="#A855F7"
+             id="rect33" />
+          <text
+             y="6"
+             font-weight="600"
+             id="text33">News</text>
+        </g>
+        <g
+           transform="translate(48, 248)"
+           id="g34">
+          <rect
+             x="-22"
+             y="-22"
+             width="44"
+             height="44"
+             rx="10"
+             fill="#F59E0B"
+             id="rect34" />
+          <text
+             y="6"
+             font-weight="600"
+             id="text34">Work</text>
+        </g>
+        <g
+           transform="translate(132, 248)"
+           id="g35">
+          <rect
+             x="-22"
+             y="-22"
+             width="44"
+             height="44"
+             rx="10"
+             fill="#06B6D4"
+             id="rect35" />
+          <text
+             y="6"
+             font-weight="600"
+             id="text35">Chat</text>
+        </g>
+      </g>
+    </g>
+    <!-- decision diamond -->
+    <g
+       transform="translate(248, 340)"
+       id="g38">
+      <polygon
+         points="0,20 40,-20 80,20 40,60"
+         fill="#0B1B3D"
+         stroke="#7DE0F2"
+         stroke-width="2"
+         id="polygon37" />
+      <text
+         x="40"
+         y="16"
+         fill="#7de0f2"
+         font-size="11px"
+         text-anchor="middle"
+         font-weight="700"
+         id="text37">AI</text>
+      <text
+         x="40"
+         y="32"
+         fill="#F4F7FB"
+         font-size="11"
+         text-anchor="middle"
+         id="text38">decides</text>
+    </g>
+    <!-- direct path (top) — local apps stay direct -->
+    <g
+       transform="translate(248, 280)"
+       id="g40">
+      <path
+         d="M 0 60 Q 80 -20 220 -20"
+         stroke="#4ADE80"
+         stroke-width="6"
+         fill="none"
+         stroke-linecap="round"
+         id="path38" />
+      <polygon
+         points="218,-30 244,-20 218,-10"
+         fill="#4ADE80"
+         id="polygon38" />
+      <text
+         x="119.75964"
+         y="-49.228573"
+         fill="#4ade80"
+         font-size="13px"
+         font-weight="700"
+         text-anchor="middle"
+         id="text39">DIRECT</text>
+      <text
+         x="119.75964"
+         y="-31.228573"
+         fill="#9fb0d1"
+         font-size="11px"
+         text-anchor="middle"
+         id="text40">Bank · Maps · Pay</text>
+    </g>
+    <!-- tunneled path (bottom) — only what needs server -->
+    <g
+       transform="translate(248, 360)"
+       id="g42">
+      <path
+         d="M 0 20 Q 80 100 220 100"
+         stroke="#7DE0F2"
+         stroke-width="6"
+         fill="none"
+         stroke-linecap="round"
+         id="path40" />
+      <polygon
+         points="218,90 244,100 218,110"
+         fill="#7DE0F2"
+         id="polygon40" />
+      <text
+         x="120"
+         y="138"
+         fill="#7DE0F2"
+         font-size="13"
+         font-weight="700"
+         text-anchor="middle"
+         id="text41">VIA YOUR SERVER</text>
+      <text
+         x="120"
+         y="156"
+         fill="#9FB0D1"
+         font-size="11"
+         text-anchor="middle"
+         id="text42">Work · News · Chat</text>
+    </g>
+    <!-- destinations stack on right -->
+    <g
+       transform="translate(498, 240)"
+       id="g49">
+      <!-- internet (direct) -->
+      <g
+         transform="translate(0, 0)"
+         id="g44">
+        <rect
+           x="0"
+           y="0"
+           width="140"
+           height="80"
+           rx="10"
+           fill="#0B1B3D"
+           stroke="#4ADE80"
+           stroke-width="2"
+           id="rect42" />
+        <text
+           x="70"
+           y="34"
+           fill="#4ADE80"
+           font-size="14"
+           font-weight="700"
+           text-anchor="middle"
+           id="text43">Local internet</text>
+        <text
+           x="70"
+           y="56"
+           fill="#9FB0D1"
+           font-size="11"
+           text-anchor="middle"
+           id="text44">fast · untouched</text>
+      </g>
+      <!-- server (tunneled) -->
+      <g
+         transform="translate(0, 200)"
+         id="g48">
+        <rect
+           x="0"
+           y="0"
+           width="140"
+           height="100"
+           rx="10"
+           fill="#0B1B3D"
+           stroke="#7DE0F2"
+           stroke-width="2"
+           id="rect44" />
+        <rect
+           x="14"
+           y="20"
+           width="112"
+           height="10"
+           rx="3"
+           fill="#1E2C50"
+           id="rect45" />
+        <rect
+           x="14"
+           y="38"
+           width="112"
+           height="10"
+           rx="3"
+           fill="#1E2C50"
+           id="rect46" />
+        <rect
+           x="14"
+           y="56"
+           width="112"
+           height="10"
+           rx="3"
+           fill="#1E2C50"
+           id="rect47" />
+        <circle
+           cx="22"
+           cy="82"
+           r="4"
+           fill="#4ADE80"
+           id="circle47" />
+        <circle
+           cx="38"
+           cy="82"
+           r="4"
+           fill="#4ADE80"
+           id="circle48" />
+        <text
+           x="70"
+           y="120"
+           fill="#7DE0F2"
+           font-size="12"
+           font-weight="700"
+           text-anchor="middle"
+           id="text48">Your server</text>
+      </g>
+    </g>
+    <!-- success callouts -->
+    <g
+       font-size="15"
+       fill="#A6F0BC"
+       id="g50">
+      <text
+         x="34"
+         y="600"
+         id="text49">✓ Bank sees a local IP. Login works.</text>
+      <text
+         x="34"
+         y="624"
+         id="text50">✓ Maps and local payments behave normally.</text>
+    </g>
+  </g>
+  <!-- footer caption -->
+  <text
+     x="800"
+     y="868"
+     fill="#9FB0D1"
+     font-size="16"
+     text-anchor="middle"
+     id="text51">Bring your own server (Outline · WireGuard · Shadowsocks · Trojan). One-time $2.99 · iPhone · iPad · Mac</text>
+</svg>

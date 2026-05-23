@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1080" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#07122B"/>
+      <stop offset="100%" stop-color="#0B1B3D"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="55%" r="55%">
+      <stop offset="0%" stop-color="#7DE0F2" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#7DE0F2" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="phoneBody" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#13234E"/>
+      <stop offset="100%" stop-color="#091638"/>
+    </linearGradient>
+    <filter id="phoneShadow" x="-30%" y="-10%" width="160%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="22"/>
+      <feOffset dx="0" dy="14" result="off"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.45"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1080" height="1080" fill="url(#bg)"/>
+  <ellipse cx="540" cy="700" rx="500" ry="380" fill="url(#glow)"/>
+
+  <!-- Connected pill -->
+  <g transform="translate(540, 90)">
+    <rect x="-130" y="-24" width="260" height="48" rx="24" fill="rgba(74, 222, 128, 0.1)" stroke="#4ADE80" stroke-width="1.5"/>
+    <circle cx="-100" cy="0" r="6" fill="#4ADE80">
+      <animate attributeName="opacity" values="1;0.4;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="-84" y="6" fill="#F4F7FB" font-size="17" font-weight="600">Connected · Abroad</text>
+  </g>
+
+  <!-- Headline -->
+  <text x="540" y="195" fill="#F4F7FB" font-size="62" font-weight="800" text-anchor="middle" letter-spacing="-2">Everything still works.</text>
+  <text x="540" y="240" fill="#9FB0D1" font-size="24" font-weight="500" text-anchor="middle">Even when you're not home.</text>
+
+  <!-- Phone -->
+  <g transform="translate(320, 290)" filter="url(#phoneShadow)">
+    <!-- body -->
+    <rect x="0" y="0" width="440" height="720" rx="56" fill="url(#phoneBody)" stroke="#2A3A66" stroke-width="2"/>
+    <!-- screen -->
+    <rect x="14" y="14" width="412" height="692" rx="46" fill="#07122B"/>
+    <!-- notch -->
+    <rect x="170" y="28" width="100" height="28" rx="14" fill="#020714"/>
+
+    <!-- status bar text -->
+    <text x="50" y="84" fill="#F4F7FB" font-size="16" font-weight="700">10:24</text>
+    <g transform="translate(390, 76)">
+      <!-- battery -->
+      <rect x="-32" y="0" width="32" height="14" rx="3" stroke="#F4F7FB" stroke-width="1.5" fill="none"/>
+      <rect x="0" y="4" width="3" height="6" rx="1" fill="#F4F7FB"/>
+      <rect x="-30" y="2" width="26" height="10" rx="1.5" fill="#4ADE80"/>
+    </g>
+    <g transform="translate(346, 78)">
+      <!-- wifi -->
+      <path d="M -10 0 Q 0 -8 10 0" stroke="#F4F7FB" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <path d="M -6 4 Q 0 -1 6 4" stroke="#F4F7FB" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+      <circle cx="0" cy="8" r="1.5" fill="#F4F7FB"/>
+    </g>
+
+    <!-- Date / location -->
+    <text x="220" y="148" fill="#9FB0D1" font-size="15" font-weight="600" text-anchor="middle" letter-spacing="0.5">SATURDAY, MAY 23</text>
+    <text x="220" y="190" fill="#F4F7FB" font-size="42" font-weight="800" text-anchor="middle" letter-spacing="-1">10:24</text>
+    <text x="220" y="222" fill="#9FB0D1" font-size="14" font-weight="500" text-anchor="middle">📍 Tokyo, Japan</text>
+
+    <!-- App grid 3×3 -->
+    <!-- Row 1: Bank, Maps, Pay -->
+    <g transform="translate(46, 270)">
+      <!-- Bank -->
+      <g>
+        <rect width="100" height="100" rx="24" fill="#2563EB"/>
+        <text x="50" y="56" fill="#fff" font-size="36" font-weight="800" text-anchor="middle">$</text>
+        <text x="50" y="124" fill="#F4F7FB" font-size="13" font-weight="500" text-anchor="middle">Bank</text>
+        <circle cx="92" cy="8" r="14" fill="#4ADE80" stroke="#07122B" stroke-width="3"/>
+        <path d="M 85 8 L 90 13 L 99 4" stroke="#07122B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <!-- Maps -->
+      <g transform="translate(124, 0)">
+        <rect width="100" height="100" rx="24" fill="#22C55E"/>
+        <path d="M 50 30 C 38 30 30 38 30 50 C 30 65 50 80 50 80 C 50 80 70 65 70 50 C 70 38 62 30 50 30 Z" fill="#fff"/>
+        <circle cx="50" cy="50" r="7" fill="#22C55E"/>
+        <text x="50" y="124" fill="#F4F7FB" font-size="13" font-weight="500" text-anchor="middle">Maps</text>
+        <circle cx="92" cy="8" r="14" fill="#4ADE80" stroke="#07122B" stroke-width="3"/>
+        <path d="M 85 8 L 90 13 L 99 4" stroke="#07122B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <!-- Pay -->
+      <g transform="translate(248, 0)">
+        <rect width="100" height="100" rx="24" fill="#0F172A"/>
+        <rect x="20" y="35" width="60" height="40" rx="6" fill="none" stroke="#fff" stroke-width="2.5"/>
+        <rect x="20" y="46" width="60" height="6" fill="#fff"/>
+        <text x="50" y="124" fill="#F4F7FB" font-size="13" font-weight="500" text-anchor="middle">Pay</text>
+        <circle cx="92" cy="8" r="14" fill="#4ADE80" stroke="#07122B" stroke-width="3"/>
+        <path d="M 85 8 L 90 13 L 99 4" stroke="#07122B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </g>
+
+    <!-- Row 2: Chat, Mail, Browser -->
+    <g transform="translate(46, 410)">
+      <!-- Chat -->
+      <g>
+        <rect width="100" height="100" rx="24" fill="#06B6D4"/>
+        <path d="M 22 38 C 22 28 30 24 50 24 C 70 24 78 28 78 38 L 78 56 C 78 66 70 70 50 70 L 42 70 L 30 80 L 32 70 C 26 68 22 64 22 56 Z" fill="#fff"/>
+        <text x="50" y="124" fill="#F4F7FB" font-size="13" font-weight="500" text-anchor="middle">Chat</text>
+        <circle cx="92" cy="8" r="14" fill="#4ADE80" stroke="#07122B" stroke-width="3"/>
+        <path d="M 85 8 L 90 13 L 99 4" stroke="#07122B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <!-- Mail -->
+      <g transform="translate(124, 0)">
+        <rect width="100" height="100" rx="24" fill="#3B82F6"/>
+        <rect x="22" y="34" width="56" height="36" rx="4" fill="none" stroke="#fff" stroke-width="2.5"/>
+        <path d="M 22 38 L 50 56 L 78 38" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="50" y="124" fill="#F4F7FB" font-size="13" font-weight="500" text-anchor="middle">Mail</text>
+        <circle cx="92" cy="8" r="14" fill="#4ADE80" stroke="#07122B" stroke-width="3"/>
+        <path d="M 85 8 L 90 13 L 99 4" stroke="#07122B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <!-- Browser -->
+      <g transform="translate(248, 0)">
+        <rect width="100" height="100" rx="24" fill="#F59E0B"/>
+        <circle cx="50" cy="50" r="22" fill="none" stroke="#fff" stroke-width="2.5"/>
+        <path d="M 30 42 L 50 50 L 42 70 Z" fill="#fff"/>
+        <text x="50" y="124" fill="#F4F7FB" font-size="13" font-weight="500" text-anchor="middle">Browser</text>
+        <circle cx="92" cy="8" r="14" fill="#4ADE80" stroke="#07122B" stroke-width="3"/>
+        <path d="M 85 8 L 90 13 L 99 4" stroke="#07122B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </g>
+
+    <!-- Row 3: Photos, Video, News -->
+    <g transform="translate(46, 550)">
+      <!-- Photos -->
+      <g>
+        <rect width="100" height="100" rx="24" fill="#EC4899"/>
+        <circle cx="34" cy="42" r="10" fill="#fff" fill-opacity="0.85"/>
+        <circle cx="58" cy="40" r="12" fill="#fff" fill-opacity="0.85"/>
+        <circle cx="44" cy="62" r="14" fill="#fff" fill-opacity="0.85"/>
+        <circle cx="68" cy="60" r="9" fill="#fff" fill-opacity="0.85"/>
+        <text x="50" y="124" fill="#F4F7FB" font-size="13" font-weight="500" text-anchor="middle">Photos</text>
+        <circle cx="92" cy="8" r="14" fill="#4ADE80" stroke="#07122B" stroke-width="3"/>
+        <path d="M 85 8 L 90 13 L 99 4" stroke="#07122B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <!-- Video -->
+      <g transform="translate(124, 0)">
+        <rect width="100" height="100" rx="24" fill="#EF4444"/>
+        <rect x="22" y="30" width="56" height="40" rx="8" fill="#fff"/>
+        <polygon points="44,42 64,50 44,58" fill="#EF4444"/>
+        <text x="50" y="124" fill="#F4F7FB" font-size="13" font-weight="500" text-anchor="middle">Video</text>
+        <circle cx="92" cy="8" r="14" fill="#4ADE80" stroke="#07122B" stroke-width="3"/>
+        <path d="M 85 8 L 90 13 L 99 4" stroke="#07122B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+      <!-- News -->
+      <g transform="translate(248, 0)">
+        <rect width="100" height="100" rx="24" fill="#A855F7"/>
+        <rect x="22" y="28" width="56" height="44" rx="3" fill="#fff"/>
+        <rect x="28" y="34" width="44" height="4" fill="#A855F7"/>
+        <rect x="28" y="42" width="44" height="3" fill="#A855F7" opacity="0.6"/>
+        <rect x="28" y="48" width="44" height="3" fill="#A855F7" opacity="0.6"/>
+        <rect x="28" y="56" width="20" height="12" fill="#A855F7" opacity="0.6"/>
+        <rect x="52" y="56" width="20" height="3" fill="#A855F7" opacity="0.6"/>
+        <rect x="52" y="62" width="20" height="3" fill="#A855F7" opacity="0.6"/>
+        <text x="50" y="124" fill="#F4F7FB" font-size="13" font-weight="500" text-anchor="middle">News</text>
+        <circle cx="92" cy="8" r="14" fill="#4ADE80" stroke="#07122B" stroke-width="3"/>
+        <path d="M 85 8 L 90 13 L 99 4" stroke="#07122B" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </g>
+
+    <!-- Home indicator bar -->
+    <rect x="170" y="688" width="100" height="5" rx="2.5" fill="#F4F7FB" opacity="0.5"/>
+  </g>
+
+  <!-- Footer -->
+  <text x="540" y="1040" fill="#9FB0D1" font-size="18" font-weight="500" text-anchor="middle">Traveler's VPN · $2.99 once · iPhone · iPad · Mac</text>
+</svg>
