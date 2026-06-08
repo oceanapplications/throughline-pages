@@ -3,46 +3,53 @@
 <head>
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width'>
-  <title>Support &mdash; Traveler's VPN</title>
+  <title>Support: Traveler's VPN</title>
   <style> body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding:1em; max-width: 760px; margin: 0 auto; line-height: 1.55; } h1 { margin-bottom: 0.25em; } h2 { margin-top: 2em; } h3 { margin-top: 1.5em; } code { background: #f4f4f5; padding: 1px 4px; border-radius: 3px; font-size: 0.9em; } ul { padding-left: 1.25em; } .meta { color: #6b7280; font-size: 0.9em; } hr { border: none; border-top: 1px solid #e5e7eb; margin: 2em 0; } </style>
 </head>
 <body>
 
-<h1>Traveler's VPN &mdash; Support</h1>
-<p class="meta">Last updated: 29 April 2026</p>
+<h1>Traveler's VPN Support</h1>
+<p class="meta">Last updated: 8 June 2026</p>
 
-<p>Traveler's VPN is a personal VPN client built for people who travel internationally. It routes Chinese, Japanese, and other regional services directly to local IPs (so banks, payment apps, and transit systems don't fraud-block you on a foreign IP) while sending the rest of your traffic through your own VPN server.</p>
+<p>Traveler's VPN is a personal VPN client built for people who travel internationally. It routes Chinese, Japanese, and other regional services directly to local IPs (so banks, payment apps, and transit systems don't fraud-block you on a foreign IP) while sending the rest of your traffic through your VPN server, whether that's a server we manage for you or one you bring yourself.</p>
 
-<p>It is a "bring your own server" client &mdash; the app does not sell or operate VPN servers. You connect it to a server you already have access to, using one of the supported protocols.</p>
+<p>You can use it two ways. Pick a <strong>managed server</strong> (a monthly plan or a 7-day travel pass) and we set up a private server for you automatically. Or <strong>bring your own server</strong> with a one-time unlock and connect the app to a server you already have, using one of the supported protocols. This guide covers the bring-your-own setup; managed servers need no setup at all.</p>
 
 <hr>
 
 <h2>Getting Started</h2>
 
-<h3>1. Get a server</h3>
-<p>You need credentials for at least one of:</p>
+<h3>Option A: Use a managed server (easiest)</h3>
+<p>We run a private server for you, so there's nothing to set up. In the app, open the <strong>&hellip;</strong> menu &rarr; <strong>Add Server</strong> &rarr; <strong>Managed Server</strong> (or just follow the welcome screen on first launch), then:</p>
 <ul>
-  <li><strong>Shadowsocks</strong> &mdash; from Outline, JustMySocks, 3X-UI panels, v2rayN, or any Shadowsocks provider.</li>
-  <li><strong>WireGuard</strong> &mdash; from Mullvad, ProtonVPN, Tailscale, wg-easy, or a self-hosted server. You can paste the config or import a <code>.conf</code> file.</li>
-  <li><strong>Trojan</strong> &mdash; from Trojan-Go, Xray, V2Ray, or 3X-UI panels.</li>
+  <li>Choose a plan: a <strong>monthly subscription</strong> (starts with a 3-day free trial) or a <strong>7-day travel pass</strong>.</li>
+  <li>Pick the region you'd like your server in.</li>
+  <li>We provision it for you. This usually takes about a minute, and the app lets you know when it's ready.</li>
 </ul>
+<p>You can switch to a server in a new region anytime while your plan is active. Then pick a routing profile and connect, as described below.</p>
 
-<h3>2. Add the server in the app</h3>
+<h3>Option B: Bring your own server</h3>
+<p>If you already run a server, unlock bring-your-own-server mode (a one-time purchase) and connect it. You need credentials for at least one of:</p>
+<ul>
+  <li><strong>Shadowsocks</strong>: from Outline, JustMySocks, 3X-UI panels, v2rayN, or any Shadowsocks provider.</li>
+  <li><strong>WireGuard</strong>: from Mullvad, ProtonVPN, Tailscale, wg-easy, or a self-hosted server. You can paste the config or import a <code>.conf</code> file.</li>
+  <li><strong>Trojan</strong>: from Trojan-Go, Xray, V2Ray, or 3X-UI panels.</li>
+</ul>
 <p>Tap the <strong>&hellip;</strong> menu in the top right &rarr; <strong>Add Server</strong>, choose your protocol, and either paste your access key / config or fill in the fields manually. You can also:</p>
 <ul>
-  <li><strong>Tap a <code>ss://</code> or <code>trojan://</code> link</strong> in Mail, Messages, or Safari &mdash; it opens directly into the right form.</li>
-  <li><strong>Open a WireGuard <code>.conf</code> file</strong> from Files, Mail, or AirDrop &mdash; the app will offer to import it.</li>
+  <li><strong>Tap a <code>ss://</code> or <code>trojan://</code> link</strong> in Mail, Messages, or Safari: it opens directly into the right form.</li>
+  <li><strong>Open a WireGuard <code>.conf</code> file</strong> from Files, Mail, or AirDrop: the app will offer to import it.</li>
 </ul>
 
-<h3>3. Pick a routing profile</h3>
-<p>Tap the <strong>Routing Profile</strong> card on the main screen and choose one:</p>
+<h3>Pick a routing profile</h3>
+<p>However you got your server, tap the <strong>Routing Profile</strong> card on the main screen and choose one:</p>
 <ul>
-  <li><strong>Travel in China</strong> &mdash; sends Chinese services (WeChat, Alipay, Baidu, Taobao, Bilibili, etc.) and Apple/iCloud direct, and routes everything else through your server. Apple services work better direct in China than through a foreign VPN.</li>
-  <li><strong>Travel in Japan</strong> &mdash; sends Japanese services (Suica, JR, Yahoo Japan, LINE, Tabelog, NHK, PayPay, etc.) direct, and US streaming and banking through your server so they don't fraud-block on a Japanese IP.</li>
-  <li><strong>VPN Only</strong> &mdash; everything goes through your server. No split routing.</li>
+  <li><strong>Travel in China</strong>: sends Chinese services (WeChat, Alipay, Baidu, Taobao, Bilibili, etc.) and Apple/iCloud direct, and routes everything else through your server. Apple services work better direct in China than through a foreign VPN.</li>
+  <li><strong>Travel in Japan</strong>: sends Japanese services (Suica, JR, Yahoo Japan, LINE, Tabelog, NHK, PayPay, etc.) direct, and US streaming and banking through your server so they don't fraud-block on a Japanese IP.</li>
+  <li><strong>VPN Only</strong>: everything goes through your server. No split routing.</li>
 </ul>
 
-<h3>4. Tap Connect</h3>
+<h3>Tap Connect</h3>
 <p>The first time you connect, iOS will ask permission to add a VPN configuration. Approve it. The shield icon at the top fills in when the tunnel is up.</p>
 
 <hr>
@@ -75,10 +82,22 @@
 <h2>Frequently Asked Questions</h2>
 
 <h3>Does Traveler's VPN provide servers?</h3>
-<p>No. It's a client only. You bring your own server (Shadowsocks, WireGuard, or Trojan). We don't sell, operate, or proxy traffic through any infrastructure of ours.</p>
+<p>Yes, if you want one. Choose a managed server (a monthly plan or a 7-day travel pass) and we provision a private server for you automatically, in the region you pick. You can also bring your own server (Shadowsocks, WireGuard, or Trojan) with the one-time unlock, in which case your traffic only ever touches the server you control.</p>
 
-<h3>Where do I get a server?</h3>
-<p>For most travelers we recommend a personal-plan provider that uses Shadowsocks (works well behind aggressive firewalls like China's) or WireGuard (fastest on stable networks). Examples: <strong>JustMySocks</strong> for Shadowsocks, <strong>Mullvad</strong> or <strong>ProtonVPN</strong> for WireGuard, or your own VPS running <strong>3X-UI</strong> / <strong>wg-easy</strong>.</p>
+<h3>Where do I get a server (bring-your-own)?</h3>
+<p>For most travelers we recommend a personal-plan provider that uses Shadowsocks (works well behind aggressive firewalls like China's) or WireGuard (fastest on stable networks). Examples: <strong>JustMySocks</strong> for Shadowsocks, <strong>Mullvad</strong> or <strong>ProtonVPN</strong> for WireGuard, or your own VPS running <strong>3X-UI</strong> / <strong>wg-easy</strong>. If you'd rather not deal with any of this, use a managed server instead.</p>
+
+<h3>What's the difference between the plans?</h3>
+<p>The <strong>7-day travel pass</strong> ($9.99) is a one-off for a single trip: seven days of a managed server, no auto-renew. The <strong>monthly subscription</strong> ($14.99/month, starting with a 3-day free trial) is for people who travel often, and lets you switch regions anytime. <strong>Bring your own server</strong> ($2.99 once) is a one-time unlock for people who already run a server. All three include the smart routing and cover iPhone, iPad, and Mac.</p>
+
+<h3>How do managed servers work, and what happens when my plan ends?</h3>
+<p>When you subscribe or buy a travel pass, we provision a private server just for you in the region you choose. While your plan is active you can re-provision in a new region anytime. When a subscription is cancelled or a travel pass expires, the server is automatically destroyed. There's no account to close.</p>
+
+<h3>Where are managed servers hosted?</h3>
+<p>Each one is a private server set up just for you, in the region you pick. It's kept locked down and is deleted when your plan ends. See the <a href="privacy.html">Privacy Policy</a> for what data is involved.</p>
+
+<h3>Do managed servers need an account?</h3>
+<p>No. There's no signup, email, or password. Your purchase is tied to your Apple ID behind the scenes, which is how your server follows you across your devices and through a restore.</p>
 
 <h3>Why isn't all my traffic going through the VPN?</h3>
 <p>Because you've selected a travel profile that intentionally splits traffic. Local-region services go direct so they work properly (e.g. mobile Suica won't activate on a US IP). If you want everything through the tunnel, switch the profile to <strong>VPN Only</strong>.</p>
@@ -99,7 +118,7 @@
 </ul>
 
 <h3>Can I connect to multiple servers at once?</h3>
-<p>No &mdash; only one server is active at a time. You can save many and switch between them with one tap.</p>
+<p>No. Only one server is active at a time. You can save many and switch between them with one tap.</p>
 
 <h3>Does it work on iPad and Mac?</h3>
 <p>Yes, the app runs on iPhone, iPad, and Mac (Apple Silicon).</p>
@@ -111,10 +130,10 @@
 <p>Roughly the same as any always-on VPN client. The travel profiles route a lot of traffic direct (no encryption overhead for those flows), which tends to be lighter than VPN Only.</p>
 
 <h3>Does Traveler's VPN log my traffic?</h3>
-<p>No. The app does not collect, transmit, or log any data &mdash; not your traffic, not your usage, not crash reports. The tunnel statistics shown in the app are computed on-device and never leave it. See the <a href="privacy.html">Privacy Policy</a> for full details.</p>
+<p>The app itself collects nothing: not your traffic, not your usage, not crash reports, and the tunnel statistics it shows are computed on-device and never leave it. If you <strong>bring your own server</strong>, nothing about your use ever reaches us. If you use a <strong>managed server</strong>, your traffic is relayed through a server we run for you; we don't inspect, record, or sell the contents of your traffic or the sites you visit, and we measure only the volume of data used to enforce your allowance. See the <a href="privacy.html">Privacy Policy</a> for full details.</p>
 
 <h3>I want to send a bug report or feature request.</h3>
-<p>Email us &mdash; see Contact below. If you can include a copy of the log from <strong>Diagnostics</strong>, that helps a lot.</p>
+<p>Email us (see Contact below). If you can include a copy of the log from <strong>Diagnostics</strong>, that helps a lot.</p>
 
 <hr>
 

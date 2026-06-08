@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Traveler's VPN — Your apps work everywhere.</title>
-  <meta name="description" content="A VPN that doesn't break your bank app, your maps, or your local payments when you connect. Faster than a regular VPN. iPhone, iPad, and Mac. $2.99 once.">
-  <meta property="og:title" content="Traveler's VPN — Your apps work everywhere.">
-  <meta property="og:description" content="Apps don't break. Local stuff stays fast. Home stuff stays connected. $2.99 once, no subscription.">
+  <title>Traveler's VPN: Your apps work everywhere.</title>
+  <meta name="description" content="A VPN that doesn't break your bank, your maps, or your local payments when you travel, and it's faster than a regular VPN. iPhone, iPad, and Mac. We run a private server for you, or bring your own. Free 3-day trial.">
+  <meta property="og:title" content="Traveler's VPN: Your apps work everywhere.">
+  <meta property="og:description" content="Your apps don't break. Local stuff stays fast. Home stuff stays connected. We run a private server for you, or bring your own. Free 3-day trial, no account.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://travelersvpn.com/">
   <meta property="og:image" content="https://travelersvpn.com/assets/og-card.png">
@@ -140,41 +140,58 @@
     }
     .visual img, .visual svg { display: block; width: 100%; height: auto; }
 
-    .pricing { display: flex; justify-content: center; }
-    .price-card {
-      background: var(--surface); border: 2px solid var(--cyan);
-      border-radius: 20px; padding: 40px; text-align: center;
-      max-width: 480px; width: 100%;
-      box-shadow: 0 18px 60px rgba(125, 224, 242, 0.1);
+    .pricing {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 18px; align-items: stretch; margin-top: 8px;
     }
-    .price-card .price {
-      font-size: 72px; font-weight: 800; letter-spacing: -2.5px;
-      color: var(--text); margin: 12px 0 4px; line-height: 1;
+    @media (max-width: 920px) {
+      .pricing { grid-template-columns: 1fr; max-width: 460px; margin-left: auto; margin-right: auto; }
     }
-    .price-card .price .small { font-size: 22px; color: var(--text-dim); font-weight: 600; }
-    .price-card .badge {
-      display: inline-block; background: rgba(125, 224, 242, 0.12);
-      color: var(--cyan); padding: 6px 12px; border-radius: 999px;
-      font-size: 13px; font-weight: 700; letter-spacing: 0.3px;
+    .tier {
+      position: relative;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 20px; padding: 30px 26px; text-align: left;
+      display: flex; flex-direction: column;
     }
-    .price-card ul {
-      list-style: none; padding: 0; margin: 28px 0; text-align: left;
+    .tier.featured {
+      border: 2px solid var(--cyan);
+      box-shadow: 0 18px 60px rgba(125, 224, 242, 0.12);
     }
-    .price-card li {
-      padding: 12px 0; border-bottom: 1px solid var(--border);
-      color: var(--text-dim); display: flex; align-items: center; gap: 12px;
+    .tier .badge {
+      position: absolute; top: -12px; left: 26px;
+      background: var(--cyan); color: #062041;
+      padding: 5px 12px; border-radius: 999px;
+      font-size: 12px; font-weight: 800; letter-spacing: 0.3px;
     }
-    .price-card li:last-child { border-bottom: none; }
-    .price-card li::before {
-      content: ""; width: 20px; height: 20px; border-radius: 50%;
+    .tier .tier-name {
+      font-size: 14px; font-weight: 700; letter-spacing: 0.4px;
+      text-transform: uppercase; color: var(--text);
+    }
+    .tier .price {
+      font-size: 44px; font-weight: 800; letter-spacing: -1.5px;
+      color: var(--text); margin: 10px 0 2px; line-height: 1;
+    }
+    .tier .price .small { font-size: 16px; color: var(--text-dim); font-weight: 600; letter-spacing: 0; }
+    .tier .tagline { color: var(--text-dim); font-size: 14px; margin: 8px 0 0; }
+    .tier ul { list-style: none; padding: 0; margin: 22px 0 24px; flex: 1; }
+    .tier li {
+      padding: 9px 0; border-bottom: 1px solid var(--border);
+      color: var(--text-dim); font-size: 14px;
+      display: flex; align-items: flex-start; gap: 10px;
+    }
+    .tier li:last-child { border-bottom: none; }
+    .tier li::before {
+      content: ""; width: 18px; height: 18px; border-radius: 50%;
       background: rgba(74, 222, 128, 0.15);
-      flex: 0 0 20px;
+      flex: 0 0 18px; margin-top: 2px;
       background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%234ADE80" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>');
-      background-size: 13px; background-repeat: no-repeat; background-position: center;
+      background-size: 12px; background-repeat: no-repeat; background-position: center;
     }
-    .price-card .footnote {
-      margin-top: 18px; color: var(--text-dim); font-size: 13px;
+    .tier .btn { width: 100%; justify-content: center; margin-top: auto; }
+    .pricing-note {
+      text-align: center; color: var(--text-dim); font-size: 13px; margin-top: 28px;
     }
+    .pricing-note a { color: var(--cyan); }
 
     details {
       background: var(--surface); border: 1px solid var(--border);
@@ -228,14 +245,14 @@
     <div class="container">
       <span class="eyebrow">iPhone · iPad · Mac</span>
       <h1>Your apps work <span class="accent">everywhere.</span></h1>
-      <p class="lead">Land anywhere. Your bank app works. Your maps work. Your local payments work. Your home apps work. All at once — and faster.</p>
+      <p class="lead">Land anywhere. Your bank app works. Your maps work. Your local payments work. Your home apps work. All at once, and faster.</p>
       <div class="ctas">
         <a class="btn btn-primary" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">
           Get it on the App Store
         </a>
         <a class="btn btn-ghost" href="#why">Why it's different</a>
       </div>
-      <p class="meta">$2.99 once · No subscription · No account</p>
+      <p class="meta">Free to download · 3-day free trial · No account to make</p>
     </div>
   </header>
 
@@ -254,7 +271,7 @@
         </div>
         <div class="outcome">
           <div class="big green">Pay works.</div>
-          <p>Local payment apps — Alipay, WeChat Pay, PayPay, your country's wallet — keep working.</p>
+          <p>Local payment apps (Alipay, WeChat Pay, PayPay, your country's wallet) keep working.</p>
         </div>
       </div>
     </div>
@@ -263,13 +280,13 @@
   <section class="alt">
     <div class="container center">
       <h2>And it's <span class="accent">faster.</span></h2>
-      <p class="sub">A regular VPN sends every byte across the planet. Traveler's VPN doesn't — local traffic stays local, so streaming, video calls, and quick lookups stay snappy.</p>
+      <p class="sub">A regular VPN sends every byte across the planet. Traveler's VPN doesn't: local traffic stays local, so streaming, video calls, and quick lookups stay snappy.</p>
       <div style="display:inline-flex; align-items:center; gap:14px; margin-top:4px; padding:14px 24px; background:rgba(125,224,242,0.1); border:1px solid rgba(125,224,242,0.3); border-radius:999px;">
         <span style="font-size:36px; font-weight:800; letter-spacing:-1.5px; color:var(--cyan); line-height:1;">10&times;</span>
         <span style="font-size:17px; font-weight:600; color:var(--text);">faster on local apps than a VPN-only app</span>
       </div>
       <div class="visual" style="margin-top:36px;">
-        <img src="/assets/before-after-routing.svg" alt="A regular VPN tunnels everything and breaks local apps. Traveler's VPN keeps local apps working while still connecting you home — up to 10x faster on local traffic.">
+        <img src="/assets/before-after-routing.svg" alt="A regular VPN tunnels everything and breaks local apps. Traveler's VPN keeps local apps working while still connecting you home, up to 10x faster on local traffic.">
       </div>
     </div>
   </section>
@@ -277,7 +294,7 @@
   <section>
     <div class="container center">
       <h2>One tap. <span class="accent">It just works.</span></h2>
-      <p class="sub">Open the app. Pick where you're traveling. Connect. That's the whole flow — every time.</p>
+      <p class="sub">Open the app. Pick where you're traveling. Connect. That's the whole flow, every time.</p>
       <div class="visual" style="max-width:680px; margin:36px auto 0;">
         <img src="/assets/routing-map-square.svg" alt="One-tap travel profiles for Japan, China, and elsewhere.">
       </div>
@@ -287,27 +304,57 @@
   <section id="pricing" class="alt">
     <div class="container">
       <div class="center">
-        <h2>One price. <span class="accent">Forever.</span></h2>
-        <p class="sub">A single purchase covers iPhone, iPad, and Mac. No monthly bill. No account to make. No catch.</p>
+        <h2>Free to download. <span class="accent">Pick how you connect.</span></h2>
+        <p class="sub">Going somewhere for a week? Grab a pass. Travel often? Let us run the server. Already have your own? Unlock it once. Every option includes the smart routing and covers iPhone, iPad, and Mac, with no account to make.</p>
       </div>
       <div class="pricing">
-        <div class="price-card">
-          <span class="badge">UNIVERSAL PURCHASE</span>
-          <div class="price">$2.99 <span class="small">once</span></div>
+
+        <div class="tier">
+          <div class="tier-name">7-Day Travel Pass</div>
+          <div class="price">$9.99 <span class="small">/ 7 days</span></div>
+          <p class="tagline">One trip, sorted. We run a private server for the week.</p>
           <ul>
-            <li>iPhone, iPad, and Mac — single purchase</li>
-            <li>Your apps don't break when you connect</li>
-            <li>Up to 10&times; faster on local apps than a VPN-only app</li>
-            <li>One-tap travel profiles</li>
-            <li>Settings sync across your Apple devices</li>
-            <li>No subscription, no account, ever</li>
+            <li>A private managed server, set up for you</li>
+            <li>7 days of access, 1 TB of data</li>
+            <li>No auto-renew, buy another pass to add 7 more days</li>
+            <li>Smart routing keeps local apps fast</li>
+            <li>iPhone, iPad, and Mac</li>
           </ul>
-          <a class="btn btn-primary" style="width:100%; justify-content:center;" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">
-            Get it on the App Store
-          </a>
-          <p class="footnote">Requires you to connect your own VPN server. <a href="/support.html">Setup details</a>.</p>
+          <a class="btn btn-ghost" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">Get it on the App Store</a>
         </div>
+
+        <div class="tier featured">
+          <span class="badge">3-DAY FREE TRIAL</span>
+          <div class="tier-name">Managed Server</div>
+          <div class="price">$14.99 <span class="small">/ month</span></div>
+          <p class="tagline">We run the server. You just tap connect, anywhere.</p>
+          <ul>
+            <li>Private server, set up automatically</li>
+            <li>Switch to a new region anytime</li>
+            <li>1 TB of data every month</li>
+            <li>Starts with a 3-day free trial, cancel anytime</li>
+            <li>Smart routing keeps local apps fast</li>
+            <li>iPhone, iPad, and Mac</li>
+          </ul>
+          <a class="btn btn-primary" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">Start your free trial</a>
+        </div>
+
+        <div class="tier">
+          <div class="tier-name">Bring Your Own Server</div>
+          <div class="price">$2.99 <span class="small">once</span></div>
+          <p class="tagline">Already have a server? Unlock the app and connect it.</p>
+          <ul>
+            <li>Connect your own Outline, Shadowsocks, WireGuard, or Trojan server</li>
+            <li>One-time unlock, no subscription</li>
+            <li>Your traffic only ever touches your server, never ours</li>
+            <li>Smart routing keeps local apps fast</li>
+            <li>iPhone, iPad, and Mac</li>
+          </ul>
+          <a class="btn btn-ghost" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">Get it on the App Store</a>
+        </div>
+
       </div>
+      <p class="pricing-note">One App Store download, Family Sharing supported. Cancel a subscription anytime in Settings. <a href="/support.html">Setup details</a>.</p>
     </div>
   </section>
 
@@ -318,7 +365,15 @@
       </div>
       <details>
         <summary>What makes this different from other VPNs?</summary>
-        <p>Other VPNs are a single on/off switch — the moment you connect, everything routes through the VPN, which is what breaks your banking app, your local maps, and your local payments. Traveler's VPN keeps your local stuff working while you stay connected to home. You get the privacy and home connection without the broken-apps tax.</p>
+        <p>Other VPNs are a single on/off switch: the moment you connect, everything routes through the VPN, which is what breaks your banking app, your local maps, and your local payments. Traveler's VPN keeps your local stuff working while you stay connected to home. You get the privacy and home connection without the broken-apps tax.</p>
+      </details>
+      <details>
+        <summary>Do I have to set up my own server?</summary>
+        <p>No. Pick a managed server (or a 7-day travel pass) and we set up a private server for you automatically, in the region you choose. Tap connect and go. If you'd rather run your own, the $2.99 bring-your-own-server unlock connects the app to any Outline, Shadowsocks, WireGuard, or Trojan server you control.</p>
+      </details>
+      <details>
+        <summary>What's the difference between the plans?</summary>
+        <p>The <strong>7-day travel pass</strong> ($9.99) is a one-off for a single trip: seven days of a managed server, no auto-renew. The <strong>managed server</strong> ($14.99/month, starting with a 3-day free trial) is for people who travel often, with a new region available anytime. <strong>Bring your own server</strong> ($2.99 once) is a one-time unlock for people who already run a server. All three include the smart routing and cover iPhone, iPad, and Mac.</p>
       </details>
       <details>
         <summary>Will my banking app still work?</summary>
@@ -326,19 +381,19 @@
       </details>
       <details>
         <summary>Is it really faster than other VPNs?</summary>
-        <p>Yes — local apps can be up to 10&times; faster than on a VPN-only app, because local websites, maps, video calls, and streaming don't get rerouted around the world. Only the traffic that actually needs to come from home takes the longer path.</p>
+        <p>Yes. Local apps can be up to 10&times; faster than on a VPN-only app, because local websites, maps, video calls, and streaming don't get rerouted around the world. Only the traffic that actually needs to come from home takes the longer path.</p>
       </details>
       <details>
         <summary>Does it work on Mac?</summary>
-        <p>Yes — there's a native menu-bar Mac app included in the same $2.99 purchase. Buy once on iPhone and install it on iPad and Mac at no extra cost.</p>
+        <p>Yes. There's a native menu-bar Mac app, and your purchase covers iPhone, iPad, and Mac together. Buy or subscribe once and use it everywhere at no extra cost, with your settings synced across your Apple devices.</p>
       </details>
       <details>
         <summary>Do I need to make an account?</summary>
-        <p>No. There's no account, no email signup, no subscription. You pay once on the App Store and that's the entire commercial relationship.</p>
+        <p>No. There's no signup, no email, and no password. Your purchases are tied to your Apple ID behind the scenes, so the app and your managed server just work across your devices. The managed server and travel pass are paid through the App Store; the bring-your-own option is a one-time purchase with nothing recurring.</p>
       </details>
       <details>
-        <summary>What do I need to use it?</summary>
-        <p>You'll need access to a VPN server you can connect to (your own, your work's, or one you've set up). The app supports the common server types. Setup details are on the <a href="/support.html">support page</a>.</p>
+        <summary>Can I cancel?</summary>
+        <p>Anytime. The managed subscription cancels like any other App Store subscription, in Settings &rarr; your name &rarr; Subscriptions. The travel pass never auto-renews, so there's nothing to cancel. The bring-your-own unlock is a one-time purchase.</p>
       </details>
     </div>
   </section>
