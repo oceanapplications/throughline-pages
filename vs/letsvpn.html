@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-30DPQBZDT0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-30DPQBZDT0');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Traveler's VPN vs LetsVPN (2026): after the mainland exit</title>
+  <meta name="description" content="LetsVPN announced in April 2026 that it could no longer serve the mainland China market. If you relied on it for China trips, here's an alternative built on private servers with smart routing. Honest comparison.">
+  <meta property="og:title" content="Traveler's VPN vs LetsVPN: what to use after the April 2026 exit">
+  <meta property="og:description" content="LetsVPN was the budget favorite for China until it announced its mainland exit in April 2026. Traveler's VPN takes a different approach: a private server per user plus smart routing. See the comparison.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://travelersvpn.com/vs/letsvpn.html">
+  <meta property="og:image" content="https://travelersvpn.com/assets/og-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://travelersvpn.com/vs/letsvpn.html">
+  <link rel="icon" type="image/png" href="/assets/icon-512.png">
+  <style>
+    :root {
+      --bg: #07122B;
+      --bg-2: #0B1B3D;
+      --surface: #0E1E45;
+      --border: #1E2C50;
+      --text: #F4F7FB;
+      --text-dim: #9FB0D1;
+      --cyan: #7DE0F2;
+      --cyan-2: #5BC9E0;
+      --green: #4ADE80;
+      --red: #FF6B6B;
+      --radius: 16px;
+      --maxw: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.55;
+    }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+    nav.top {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: saturate(140%) blur(14px);
+      background: rgba(7, 18, 43, 0.75);
+      border-bottom: 1px solid var(--border);
+    }
+    nav.top .container {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    nav.top .brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; letter-spacing: -0.3px; color: var(--text);
+    }
+    nav.top .brand img { width: 28px; height: 28px; border-radius: 7px; }
+    nav.top .links a {
+      color: var(--text-dim); margin-left: 22px; font-size: 14px; font-weight: 500;
+    }
+    nav.top .links a:hover { color: var(--text); text-decoration: none; }
+    nav.top .cta {
+      background: var(--cyan); color: #062041 !important; padding: 8px 14px;
+      border-radius: 10px; font-weight: 700;
+    }
+    nav.top .cta:hover { text-decoration: none; background: var(--cyan-2); }
+
+    .hero { padding: 90px 0 56px; text-align: center; }
+    .eyebrow {
+      display: inline-block; padding: 6px 12px; border-radius: 999px;
+      background: rgba(125, 224, 242, 0.12); color: var(--cyan);
+      font-size: 13px; font-weight: 600; letter-spacing: 0.2px;
+      border: 1px solid rgba(125, 224, 242, 0.2);
+    }
+    .hero h1 {
+      font-size: clamp(34px, 5.6vw, 60px);
+      line-height: 1.05; letter-spacing: -1.5px; font-weight: 800;
+      margin: 22px auto 18px; max-width: 920px;
+    }
+    .hero h1 .accent { color: var(--cyan); }
+    .hero p.lead {
+      font-size: clamp(17px, 2vw, 21px);
+      color: var(--text-dim); max-width: 700px; margin: 0 auto;
+    }
+    .hero .ctas {
+      display: flex; justify-content: center; gap: 14px;
+      margin-top: 32px; flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 22px; border-radius: 12px; font-weight: 700;
+      font-size: 16px; transition: transform .12s ease, background .15s ease;
+    }
+    .btn-primary {
+      background: var(--cyan); color: #062041; box-shadow: 0 8px 24px rgba(125, 224, 242, 0.2);
+    }
+    .btn-primary:hover { background: var(--cyan-2); text-decoration: none; transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent; color: var(--text); border: 1px solid var(--border);
+    }
+    .btn-ghost:hover { background: var(--surface); text-decoration: none; }
+    .hero .meta { margin-top: 18px; color: var(--text-dim); font-size: 14px; }
+
+    section { padding: 72px 0; }
+    section.alt { background: rgba(14, 30, 69, 0.4); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    h2 {
+      font-size: clamp(28px, 4vw, 40px); line-height: 1.12; letter-spacing: -1px;
+      margin: 0 0 16px; font-weight: 800;
+    }
+    h2 .accent { color: var(--cyan); }
+    .sub { color: var(--text-dim); font-size: 18px; max-width: 680px; margin: 0 0 32px; }
+    .center { text-align: center; }
+    .center .sub { margin-left: auto; margin-right: auto; }
+
+    .verdicts {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px;
+    }
+    @media (max-width: 860px) { .verdicts { grid-template-columns: 1fr; } }
+    .verdict {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 26px; text-align: left;
+    }
+    .verdict .tag {
+      font-size: 12px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .verdict .tag.us { color: var(--green); }
+    .verdict .tag.them { color: var(--cyan); }
+    .verdict .tag.line { color: var(--text-dim); }
+    .verdict h3 { margin: 0 0 10px; font-size: 19px; letter-spacing: -0.3px; }
+    .verdict p { color: var(--text-dim); margin: 0; font-size: 15px; }
+
+    .table-wrap {
+      overflow-x: auto; -webkit-overflow-scrolling: touch;
+      border: 1px solid var(--border); border-radius: var(--radius);
+      background: var(--surface); margin-top: 8px;
+    }
+    table.compare { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 15px; }
+    table.compare th, table.compare td {
+      padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    table.compare tr:last-child th, table.compare tr:last-child td { border-bottom: none; }
+    table.compare thead th {
+      font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;
+      color: var(--text-dim); background: rgba(7, 18, 43, 0.5);
+    }
+    table.compare thead th.us-col { color: var(--cyan); }
+    table.compare tbody th {
+      font-weight: 600; color: var(--text); width: 30%; font-size: 14px;
+    }
+    table.compare td { color: var(--text-dim); }
+    table.compare td.yes { color: var(--green); font-weight: 600; }
+    table.compare td.no { color: var(--red); font-weight: 600; }
+    .table-note { color: #6E7FA0; font-size: 12.5px; margin-top: 14px; }
+
+    .prose { max-width: 760px; margin: 0 auto; }
+    .prose h2 { margin-top: 0; }
+    .prose h3 { font-size: 21px; letter-spacing: -0.4px; margin: 34px 0 10px; }
+    .prose p { color: var(--text-dim); font-size: 16.5px; }
+    .prose ul { color: var(--text-dim); font-size: 16.5px; padding-left: 22px; }
+    .prose li { margin: 8px 0; }
+    .prose strong { color: var(--text); }
+
+    details {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 18px 22px; margin-bottom: 10px;
+    }
+    details summary {
+      cursor: pointer; font-weight: 600; font-size: 16px; color: var(--text);
+      list-style: none; display: flex; justify-content: space-between; align-items: center;
+    }
+    details summary::after { content: "+"; color: var(--cyan); font-size: 22px; line-height: 1; }
+    details[open] summary::after { content: "−"; }
+    details p { color: var(--text-dim); margin: 12px 0 0; font-size: 15px; }
+
+    .cta-band { text-align: center; }
+    .cta-band .meta { margin-top: 16px; color: var(--text-dim); font-size: 14px; }
+
+    footer {
+      border-top: 1px solid var(--border); padding: 48px 0 64px;
+      color: var(--text-dim); font-size: 14px;
+    }
+    footer .container {
+      display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    }
+    footer .footer-brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; }
+    footer .footer-brand img { width: 24px; height: 24px; border-radius: 6px; }
+    footer .links a { color: var(--text-dim); margin-left: 18px; }
+    footer .links a:hover { color: var(--text); }
+    footer .small { display: block; margin-top: 14px; color: #6E7FA0; font-size: 12px; }
+
+    @media (max-width: 640px) {
+      .hero { padding: 56px 0 36px; }
+      nav.top .links a:not(.cta) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top">
+    <div class="container">
+      <a href="/" class="brand">
+        <img src="/assets/icon-512.png" alt="">
+        Traveler's VPN
+      </a>
+      <div class="links">
+        <a href="/#why">Why</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/vs/">Compare</a>
+        <a href="/support.html">Support</a>
+        <a href="https://apps.apple.com/us/app/travelers-vpn/id6764288591" class="cta">Get the app</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow">Comparison · Updated August 2026</span>
+      <h1>Traveler's VPN <span class="accent">vs LetsVPN</span></h1>
+      <p class="lead">LetsVPN (快连) was the budget favorite for China, until April 2026, when the company announced it could no longer sustain service for the mainland market after weeks of escalating blocking. If it was your China VPN, this page is about what to use instead.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">Get Traveler's VPN</a>
+        <a class="btn btn-ghost" href="#table">See the comparison</a>
+      </div>
+      <p class="meta">Free to download · 3-day free trial · No account to make</p>
+    </div>
+  </header>
+
+  <section>
+    <div class="container center">
+      <h2>Traveler's VPN vs LetsVPN <span class="accent">at a glance.</span></h2>
+      <div class="verdicts">
+        <div class="verdict">
+          <div class="tag us">Pick Traveler's VPN if</div>
+          <h3>You want a China-trip setup that isn't a shared target.</h3>
+          <p>Every pass or subscription provisions a private server with an IP address only you use, so there's no well-known commercial endpoint for censors to blocklist. Smart routing keeps WeChat, Alipay, and local maps fast while Instagram, WhatsApp, and YouTube flow through the tunnel. $9.99 for 7 days, no account.</p>
+        </div>
+        <div class="verdict">
+          <div class="tag them">What LetsVPN got right</div>
+          <h3>Simplicity and trip-sized pricing.</h3>
+          <p>One-tap connect, cheap short passes, an automatic mode that left Chinese apps direct, and for years it genuinely outperformed most Western VPNs against the firewall. Its instincts about what travelers need were correct.</p>
+        </div>
+        <div class="verdict">
+          <div class="tag line">Bottom line</div>
+          <h3>The centralized model hit its limit.</h3>
+          <p>When one company routes hundreds of thousands of users through its own endpoints, those endpoints become the target. LetsVPN's April 2026 mainland exit is what losing that fight looks like. Private per-user servers don't present that target.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="table">
+    <div class="container">
+      <div class="center">
+        <h2>LetsVPN vs Traveler's VPN, <span class="accent">side by side.</span></h2>
+        <p class="sub">LetsVPN details from its own site, blog, and independent 2025-2026 reviews, as of August 2026.</p>
+      </div>
+      <div class="table-wrap">
+        <table class="compare">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="us-col">Traveler's VPN</th>
+              <th>LetsVPN</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Mainland China service</th>
+              <td class="yes">Private server per user with a clean, unshared IP; install before you land</td>
+              <td class="no">Announced April 2026 it could not continue operations for the mainland market; refunds promised</td>
+            </tr>
+            <tr>
+              <th>Cost for a one-week trip</th>
+              <td class="yes">$9.99, one-time Travel Pass, 1 TB of data</td>
+              <td>Short passes were cheap (a few dollars a week) when available</td>
+            </tr>
+            <tr>
+              <th>Devices per plan</th>
+              <td class="yes">iPhone, iPad, and Mac in one purchase, Family Sharing included</td>
+              <td>2 simultaneous devices on the base plan; more devices means paying more</td>
+            </tr>
+            <tr>
+              <th>Account required</th>
+              <td class="yes">None. No email, no signup, purchases through Apple</td>
+              <td>Account plus device-ID fingerprinting; advertised 72-hour trial often granted as 1-24 hours in practice per reviewers</td>
+            </tr>
+            <tr>
+              <th>Who runs it</th>
+              <td>An indie iOS developer; company and pricing on the public record, App Store purchase protections apply</td>
+              <td>Operator ("LetsGo Network") with no named team, no disclosed jurisdiction, and payment entities traced to Singapore/Hong Kong per independent reviews</td>
+            </tr>
+            <tr>
+              <th>Logging</th>
+              <td class="yes">BYO mode: your traffic never touches our servers. Managed mode: your private server, no shared infrastructure aggregating users</td>
+              <td>Its own policy permits device IDs, timestamps, purchase and diagnostic data; reviewers class it as not a no-logs VPN, with no independent audit</td>
+            </tr>
+            <tr>
+              <th>Smart routing</th>
+              <td class="yes">Automatic per-destination profiles, updated rule sets, works the same on iPhone, iPad, and Mac</td>
+              <td>Auto Mode proxied blocked sites and left Chinese apps direct (a preset toggle, not configurable)</td>
+            </tr>
+            <tr>
+              <th>Kill switch / open protocols</th>
+              <td class="yes">Built on sing-box with standard protocols (Outline/Shadowsocks, WireGuard, Trojan)</td>
+              <td class="no">No kill switch; proprietary closed-source protocol, unaudited</td>
+            </tr>
+            <tr>
+              <th>Bring your own server</th>
+              <td class="yes">$2.99 one-time unlock</td>
+              <td class="no">Not supported</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">LetsVPN's mainland-market exit was announced April 28, 2026 and reported consistently across multiple independent outlets quoting the company's notice. The app remains listed on international App Stores; if its mainland service returns, we'll update this page.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container prose">
+      <h2>What happened, and <span class="accent">why the model matters.</span></h2>
+      <p>Through 2025, LetsVPN earned its reputation honestly: independent testing had it connecting through the Great Firewall far more reliably than the big Western brands, with a dead-simple app and trip-sized pricing. Then came the spring 2026 blocking campaign. After roughly three weeks of escalating disruption its team said it was adjusting to "hourly," the company announced on April 28, 2026 that it could not continue operations targeting mainland China.</p>
+      <p>The lesson isn't that LetsVPN was bad at this. It's that any service routing a huge user base through company-operated endpoints hands the censor a finite, findable list of targets. When the pressure ratcheted up, the list got exhausted.</p>
+      <p>Traveler's VPN is built on the opposite structure. Each user gets a private server, provisioned on demand, with an ordinary cloud IP address that no one else uses and no blocklist knows. There's no central fleet whose discovery kills service for everyone at once. On top of that sits the routing engine LetsVPN's Auto Mode gestured at, done properly: per-destination rules that keep local apps direct and fast while Instagram, WhatsApp, Gmail, and YouTube tunnel, on iPhone, iPad, and native Mac.</p>
+      <p>And the trust equation is simpler. LetsVPN asked users to trust an anonymous operator with a closed protocol and a logging-permissive policy. With Traveler's VPN there's no account to create, purchases run through Apple, the tunnel is standard open protocols via sing-box, and in BYO mode your traffic never touches infrastructure we operate at all.</p>
+
+      <h3>What LetsVPN genuinely got right</h3>
+      <ul>
+        <li><strong>The pricing shape.</strong> Cheap weekly passes matched how travelers actually buy. We agree; that's what the Travel Pass is.</li>
+        <li><strong>The routing instinct.</strong> Auto Mode's "leave Chinese apps direct" idea was the right idea. We ship it as configurable, region-aware profiles.</li>
+        <li><strong>Simplicity.</strong> Three-second connect, Chinese-language UI, worked with Alipay and WeChat Pay for payment. Real strengths for its audience.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="alt" id="faq">
+    <div class="container" style="max-width: 760px;">
+      <div class="center">
+        <h2>Questions about LetsVPN and what replaces it.</h2>
+      </div>
+      <details>
+        <summary>Is LetsVPN shut down completely?</summary>
+        <p>No. The April 2026 announcement covered its mainland China operations, and the company said it would refund affected users. The app remains available on international App Stores. But if your reason for using it was China connectivity, that's the part that ended.</p>
+      </details>
+      <details>
+        <summary>Why would a private server survive where LetsVPN didn't?</summary>
+        <p>Blocking works by identifying endpoints. A commercial VPN's servers carry thousands of users and known traffic signatures, so they're worth finding and blocking, and once found, everyone on them goes dark. A private server is one ordinary cloud IP carrying one user's traffic over standard protocols. There's nothing to put on a blocklist until it's observed, and no one else's blocking takes you down. No approach is guaranteed against the firewall, but the private model removes the shared single point of failure.</p>
+      </details>
+      <details>
+        <summary>Was LetsVPN safe to use?</summary>
+        <p>Independent reviewers consistently flagged the same concerns: an operator with no public identity or jurisdiction, a privacy policy permitting device and usage logging, no kill switch, and no independent audit. The common framing was "fine for casual browsing, don't do banking on it." Traveler's VPN takes the opposite posture: no account, App Store purchase protections, standard open protocols, and no shared infrastructure aggregating your traffic with strangers'.</p>
+      </details>
+      <details>
+        <summary>How do I set up Traveler's VPN for a China trip?</summary>
+        <p>Download the app before you fly (App Stores are unreachable from the mainland without a VPN), start the free 3-day trial or buy a $9.99 Travel Pass, pick the China travel profile, and connect. Your private server is provisioned automatically; there's no account to create.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container center">
+      <h2>Your server. Your IP. <span class="accent">Your trip.</span></h2>
+      <p class="sub">If the April 2026 exit left you without a China setup, a private server nobody shares is the sturdier replacement. Free 3-day trial, then $9.99 for the week.</p>
+      <a class="btn btn-primary" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">Get it on the App Store</a>
+      <p class="meta">iPhone · iPad · Mac · One purchase, Family Sharing supported</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div>
+        <div class="footer-brand">
+          <img src="/assets/icon-512.png" alt="">
+          Traveler's VPN
+        </div>
+        <span class="small">Built by an indie developer who travels too much. © 2026 Supra Applications Inc.</span>
+        <span class="small">LetsVPN is a trademark of its respective owner. Comparison data gathered August 2026 from public statements, the vendor's site, and independent reviews; corrections welcome via <a href="/support.html">support</a>.</span>
+      </div>
+      <div class="links">
+        <a href="/vs/">All comparisons</a>
+        <a href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">App Store</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/support.html">Support</a>
+        <a href="/conditions.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is LetsVPN shut down completely?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. The April 2026 announcement covered its mainland China operations, with refunds promised, and the app remains on international App Stores. But if your reason for using it was China connectivity, that's the part that ended." }
+      },
+      {
+        "@type": "Question",
+        "name": "Why would a private server survive where LetsVPN didn't?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Commercial VPN endpoints carry thousands of users and are worth finding and blocking. A private server is one ordinary cloud IP carrying one user's traffic over standard protocols, with no shared single point of failure. No approach is guaranteed, but the target profile is completely different." }
+      },
+      {
+        "@type": "Question",
+        "name": "Was LetsVPN safe to use?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Independent reviewers flagged an anonymous operator, a logging-permissive privacy policy, no kill switch, and no independent audit, commonly advising against banking on it. Traveler's VPN requires no account, uses standard open protocols, and doesn't aggregate your traffic with other users'." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I set up Traveler's VPN for a China trip?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Download the app before you fly, start the free 3-day trial or buy a $9.99 Travel Pass, pick the China travel profile, and connect. Your private server is provisioned automatically with no account to create." }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Traveler's VPN", "item": "https://travelersvpn.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Compare", "item": "https://travelersvpn.com/vs/" },
+      { "@type": "ListItem", "position": 3, "name": "Traveler's VPN vs LetsVPN", "item": "https://travelersvpn.com/vs/letsvpn.html" }
+    ]
+  }
+  </script>
+
+</body>
+</html>

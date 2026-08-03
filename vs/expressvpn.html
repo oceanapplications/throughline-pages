@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-30DPQBZDT0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-30DPQBZDT0');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Traveler's VPN vs ExpressVPN (2026): the travel comparison</title>
+  <meta name="description" content="ExpressVPN is fast and polished, but on iPhone it has no per-app split tunneling, so local apps break when you connect. Traveler's VPN routes per app automatically for $9.99 per trip. Honest comparison.">
+  <meta property="og:title" content="Traveler's VPN vs ExpressVPN: which one for your trip?">
+  <meta property="og:description" content="ExpressVPN tunnels everything on iPhone, so you toggle all day. Traveler's VPN routes per app automatically. $9.99 for the trip, no subscription. See the comparison.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://travelersvpn.com/vs/expressvpn.html">
+  <meta property="og:image" content="https://travelersvpn.com/assets/og-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://travelersvpn.com/vs/expressvpn.html">
+  <link rel="icon" type="image/png" href="/assets/icon-512.png">
+  <style>
+    :root {
+      --bg: #07122B;
+      --bg-2: #0B1B3D;
+      --surface: #0E1E45;
+      --border: #1E2C50;
+      --text: #F4F7FB;
+      --text-dim: #9FB0D1;
+      --cyan: #7DE0F2;
+      --cyan-2: #5BC9E0;
+      --green: #4ADE80;
+      --red: #FF6B6B;
+      --radius: 16px;
+      --maxw: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.55;
+    }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+    nav.top {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: saturate(140%) blur(14px);
+      background: rgba(7, 18, 43, 0.75);
+      border-bottom: 1px solid var(--border);
+    }
+    nav.top .container {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    nav.top .brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; letter-spacing: -0.3px; color: var(--text);
+    }
+    nav.top .brand img { width: 28px; height: 28px; border-radius: 7px; }
+    nav.top .links a {
+      color: var(--text-dim); margin-left: 22px; font-size: 14px; font-weight: 500;
+    }
+    nav.top .links a:hover { color: var(--text); text-decoration: none; }
+    nav.top .cta {
+      background: var(--cyan); color: #062041 !important; padding: 8px 14px;
+      border-radius: 10px; font-weight: 700;
+    }
+    nav.top .cta:hover { text-decoration: none; background: var(--cyan-2); }
+
+    .hero { padding: 90px 0 56px; text-align: center; }
+    .eyebrow {
+      display: inline-block; padding: 6px 12px; border-radius: 999px;
+      background: rgba(125, 224, 242, 0.12); color: var(--cyan);
+      font-size: 13px; font-weight: 600; letter-spacing: 0.2px;
+      border: 1px solid rgba(125, 224, 242, 0.2);
+    }
+    .hero h1 {
+      font-size: clamp(34px, 5.6vw, 60px);
+      line-height: 1.05; letter-spacing: -1.5px; font-weight: 800;
+      margin: 22px auto 18px; max-width: 920px;
+    }
+    .hero h1 .accent { color: var(--cyan); }
+    .hero p.lead {
+      font-size: clamp(17px, 2vw, 21px);
+      color: var(--text-dim); max-width: 700px; margin: 0 auto;
+    }
+    .hero .ctas {
+      display: flex; justify-content: center; gap: 14px;
+      margin-top: 32px; flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 22px; border-radius: 12px; font-weight: 700;
+      font-size: 16px; transition: transform .12s ease, background .15s ease;
+    }
+    .btn-primary {
+      background: var(--cyan); color: #062041; box-shadow: 0 8px 24px rgba(125, 224, 242, 0.2);
+    }
+    .btn-primary:hover { background: var(--cyan-2); text-decoration: none; transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent; color: var(--text); border: 1px solid var(--border);
+    }
+    .btn-ghost:hover { background: var(--surface); text-decoration: none; }
+    .hero .meta { margin-top: 18px; color: var(--text-dim); font-size: 14px; }
+
+    section { padding: 72px 0; }
+    section.alt { background: rgba(14, 30, 69, 0.4); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    h2 {
+      font-size: clamp(28px, 4vw, 40px); line-height: 1.12; letter-spacing: -1px;
+      margin: 0 0 16px; font-weight: 800;
+    }
+    h2 .accent { color: var(--cyan); }
+    .sub { color: var(--text-dim); font-size: 18px; max-width: 680px; margin: 0 0 32px; }
+    .center { text-align: center; }
+    .center .sub { margin-left: auto; margin-right: auto; }
+
+    .verdicts {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px;
+    }
+    @media (max-width: 860px) { .verdicts { grid-template-columns: 1fr; } }
+    .verdict {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 26px; text-align: left;
+    }
+    .verdict .tag {
+      font-size: 12px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .verdict .tag.us { color: var(--green); }
+    .verdict .tag.them { color: var(--cyan); }
+    .verdict .tag.line { color: var(--text-dim); }
+    .verdict h3 { margin: 0 0 10px; font-size: 19px; letter-spacing: -0.3px; }
+    .verdict p { color: var(--text-dim); margin: 0; font-size: 15px; }
+
+    .table-wrap {
+      overflow-x: auto; -webkit-overflow-scrolling: touch;
+      border: 1px solid var(--border); border-radius: var(--radius);
+      background: var(--surface); margin-top: 8px;
+    }
+    table.compare { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 15px; }
+    table.compare th, table.compare td {
+      padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    table.compare tr:last-child th, table.compare tr:last-child td { border-bottom: none; }
+    table.compare thead th {
+      font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;
+      color: var(--text-dim); background: rgba(7, 18, 43, 0.5);
+    }
+    table.compare thead th.us-col { color: var(--cyan); }
+    table.compare tbody th {
+      font-weight: 600; color: var(--text); width: 30%; font-size: 14px;
+    }
+    table.compare td { color: var(--text-dim); }
+    table.compare td.yes { color: var(--green); font-weight: 600; }
+    table.compare td.no { color: var(--red); font-weight: 600; }
+    .table-note { color: #6E7FA0; font-size: 12.5px; margin-top: 14px; }
+
+    .prose { max-width: 760px; margin: 0 auto; }
+    .prose h2 { margin-top: 0; }
+    .prose h3 { font-size: 21px; letter-spacing: -0.4px; margin: 34px 0 10px; }
+    .prose p { color: var(--text-dim); font-size: 16.5px; }
+    .prose ul { color: var(--text-dim); font-size: 16.5px; padding-left: 22px; }
+    .prose li { margin: 8px 0; }
+    .prose strong { color: var(--text); }
+
+    details {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 18px 22px; margin-bottom: 10px;
+    }
+    details summary {
+      cursor: pointer; font-weight: 600; font-size: 16px; color: var(--text);
+      list-style: none; display: flex; justify-content: space-between; align-items: center;
+    }
+    details summary::after { content: "+"; color: var(--cyan); font-size: 22px; line-height: 1; }
+    details[open] summary::after { content: "−"; }
+    details p { color: var(--text-dim); margin: 12px 0 0; font-size: 15px; }
+
+    .cta-band { text-align: center; }
+    .cta-band .meta { margin-top: 16px; color: var(--text-dim); font-size: 14px; }
+
+    footer {
+      border-top: 1px solid var(--border); padding: 48px 0 64px;
+      color: var(--text-dim); font-size: 14px;
+    }
+    footer .container {
+      display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    }
+    footer .footer-brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; }
+    footer .footer-brand img { width: 24px; height: 24px; border-radius: 6px; }
+    footer .links a { color: var(--text-dim); margin-left: 18px; }
+    footer .links a:hover { color: var(--text); }
+    footer .small { display: block; margin-top: 14px; color: #6E7FA0; font-size: 12px; }
+
+    @media (max-width: 640px) {
+      .hero { padding: 56px 0 36px; }
+      nav.top .links a:not(.cta) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top">
+    <div class="container">
+      <a href="/" class="brand">
+        <img src="/assets/icon-512.png" alt="">
+        Traveler's VPN
+      </a>
+      <div class="links">
+        <a href="/#why">Why</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/vs/">Compare</a>
+        <a href="/support.html">Support</a>
+        <a href="https://apps.apple.com/us/app/travelers-vpn/id6764288591" class="cta">Get the app</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow">Comparison · Updated August 2026</span>
+      <h1>Traveler's VPN <span class="accent">vs ExpressVPN</span></h1>
+      <p class="lead">ExpressVPN is a polished, fast, well-audited privacy tool. But on iPhone it's still one big switch: connect, and every app tunnels through a foreign server, including the local ones you need. That's the gap this page is about.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">Get Traveler's VPN</a>
+        <a class="btn btn-ghost" href="#table">See the comparison</a>
+      </div>
+      <p class="meta">Free to download · 3-day free trial · No account to make</p>
+    </div>
+  </header>
+
+  <section>
+    <div class="container center">
+      <h2>Traveler's VPN or ExpressVPN? <span class="accent">The 30-second answer.</span></h2>
+      <div class="verdicts">
+        <div class="verdict">
+          <div class="tag us">Pick Traveler's VPN if</div>
+          <h3>You're traveling and want your phone to just work.</h3>
+          <p>Per-destination routing keeps WeChat, Alipay, Didi, and local maps fast and direct while Instagram, WhatsApp, YouTube, and Gmail route home. Automatically, on iPhone. $9.99 for a 7-day trip on a private server, no subscription.</p>
+        </div>
+        <div class="verdict">
+          <div class="tag them">Pick ExpressVPN if</div>
+          <h3>You want a year-round privacy and streaming tool.</h3>
+          <p>Among the fastest VPNs tested, 23 independent audits, RAM-only servers, apps for every platform including routers and TVs, and reliable streaming unblocking. As a general-purpose VPN it's excellent.</p>
+        </div>
+        <div class="verdict">
+          <div class="tag line">Bottom line</div>
+          <h3>Different jobs.</h3>
+          <p>ExpressVPN protects a connection. Traveler's VPN manages a trip. If your problem is "my apps break when I land," ExpressVPN's all-or-nothing iPhone tunnel is the cause, and a smarter router is the fix.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="table">
+    <div class="container">
+      <div class="center">
+        <h2>ExpressVPN vs Traveler's VPN, <span class="accent">side by side.</span></h2>
+        <p class="sub">Prices and features as of August 2026. ExpressVPN details from its own support documentation and published pricing.</p>
+      </div>
+      <div class="table-wrap">
+        <table class="compare">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="us-col">Traveler's VPN</th>
+              <th>ExpressVPN</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Cost for a one-week trip</th>
+              <td class="yes">$9.99, one-time Travel Pass, no auto-renew</td>
+              <td>$12.99+ for one month (Basic), auto-renewing; cheap rates require a 1- or 2-year commitment billed up front</td>
+            </tr>
+            <tr>
+              <th>Ongoing price</th>
+              <td>$14.99/month, cancel anytime</td>
+              <td>Intro deals from ~$2.49-3.99/month billed up front, renewing at ~$99.95+/year (Basic)</td>
+            </tr>
+            <tr>
+              <th>Per-app smart routing on iPhone</th>
+              <td class="yes">Automatic, per destination</td>
+              <td class="no">None. iOS split tunneling is single-IP-address only; ExpressVPN's own docs say it "will not work reliably for large websites"</td>
+            </tr>
+            <tr>
+              <th>Local apps while connected</th>
+              <td class="yes">Stay direct and fast, up to ~10x faster than full-tunnel</td>
+              <td>Everything tunnels through a foreign server; the fix on iPhone is disconnecting</td>
+            </tr>
+            <tr>
+              <th>Banking apps</th>
+              <td class="yes">Private server IP only you use</td>
+              <td>Shared IPs that bank fraud systems flag; dedicated IP is bundled with the Pro tier ($22.99/month monthly)</td>
+            </tr>
+            <tr>
+              <th>Account required</th>
+              <td class="yes">None. No email, no signup</td>
+              <td>Account required (email on web signup; App Store subscriptions key to your Apple ID)</td>
+            </tr>
+            <tr>
+              <th>Your own server</th>
+              <td class="yes">Private server provisioned just for you, 1 TB of data</td>
+              <td>Shared servers in 105+ countries</td>
+            </tr>
+            <tr>
+              <th>Bring your own server</th>
+              <td class="yes">$2.99 once unlocks BYO mode for any Outline, WireGuard, Shadowsocks, or Trojan server</td>
+              <td class="no">Not supported</td>
+            </tr>
+            <tr>
+              <th>Platforms</th>
+              <td>iPhone, iPad, and native Mac in one purchase, Family Sharing included</td>
+              <td>Windows, macOS, Linux, iOS, Android, TVs, browser extensions, Aircove routers; 10-14 connections by tier</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">ExpressVPN pricing varies by promotion and tier (Basic / Advanced / Pro); figures reflect published rates in August 2026. iOS split-tunneling limitation from ExpressVPN's own support documentation.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container prose">
+      <h2>The real difference: <span class="accent">one switch</span> vs a router.</h2>
+      <p>ExpressVPN on iPhone is a beautifully made on/off switch. Flip it on and every packet, from every app, exits through a server in another country. That's exactly right for hiding your traffic on hotel Wi-Fi. It's exactly wrong for the daily texture of a trip: your ride-hailing app now thinks you're in Frankfurt, your local maps crawl, your payment QR code times out, and your banking app sees a datacenter IP and locks you out.</p>
+      <p>ExpressVPN knows this, which is why its iOS app offers split tunneling by individual IP address. Its own documentation warns the feature won't work reliably for large websites, and it can't exclude apps at all. So in practice, travelers toggle: VPN on for Instagram and Gmail, VPN off for taxis and payments, dozens of times a day.</p>
+      <p>Traveler's VPN starts from the toggle problem. The routing engine ships with per-destination profiles: local services stay direct and fast, while Instagram, WhatsApp, YouTube, Gmail, and the rest of the blocked half of your phone go through the tunnel, per connection, automatically. Your phone behaves like your phone, in both directions, with the VPN on the whole time.</p>
+      <p>The server model differs too. Instead of shared endpoints used by thousands of people (the reason banks challenge VPN logins, and the reason censors can blocklist commercial VPN ranges wholesale), each Travel Pass or subscription provisions a private server with an IP address that's yours alone.</p>
+
+      <h3>What ExpressVPN genuinely does better</h3>
+      <ul>
+        <li><strong>Raw speed and polish.</strong> Lightway is consistently among the fastest protocols tested, and the apps are mature on every platform.</li>
+        <li><strong>Audit cadence.</strong> 23 independent audits since 2020, including repeated KPMG no-logs audits, plus RAM-only TrustedServer infrastructure. Best-in-class transparency for a commercial VPN.</li>
+        <li><strong>Streaming.</strong> Reliably unblocks major streaming libraries; that's not what Traveler's VPN is for.</li>
+        <li><strong>Coverage beyond Apple.</strong> Windows, Linux, Android, TVs, and its own Aircove router. Traveler's VPN is iPhone, iPad, and Mac only.</li>
+      </ul>
+      <p>If you want a permanent, everything-everywhere privacy subscription, ExpressVPN is a strong one. If you want your apps to work on a two-week trip, that's our whole product.</p>
+    </div>
+  </section>
+
+  <section class="alt" id="faq">
+    <div class="container" style="max-width: 760px;">
+      <div class="center">
+        <h2>Questions travelers ask about ExpressVPN.</h2>
+      </div>
+      <details>
+        <summary>Does ExpressVPN have split tunneling on iPhone?</summary>
+        <p>Only by single IP address, not by app or domain. ExpressVPN's own support page notes it won't work reliably for large websites and that it's incompatible with the Advanced Kill Switch. Per-app split tunneling exists on Windows, Android, Linux, and (as of late 2025) the new Mac app. Traveler's VPN routes per destination automatically on iPhone, iPad, and Mac.</p>
+      </details>
+      <details>
+        <summary>Which is cheaper for a single trip?</summary>
+        <p>For one trip, Traveler's VPN's $9.99 non-renewing 7-day pass beats ExpressVPN's $12.99+ auto-renewing month. ExpressVPN's headline low prices (from around $2.49/month) require paying for one or two years up front and renew at roughly $99.95+/year. If you travel constantly and also want streaming and desktop coverage, that annual math can still work in ExpressVPN's favor.</p>
+      </details>
+      <details>
+        <summary>Does ExpressVPN work in China?</summary>
+        <p>Reports through 2025-2026 are mixed: it can work with the right server locations and protocol settings, but reviewers describe it as hit-or-miss and rank it behind China specialists. Its website is blocked there, so everything must be installed before arrival. Traveler's VPN provisions a private server with an IP only you use, which has no public VPN reputation to blocklist, and the app should likewise be installed before you land.</p>
+      </details>
+      <details>
+        <summary>Is there a free trial?</summary>
+        <p>Both offer one. ExpressVPN has a 7-day mobile trial that auto-converts to a paid subscription unless cancelled, plus a 30-day money-back guarantee you claim through support. Traveler's VPN's 3-day trial requires no account and no payment method up front; if you do nothing, you simply aren't charged.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container center">
+      <h2>Stop toggling. <span class="accent">Start traveling.</span></h2>
+      <p class="sub">Try the routing free for 3 days, then take a $9.99 Travel Pass on the trip. WeChat and Instagram, working at the same time, on the same phone.</p>
+      <a class="btn btn-primary" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">Get it on the App Store</a>
+      <p class="meta">iPhone · iPad · Mac · One purchase, Family Sharing supported</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div>
+        <div class="footer-brand">
+          <img src="/assets/icon-512.png" alt="">
+          Traveler's VPN
+        </div>
+        <span class="small">Built by an indie developer who travels too much. © 2026 Supra Applications Inc.</span>
+        <span class="small">ExpressVPN is a trademark of its respective owner. Comparison data gathered August 2026 from public pricing and documentation; corrections welcome via <a href="/support.html">support</a>.</span>
+      </div>
+      <div class="links">
+        <a href="/vs/">All comparisons</a>
+        <a href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">App Store</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/support.html">Support</a>
+        <a href="/conditions.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does ExpressVPN have split tunneling on iPhone?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Only by single IP address, not by app or domain, and ExpressVPN's own support page notes it won't work reliably for large websites. Traveler's VPN routes per destination automatically on iPhone, iPad, and Mac." }
+      },
+      {
+        "@type": "Question",
+        "name": "Which is cheaper for a single trip?",
+        "acceptedAnswer": { "@type": "Answer", "text": "For one trip, Traveler's VPN's $9.99 non-renewing 7-day pass beats ExpressVPN's $12.99+ auto-renewing month. ExpressVPN's low headline prices require one- or two-year commitments billed up front and renew at roughly $99.95+/year." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does ExpressVPN work in China?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Reports through 2025-2026 are mixed: it can work with the right settings but reviewers describe it as hit-or-miss and rank it behind China specialists. Traveler's VPN provisions a private server with an IP address only you use." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is there a free trial?",
+        "acceptedAnswer": { "@type": "Answer", "text": "ExpressVPN has a 7-day mobile trial that auto-converts unless cancelled, plus a 30-day money-back guarantee claimed through support. Traveler's VPN's 3-day trial needs no account or payment method; if you do nothing, you aren't charged." }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Traveler's VPN", "item": "https://travelersvpn.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Compare", "item": "https://travelersvpn.com/vs/" },
+      { "@type": "ListItem", "position": 3, "name": "Traveler's VPN vs ExpressVPN", "item": "https://travelersvpn.com/vs/expressvpn.html" }
+    ]
+  }
+  </script>
+
+</body>
+</html>

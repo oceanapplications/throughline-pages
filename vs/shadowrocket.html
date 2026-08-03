@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-30DPQBZDT0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-30DPQBZDT0');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Traveler's VPN vs Shadowrocket (2026): same price, different philosophy</title>
+  <meta name="description" content="Both cost $2.99 and connect to your own server. Shadowrocket gives you a rule compiler; Traveler's VPN gives you travel profiles that just work, plus a managed option and a native Mac app. Honest comparison.">
+  <meta property="og:title" content="Traveler's VPN vs Shadowrocket: which $2.99 client?">
+  <meta property="og:description" content="Shadowrocket is the power tool: 20+ protocols, manual rules, Chinese-language ecosystem. Traveler's VPN ships maintained travel profiles, a native Mac app, and an optional managed server. See the comparison.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://travelersvpn.com/vs/shadowrocket.html">
+  <meta property="og:image" content="https://travelersvpn.com/assets/og-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://travelersvpn.com/vs/shadowrocket.html">
+  <link rel="icon" type="image/png" href="/assets/icon-512.png">
+  <style>
+    :root {
+      --bg: #07122B;
+      --bg-2: #0B1B3D;
+      --surface: #0E1E45;
+      --border: #1E2C50;
+      --text: #F4F7FB;
+      --text-dim: #9FB0D1;
+      --cyan: #7DE0F2;
+      --cyan-2: #5BC9E0;
+      --green: #4ADE80;
+      --red: #FF6B6B;
+      --radius: 16px;
+      --maxw: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.55;
+    }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+    nav.top {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: saturate(140%) blur(14px);
+      background: rgba(7, 18, 43, 0.75);
+      border-bottom: 1px solid var(--border);
+    }
+    nav.top .container {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    nav.top .brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; letter-spacing: -0.3px; color: var(--text);
+    }
+    nav.top .brand img { width: 28px; height: 28px; border-radius: 7px; }
+    nav.top .links a {
+      color: var(--text-dim); margin-left: 22px; font-size: 14px; font-weight: 500;
+    }
+    nav.top .links a:hover { color: var(--text); text-decoration: none; }
+    nav.top .cta {
+      background: var(--cyan); color: #062041 !important; padding: 8px 14px;
+      border-radius: 10px; font-weight: 700;
+    }
+    nav.top .cta:hover { text-decoration: none; background: var(--cyan-2); }
+
+    .hero { padding: 90px 0 56px; text-align: center; }
+    .eyebrow {
+      display: inline-block; padding: 6px 12px; border-radius: 999px;
+      background: rgba(125, 224, 242, 0.12); color: var(--cyan);
+      font-size: 13px; font-weight: 600; letter-spacing: 0.2px;
+      border: 1px solid rgba(125, 224, 242, 0.2);
+    }
+    .hero h1 {
+      font-size: clamp(34px, 5.6vw, 60px);
+      line-height: 1.05; letter-spacing: -1.5px; font-weight: 800;
+      margin: 22px auto 18px; max-width: 920px;
+    }
+    .hero h1 .accent { color: var(--cyan); }
+    .hero p.lead {
+      font-size: clamp(17px, 2vw, 21px);
+      color: var(--text-dim); max-width: 700px; margin: 0 auto;
+    }
+    .hero .ctas {
+      display: flex; justify-content: center; gap: 14px;
+      margin-top: 32px; flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 14px 22px; border-radius: 12px; font-weight: 700;
+      font-size: 16px; transition: transform .12s ease, background .15s ease;
+    }
+    .btn-primary {
+      background: var(--cyan); color: #062041; box-shadow: 0 8px 24px rgba(125, 224, 242, 0.2);
+    }
+    .btn-primary:hover { background: var(--cyan-2); text-decoration: none; transform: translateY(-1px); }
+    .btn-ghost {
+      background: transparent; color: var(--text); border: 1px solid var(--border);
+    }
+    .btn-ghost:hover { background: var(--surface); text-decoration: none; }
+    .hero .meta { margin-top: 18px; color: var(--text-dim); font-size: 14px; }
+
+    section { padding: 72px 0; }
+    section.alt { background: rgba(14, 30, 69, 0.4); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    h2 {
+      font-size: clamp(28px, 4vw, 40px); line-height: 1.12; letter-spacing: -1px;
+      margin: 0 0 16px; font-weight: 800;
+    }
+    h2 .accent { color: var(--cyan); }
+    .sub { color: var(--text-dim); font-size: 18px; max-width: 680px; margin: 0 0 32px; }
+    .center { text-align: center; }
+    .center .sub { margin-left: auto; margin-right: auto; }
+
+    .verdicts {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px;
+    }
+    @media (max-width: 860px) { .verdicts { grid-template-columns: 1fr; } }
+    .verdict {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 26px; text-align: left;
+    }
+    .verdict .tag {
+      font-size: 12px; font-weight: 800; letter-spacing: 0.6px; text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .verdict .tag.us { color: var(--green); }
+    .verdict .tag.them { color: var(--cyan); }
+    .verdict .tag.line { color: var(--text-dim); }
+    .verdict h3 { margin: 0 0 10px; font-size: 19px; letter-spacing: -0.3px; }
+    .verdict p { color: var(--text-dim); margin: 0; font-size: 15px; }
+
+    .table-wrap {
+      overflow-x: auto; -webkit-overflow-scrolling: touch;
+      border: 1px solid var(--border); border-radius: var(--radius);
+      background: var(--surface); margin-top: 8px;
+    }
+    table.compare { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 15px; }
+    table.compare th, table.compare td {
+      padding: 14px 18px; text-align: left; border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    table.compare tr:last-child th, table.compare tr:last-child td { border-bottom: none; }
+    table.compare thead th {
+      font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;
+      color: var(--text-dim); background: rgba(7, 18, 43, 0.5);
+    }
+    table.compare thead th.us-col { color: var(--cyan); }
+    table.compare tbody th {
+      font-weight: 600; color: var(--text); width: 30%; font-size: 14px;
+    }
+    table.compare td { color: var(--text-dim); }
+    table.compare td.yes { color: var(--green); font-weight: 600; }
+    table.compare td.no { color: var(--red); font-weight: 600; }
+    .table-note { color: #6E7FA0; font-size: 12.5px; margin-top: 14px; }
+
+    .prose { max-width: 760px; margin: 0 auto; }
+    .prose h2 { margin-top: 0; }
+    .prose h3 { font-size: 21px; letter-spacing: -0.4px; margin: 34px 0 10px; }
+    .prose p { color: var(--text-dim); font-size: 16.5px; }
+    .prose ul { color: var(--text-dim); font-size: 16.5px; padding-left: 22px; }
+    .prose li { margin: 8px 0; }
+    .prose strong { color: var(--text); }
+
+    details {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 18px 22px; margin-bottom: 10px;
+    }
+    details summary {
+      cursor: pointer; font-weight: 600; font-size: 16px; color: var(--text);
+      list-style: none; display: flex; justify-content: space-between; align-items: center;
+    }
+    details summary::after { content: "+"; color: var(--cyan); font-size: 22px; line-height: 1; }
+    details[open] summary::after { content: "−"; }
+    details p { color: var(--text-dim); margin: 12px 0 0; font-size: 15px; }
+
+    .cta-band { text-align: center; }
+    .cta-band .meta { margin-top: 16px; color: var(--text-dim); font-size: 14px; }
+
+    footer {
+      border-top: 1px solid var(--border); padding: 48px 0 64px;
+      color: var(--text-dim); font-size: 14px;
+    }
+    footer .container {
+      display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    }
+    footer .footer-brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; }
+    footer .footer-brand img { width: 24px; height: 24px; border-radius: 6px; }
+    footer .links a { color: var(--text-dim); margin-left: 18px; }
+    footer .links a:hover { color: var(--text); }
+    footer .small { display: block; margin-top: 14px; color: #6E7FA0; font-size: 12px; }
+
+    @media (max-width: 640px) {
+      .hero { padding: 56px 0 36px; }
+      nav.top .links a:not(.cta) { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top">
+    <div class="container">
+      <a href="/" class="brand">
+        <img src="/assets/icon-512.png" alt="">
+        Traveler's VPN
+      </a>
+      <div class="links">
+        <a href="/#why">Why</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/vs/">Compare</a>
+        <a href="/support.html">Support</a>
+        <a href="https://apps.apple.com/us/app/travelers-vpn/id6764288591" class="cta">Get the app</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <span class="eyebrow">Comparison · Updated August 2026</span>
+      <h1>Traveler's VPN <span class="accent">vs Shadowrocket</span></h1>
+      <p class="lead">Same $2.99 price. Same bring-your-own-server idea. Completely different philosophy: Shadowrocket hands you a rule compiler and wishes you luck; Traveler's VPN ships maintained travel profiles that route correctly out of the box.</p>
+      <div class="ctas">
+        <a class="btn btn-primary" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">Get Traveler's VPN</a>
+        <a class="btn btn-ghost" href="#table">See the comparison</a>
+      </div>
+      <p class="meta">Free to download · 3-day free trial · No account to make</p>
+    </div>
+  </header>
+
+  <section>
+    <div class="container center">
+      <h2>Traveler's VPN or Shadowrocket? <span class="accent">The short answer.</span></h2>
+      <div class="verdicts">
+        <div class="verdict">
+          <div class="tag us">Pick Traveler's VPN if</div>
+          <h3>You want routing that's already figured out.</h3>
+          <p>Pick a travel profile, paste your server key (or let us provision one), connect. Region-aware rule sets are bundled and self-update. Native menu-bar Mac app, iCloud sync, English docs and support, and a managed option when you don't feel like running a server.</p>
+        </div>
+        <div class="verdict">
+          <div class="tag them">Pick Shadowrocket if</div>
+          <h3>You want maximum control and know what SNI means.</h3>
+          <p>Twenty-plus protocols including VLESS/Reality and Hysteria2, per-request rules, Lua scripting, MITM inspection, subscription URLs. Battle-tested since 2015 with a huge (largely Chinese-language) ecosystem. As a power tool, it's unmatched on iOS.</p>
+        </div>
+        <div class="verdict">
+          <div class="tag line">Bottom line</div>
+          <h3>A product vs a toolkit.</h3>
+          <p>Shadowrocket can be configured to do most of what Traveler's VPN does, if you find the right third-party rule lists, vet them, import them, and keep them fresh. Traveler's VPN is what that looks like already assembled, maintained, and supported.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="table">
+    <div class="container">
+      <div class="center">
+        <h2>Shadowrocket vs Traveler's VPN: <span class="accent">the numbers.</span></h2>
+        <p class="sub">Details as of August 2026, from each app's App Store listing and documentation.</p>
+      </div>
+      <div class="table-wrap">
+        <table class="compare">
+          <thead>
+            <tr>
+              <th></th>
+              <th class="us-col">Traveler's VPN</th>
+              <th>Shadowrocket</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Price (BYO client)</th>
+              <td class="yes">$2.99 one-time unlock, free to download and trial</td>
+              <td>$2.99 one-time purchase</td>
+            </tr>
+            <tr>
+              <th>Setup for a China or Japan trip</th>
+              <td class="yes">Pick the travel profile, connect. Routing rules are bundled and maintained</td>
+              <td>Find, vet, and import a third-party rule config from GitHub; most popular ones are documented in Chinese</td>
+            </tr>
+            <tr>
+              <th>Rule updates</th>
+              <td class="yes">Region rule sets self-update from source automatically</td>
+              <td>Manual: re-import configs or manage remote rule URLs yourself</td>
+            </tr>
+            <tr>
+              <th>Managed server option</th>
+              <td class="yes">Yes: $9.99 7-day Travel Pass or $14.99/month, private server provisioned automatically</td>
+              <td class="no">None. "Does not include any proxy services or server resources" (App Store listing). Third-party "Shadowrocket subscription" sites are unofficial, some are scams</td>
+            </tr>
+            <tr>
+              <th>Mac</th>
+              <td class="yes">Native menu-bar Mac app, same Universal Purchase</td>
+              <td class="no">No native macOS app; runs as an iPad app on Apple Silicon Macs only ("Not verified for macOS" per its listing)</td>
+            </tr>
+            <tr>
+              <th>Docs and support</th>
+              <td class="yes">Official site, English documentation, direct support</td>
+              <td>No official website (per the developer's own statement); documentation is third-party blogs and GitHub wikis, with a known ecosystem of impostor sites</td>
+            </tr>
+            <tr>
+              <th>Protocols</th>
+              <td>Outline/Shadowsocks, WireGuard, Trojan</td>
+              <td class="yes">20+: Shadowsocks(R), VMess, VLESS/Reality, Trojan, WireGuard, Hysteria 1/2, TUIC, Snell, SSH, SOCKS5, and more</td>
+            </tr>
+            <tr>
+              <th>Power-user depth</th>
+              <td>Profiles are opinionated; per-app overrides, not a rule editor</td>
+              <td class="yes">Full rule engine, Lua scripting, URL rewriting, MITM/HTTPS decryption, subscription management</td>
+            </tr>
+            <tr>
+              <th>Other Apple platforms</th>
+              <td>iPhone, iPad, Mac</td>
+              <td class="yes">iPhone, iPad, Apple TV (tvOS 17+), Vision Pro</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="table-note">Shadowrocket details from its US App Store listing (August 2026) and community documentation. Its protocol breadth and rule-engine depth are real advantages we don't claim to match.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="container prose">
+      <h2>The real difference: <span class="accent">who maintains the routing?</span></h2>
+      <p>Respect where due: Shadowrocket is one of the great iOS power tools. It's been shipping since 2015, holds a 4.5-star average across twelve thousand ratings, and supports protocols most people have never heard of. If you enjoy network plumbing, it will never limit you.</p>
+      <p>But look at what "set it up for a trip" actually means. Out of the box, Shadowrocket gives you global proxy modes and a GeoIP database. The routing intelligence, which domains go direct, which go through your server, what to do with ads and trackers, comes from config files the community maintains on GitHub. You find one, judge whether it's trustworthy and current, import it, and repeat when it rots. The best guides, and most of the ecosystem, are in Chinese. That's a fine trade for a tinkerer. It's a terrible one the night before a flight.</p>
+      <p>Traveler's VPN makes the routing the product. The travel profiles are built in, based on the same battle-tested rule-set data the pros use (SagerNet's geosite/geoip, compiled for sing-box), and the app keeps them updated automatically. Paste your Outline key or WireGuard config and you're routing correctly in a minute, in English, with support if it doesn't work.</p>
+      <p>And there are two things Shadowrocket structurally doesn't offer. There's no managed tier: when a friend without a VPS asks "what do I do?", Shadowrocket has no answer, while Traveler's VPN provisions them a private server for $9.99. And there's no real Mac app: it runs as an iPad app on Apple Silicon only, while Traveler's VPN ships a native menu-bar Mac client in the same purchase.</p>
+
+      <h3>What Shadowrocket genuinely does better</h3>
+      <ul>
+        <li><strong>Protocol breadth.</strong> VLESS/Reality, Hysteria2, TUIC, Snell, SSH and more. If your server speaks something exotic, Shadowrocket speaks it too.</li>
+        <li><strong>Rule-engine depth.</strong> Per-request rules, Lua scripting, URL rewriting, MITM inspection. Traveler's VPN deliberately doesn't expose this surface.</li>
+        <li><strong>Subscription URLs.</strong> First-class support for bulk server imports from "airport" resellers.</li>
+        <li><strong>Apple TV and Vision Pro.</strong> It runs on more Apple platforms than we do today.</li>
+      </ul>
+      <p>Plenty of our BYO users graduated from Shadowrocket, and some power users will rightly stay with it. The question is just whether you want to operate the routing or have it operated for you.</p>
+    </div>
+  </section>
+
+  <section class="alt" id="faq">
+    <div class="container" style="max-width: 760px;">
+      <div class="center">
+        <h2>Questions Shadowrocket users ask.</h2>
+      </div>
+      <details>
+        <summary>They're both $2.99. What am I actually choosing between?</summary>
+        <p>Maintenance. Shadowrocket's $2.99 buys a rule engine you configure and maintain with community config files. Traveler's VPN's $2.99 BYO unlock buys routing profiles that are already built, self-update, and come with English documentation and support. Plus the option of a managed private server ($9.99/week or $14.99/month) that Shadowrocket has no equivalent for.</p>
+      </details>
+      <details>
+        <summary>Can Shadowrocket use my Outline server?</summary>
+        <p>Generally yes, since Outline keys are Shadowsocks URIs, though it isn't a first-class flow. Traveler's VPN parses Outline access keys, WireGuard configs, Shadowsocks URIs, and Trojan URIs directly, and tells you exactly what didn't parse if something's off.</p>
+      </details>
+      <details>
+        <summary>Does either work on the Mac?</summary>
+        <p>Traveler's VPN has a native menu-bar macOS app covered by the same Universal Purchase, on both Apple Silicon and Intel. Shadowrocket has no Mac build; its App Store listing is marked "Designed for iPad, Not verified for macOS," and it can only be installed on Apple Silicon Macs as an iPad app.</p>
+      </details>
+      <details>
+        <summary>Is Shadowrocket's extra protocol support worth it?</summary>
+        <p>If your server runs VLESS/Reality, Hysteria2, or another protocol we don't support, then yes, use Shadowrocket; it's the best client for that. If you run Outline, WireGuard, Shadowsocks, or Trojan (the most common self-hosted setups), Traveler's VPN covers you with far less configuration.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container center">
+      <h2>The smart tunnel, <span class="accent">pre-assembled.</span></h2>
+      <p class="sub">$2.99 once connects your own server with routing already tuned for travel. No rule lists to hunt down, and a managed private server when you'd rather not host.</p>
+      <a class="btn btn-primary" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">Get it on the App Store</a>
+      <p class="meta">iPhone · iPad · Mac · One purchase, Family Sharing supported</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div>
+        <div class="footer-brand">
+          <img src="/assets/icon-512.png" alt="">
+          Traveler's VPN
+        </div>
+        <span class="small">Built by an indie developer who travels too much. © 2026 Supra Applications Inc.</span>
+        <span class="small">Shadowrocket is a trademark of its respective owner. Comparison data gathered August 2026 from public listings and documentation; corrections welcome via <a href="/support.html">support</a>.</span>
+      </div>
+      <div class="links">
+        <a href="/vs/">All comparisons</a>
+        <a href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">App Store</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/support.html">Support</a>
+        <a href="/conditions.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "They're both $2.99. What am I actually choosing between?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Maintenance. Shadowrocket's $2.99 buys a rule engine you configure with community config files. Traveler's VPN's $2.99 BYO unlock buys routing profiles that are already built, self-update, and come with English support, plus an optional managed private server Shadowrocket has no equivalent for." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Shadowrocket use my Outline server?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Generally yes, since Outline keys are Shadowsocks URIs, though it isn't a first-class flow. Traveler's VPN parses Outline access keys, WireGuard configs, Shadowsocks URIs, and Trojan URIs directly." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does either work on the Mac?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Traveler's VPN has a native menu-bar macOS app in the same Universal Purchase. Shadowrocket has no Mac build; it runs only as an iPad app on Apple Silicon Macs and its listing is marked Not verified for macOS." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is Shadowrocket's extra protocol support worth it?",
+        "acceptedAnswer": { "@type": "Answer", "text": "If your server runs VLESS/Reality, Hysteria2, or another protocol we don't support, use Shadowrocket. If you run Outline, WireGuard, Shadowsocks, or Trojan, Traveler's VPN covers you with far less configuration." }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Traveler's VPN", "item": "https://travelersvpn.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Compare", "item": "https://travelersvpn.com/vs/" },
+      { "@type": "ListItem", "position": 3, "name": "Traveler's VPN vs Shadowrocket", "item": "https://travelersvpn.com/vs/shadowrocket.html" }
+    ]
+  }
+  </script>
+
+</body>
+</html>
