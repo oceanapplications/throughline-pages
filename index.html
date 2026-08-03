@@ -94,7 +94,7 @@
       color: var(--text-dim); max-width: 640px; margin: 0 auto;
     }
     .hero .ctas {
-      display: flex; justify-content: center; gap: 14px;
+      display: flex; justify-content: center; align-items: center; gap: 14px;
       margin-top: 36px; flex-wrap: wrap;
     }
     .btn {
@@ -110,6 +110,9 @@
       background: transparent; color: var(--text); border: 1px solid var(--border);
     }
     .btn-ghost:hover { background: var(--surface); text-decoration: none; }
+    .store-badge { display: inline-block; }
+    .store-badge img { height: 52px; width: auto; display: block; }
+    .tier .store-badge { margin-top: auto; align-self: center; }
     .hero .meta {
       margin-top: 18px; color: var(--text-dim); font-size: 14px;
     }
@@ -257,8 +260,8 @@
       <h1>Your apps work <span class="accent">everywhere.</span></h1>
       <p class="lead">Land anywhere. Instagram, WhatsApp, and YouTube come with you. Local maps, payments, and taxis stay fast. All at once, and faster than a normal VPN.</p>
       <div class="ctas">
-        <a class="btn btn-primary" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">
-          Get it on the App Store
+        <a class="store-badge" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">
+          <img src="/assets/app-store-badge.svg" alt="Download on the App Store">
         </a>
         <a class="btn btn-ghost" href="#why">Why it's different</a>
       </div>
@@ -330,7 +333,7 @@
             <li>Smart routing keeps local apps fast</li>
             <li>iPhone, iPad, and Mac</li>
           </ul>
-          <a class="btn btn-ghost" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">Get it on the App Store</a>
+          <a class="store-badge" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591"><img src="/assets/app-store-badge.svg" alt="Download on the App Store"></a>
         </div>
 
         <div class="tier featured">
@@ -360,7 +363,7 @@
             <li>Smart routing keeps local apps fast</li>
             <li>iPhone, iPad, and Mac</li>
           </ul>
-          <a class="btn btn-ghost" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">Get it on the App Store</a>
+          <a class="store-badge" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591"><img src="/assets/app-store-badge.svg" alt="Download on the App Store"></a>
         </div>
 
       </div>
