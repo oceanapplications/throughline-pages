@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-30DPQBZDT0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-30DPQBZDT0');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Run your own travel VPN for about $5 a month</title>
+  <meta name="description" content="Set up a private VPN server on a $5/month VPS with Outline in about ten minutes, then connect it to a $2.99 smart-routing iPhone app. No subscription, no shared IPs, no VPN company in the middle.">
+  <meta property="og:title" content="Run your own travel VPN for about $5 a month">
+  <meta property="og:description" content="A private Outline or WireGuard server on a cheap VPS, plus a $2.99 smart-routing client for iPhone, iPad, and Mac. The self-hosted travel VPN setup, step by step.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://travelersvpn.com/blog/run-your-own-travel-vpn.html">
+  <meta property="og:image" content="https://travelersvpn.com/assets/og-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://travelersvpn.com/blog/run-your-own-travel-vpn.html">
+  <link rel="icon" type="image/png" href="/assets/icon-512.png">
+  <style>
+    :root {
+      --bg: #07122B;
+      --bg-2: #0B1B3D;
+      --surface: #0E1E45;
+      --border: #1E2C50;
+      --text: #F4F7FB;
+      --text-dim: #9FB0D1;
+      --cyan: #7DE0F2;
+      --cyan-2: #5BC9E0;
+      --green: #4ADE80;
+      --radius: 16px;
+      --maxw: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+
+    nav.top {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: saturate(140%) blur(14px);
+      background: rgba(7, 18, 43, 0.75);
+      border-bottom: 1px solid var(--border);
+    }
+    nav.top .container {
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    nav.top .brand {
+      display: flex; align-items: center; gap: 10px;
+      font-weight: 700; letter-spacing: -0.3px; color: var(--text);
+    }
+    nav.top .brand img { width: 28px; height: 28px; border-radius: 7px; }
+    nav.top .links a {
+      color: var(--text-dim); margin-left: 22px; font-size: 14px; font-weight: 500;
+    }
+    nav.top .links a:hover { color: var(--text); text-decoration: none; }
+    nav.top .cta {
+      background: var(--cyan); color: #062041 !important; padding: 8px 14px;
+      border-radius: 10px; font-weight: 700;
+    }
+    nav.top .cta:hover { text-decoration: none; background: var(--cyan-2); }
+
+    article { max-width: 760px; margin: 0 auto; padding: 72px 24px 40px; }
+    .eyebrow {
+      display: inline-block; padding: 6px 12px; border-radius: 999px;
+      background: rgba(125, 224, 242, 0.12); color: var(--cyan);
+      font-size: 13px; font-weight: 600; letter-spacing: 0.2px;
+      border: 1px solid rgba(125, 224, 242, 0.2);
+    }
+    article h1 {
+      font-size: clamp(32px, 5vw, 52px); line-height: 1.08; letter-spacing: -1.5px;
+      font-weight: 800; margin: 20px 0 14px;
+    }
+    article .lead { font-size: 19px; color: var(--text-dim); margin: 0 0 8px; }
+    article .byline { font-size: 13.5px; color: #6E7FA0; margin-bottom: 36px; }
+    article h2 { font-size: 27px; letter-spacing: -0.6px; margin: 42px 0 12px; font-weight: 800; }
+    article h2 .accent { color: var(--cyan); }
+    article p, article li { color: var(--text-dim); font-size: 16.5px; }
+    article ul, article ol { padding-left: 22px; }
+    article li { margin: 8px 0; }
+    article strong { color: var(--text); }
+    article code {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 6px; padding: 2px 7px; font-size: 14.5px; color: var(--cyan);
+      font-family: "SF Mono", ui-monospace, Menlo, monospace;
+    }
+    pre {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px 18px; overflow-x: auto;
+    }
+    pre code { background: none; border: none; padding: 0; color: var(--text); }
+    .callout {
+      background: var(--surface); border: 1px solid var(--border);
+      border-left: 3px solid var(--cyan);
+      border-radius: 12px; padding: 16px 20px; margin: 24px 0;
+    }
+    .callout p { margin: 0; font-size: 15.5px; }
+    .table-wrap {
+      overflow-x: auto; border: 1px solid var(--border); border-radius: 12px;
+      background: var(--surface); margin: 20px 0;
+    }
+    table { border-collapse: collapse; width: 100%; min-width: 480px; font-size: 15px; }
+    th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+    tr:last-child th, tr:last-child td { border-bottom: none; }
+    thead th { font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-dim); background: rgba(7, 18, 43, 0.5); }
+    tbody th { font-weight: 600; color: var(--text); font-size: 14px; }
+    td { color: var(--text-dim); }
+
+    .cta-band { text-align: center; padding: 40px 24px 88px; max-width: 760px; margin: 0 auto; }
+    .cta-band h2 { font-size: clamp(26px, 4vw, 36px); letter-spacing: -1px; font-weight: 800; margin: 0 0 12px; }
+    .cta-band h2 .accent { color: var(--cyan); }
+    .cta-band .sub { color: var(--text-dim); font-size: 17px; margin: 0 0 24px; }
+    .store-badge { display: inline-block; }
+    .store-badge img { height: 56px; width: auto; display: block; margin: 0 auto; }
+    .cta-band .meta { margin-top: 16px; color: var(--text-dim); font-size: 14px; }
+
+    footer {
+      border-top: 1px solid var(--border); padding: 48px 0 64px;
+      color: var(--text-dim); font-size: 14px;
+    }
+    footer .container { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    footer .footer-brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; }
+    footer .footer-brand img { width: 24px; height: 24px; border-radius: 6px; }
+    footer .links a { color: var(--text-dim); margin-left: 18px; }
+    footer .links a:hover { color: var(--text); }
+    footer .small { display: block; margin-top: 14px; color: #6E7FA0; font-size: 12px; }
+    @media (max-width: 640px) { nav.top .links a:not(.cta) { display: none; } }
+  </style>
+</head>
+<body>
+
+  <nav class="top">
+    <div class="container">
+      <a href="/" class="brand">
+        <img src="/assets/icon-512.png" alt="">
+        Traveler's VPN
+      </a>
+      <div class="links">
+        <a href="/#why">Why</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/vs/">Compare</a>
+        <a href="/support.html">Support</a>
+        <a href="https://apps.apple.com/us/app/travelers-vpn/id6764288591" class="cta">Get the app</a>
+      </div>
+    </div>
+  </nav>
+
+  <article>
+    <span class="eyebrow">Guide · Self-hosting</span>
+    <h1>Run your own travel VPN for about $5 a month.</h1>
+    <p class="lead">A private Outline or WireGuard server on a cheap VPS, plus a $2.99 smart-routing client on your iPhone. No subscription, no shared IP addresses, no VPN company between you and the internet. Here's the whole setup, in about ten minutes.</p>
+    <p class="byline">Updated August 2026 · travelersvpn.com</p>
+
+    <h2>Why self-host a <span class="accent">travel VPN?</span></h2>
+    <p>Commercial VPNs put thousands of strangers behind each server IP. That's why banks challenge logins from them, streaming services block them, and censors can blocklist their address ranges wholesale. A server you rent yourself is the opposite: one ordinary cloud IP, one user, no reputation, and nobody's logging policy to take on faith, because there's no company in the path at all.</p>
+    <p>The math works too. A capable VPS is $5 to $6 a month and covers every device you own. Commercial VPNs run $60 to $360 a year. The one thing self-hosting historically lacked on iPhone was a smart client, one that routes only the traffic that needs your server through it and leaves local apps alone. That's the gap <a href="/">Traveler's VPN</a> fills, and why this guide exists.</p>
+
+    <h2>What you need</h2>
+    <ul>
+      <li><strong>A VPS.</strong> Any provider works: DigitalOcean, Vultr, Hetzner, Linode. The cheapest tier (1 GB RAM) is plenty for a personal VPN.</li>
+      <li><strong>Ten minutes</strong> before your trip. Set everything up while you're still home; app stores and VPN sites are unreachable from inside China.</li>
+      <li><strong>Traveler's VPN</strong> on your iPhone, iPad, or Mac, with the $2.99 one-time bring-your-own-server unlock.</li>
+    </ul>
+
+    <h2>Step 1: rent the server</h2>
+    <p>Create a VPS in <strong>your home country</strong> (or wherever you want your traffic to appear from). For a US traveler heading to Asia, a US region is right: your Instagram, Gmail, and streaming exit from a domestic IP, exactly like you never left. Pick the smallest plan, Ubuntu as the OS, and note the server's IP address.</p>
+
+    <h2>Step 2: install Outline (the easy path)</h2>
+    <p>Outline is Google Jigsaw's open-source, self-hosted VPN based on Shadowsocks. Install the <a href="https://getoutline.org/get-started/" rel="noopener">Outline Manager</a> app on your computer, choose "Set up Outline anywhere," and paste the one-line install command it gives you into your server over SSH:</p>
+    <pre><code>sudo bash -c "$(wget -qO- https://raw.githubusercontent.com/Jigsaw-Code/outline-server/master/src/server_manager/install_scripts/install_server.sh)"</code></pre>
+    <p>The script prints a JSON snippet; paste it back into Outline Manager and you have a working server. Create a key and copy it. It looks like <code>ss://…</code>, and that one string is your whole credential.</p>
+    <div class="callout">
+      <p><strong>Prefer WireGuard or Trojan?</strong> Traveler's VPN speaks those too. WireGuard is the fastest option on an uncongested path; Trojan disguises traffic as ordinary HTTPS, which travels better through restrictive networks. Paste a standard WireGuard config or a <code>trojan://</code> URI instead of an Outline key; everything else in this guide is identical.</p>
+    </div>
+
+    <h2>Step 3: connect the smart client</h2>
+    <p>In Traveler's VPN, unlock bring-your-own-server ($2.99, one-time), paste your Outline key, pick a travel profile for where you're going, and connect. The routing is the point: WeChat, Alipay, Didi, and local maps stay direct and fast, while Instagram, WhatsApp, YouTube, Gmail, and the rest of the blocked half of your phone go through your server. Automatically, with the tunnel up the whole time, up to ~10x faster on local apps than an all-or-nothing VPN. Your key syncs to your iPad and Mac via iCloud, so one server covers everything.</p>
+
+    <h2>What it costs</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th></th><th>First year</th><th>Every year after</th></tr>
+        </thead>
+        <tbody>
+          <tr><th>Self-hosted (this guide)</th><td>~$63 to $75 (VPS) + $2.99 once</td><td>~$63 to $75</td></tr>
+          <tr><th>Commercial VPN</th><td>$60 to $100 intro pricing</td><td>$80 to $360 at renewal rates</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Roughly a wash on price in year one, cheaper after, and the differences that matter aren't on the invoice: your own IP with no shared reputation, open protocols you can verify, and no operator who could log you. See how that stacks up against the big brands in our <a href="/vs/">comparison pages</a>, or against the other power-user client in <a href="/vs/shadowrocket.html">Traveler's VPN vs Shadowrocket</a>.</p>
+
+    <h2>Honest caveats</h2>
+    <ul>
+      <li><strong>Set up before you fly.</strong> From inside China you can't reach app stores, VPN sites, or most cloud-provider consoles. Everything in this guide happens at home.</li>
+      <li><strong>One region per server.</strong> Your traffic exits where the VPS lives. That's ideal for travel (you want home), less flexible than a commercial VPN's country picker if you hop exit locations for streaming.</li>
+      <li><strong>It's your server.</strong> Reboots, provider outages, and OS updates are on you. In practice an Outline droplet needs attention about never, but "about never" isn't "never."</li>
+      <li><strong>Not into any of this?</strong> The same app runs the same smart routing on a private server we provision for you: a $9.99 7-day Travel Pass or $14.99/month, with a free 3-day trial and no account. Self-hosting is the enthusiast path, not the toll gate.</li>
+    </ul>
+  </article>
+
+  <div class="cta-band">
+    <h2>The client half of the setup, <span class="accent">$2.99 once.</span></h2>
+    <p class="sub">Outline, WireGuard, Shadowsocks, and Trojan. Smart per-destination routing on iPhone, iPad, and a native Mac menu-bar app, in one purchase.</p>
+    <a class="store-badge" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591"><img src="/assets/app-store-badge.svg" alt="Download on the App Store"></a>
+    <p class="meta">Free to download · No account to make · Family Sharing supported</p>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div>
+        <div class="footer-brand">
+          <img src="/assets/icon-512.png" alt="">
+          Traveler's VPN
+        </div>
+        <span class="small">Built by an indie developer who travels too much. © 2026 Supra Applications Inc.</span>
+      </div>
+      <div class="links">
+        <a href="/vs/">Compare</a>
+        <a href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">App Store</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/support.html">Support</a>
+        <a href="/conditions.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Run your own travel VPN for about $5 a month",
+    "description": "Set up a private Outline or WireGuard server on a cheap VPS and connect it to a $2.99 smart-routing client for iPhone, iPad, and Mac.",
+    "datePublished": "2026-08-03",
+    "dateModified": "2026-08-03",
+    "author": { "@type": "Organization", "name": "Traveler's VPN" },
+    "publisher": { "@type": "Organization", "name": "Supra Applications Inc." },
+    "mainEntityOfPage": "https://travelersvpn.com/blog/run-your-own-travel-vpn.html"
+  }
+  </script>
+
+</body>
+</html>

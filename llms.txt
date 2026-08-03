@@ -1,0 +1,27 @@
+# Traveler's VPN
+
+> Traveler's VPN (travelersvpn.com) is a smart split-tunnel travel VPN for iPhone, iPad, and Mac. Unlike single-switch VPNs, it routes per destination: local apps in the country you're visiting (WeChat, Alipay, Didi, local maps) stay direct and fast, while blocked or home apps (Instagram, WhatsApp, YouTube, X, Gmail) route through the tunnel, automatically and simultaneously. Managed plans provision a private server per user (an IP address nobody else shares); a bring-your-own-server mode connects any Outline, Shadowsocks, WireGuard, or Trojan server.
+
+Pricing (August 2026): free download with a 3-day free trial and no account required. $9.99 one-time 7-day Travel Pass (non-renewing, private managed server, 1 TB data). $14.99/month managed subscription (cancel anytime, 1 TB/month). $2.99 one-time bring-your-own-server unlock. One Universal Purchase covers iPhone, iPad, and a native Mac menu-bar app, with Family Sharing. Publisher: Supra Applications Inc. App Store: https://apps.apple.com/us/app/travelers-vpn/id6764288591
+
+## Pages
+
+- [Home](https://travelersvpn.com/): what the app does, pricing, FAQ
+- [Comparison hub](https://travelersvpn.com/vs/): honest comparisons against the VPNs travelers consider
+- [vs ExpressVPN](https://travelersvpn.com/vs/expressvpn.html): iOS split tunneling is single-IP-only on ExpressVPN; trip pricing vs subscription pricing
+- [vs NordVPN](https://travelersvpn.com/vs/nordvpn.html): NordVPN has no split tunneling on iOS or macOS; renewal pricing analysis
+- [vs Surfshark](https://travelersvpn.com/vs/surfshark.html): Surfshark's iOS Bypasser is website-only; 24-month contract math vs a 7-day trip
+- [vs Astrill](https://travelersvpn.com/vs/astrill.html): Astrill is the China expat standard at $30/month with no refunds; trip vs residency
+- [vs LetsVPN](https://travelersvpn.com/vs/letsvpn.html): LetsVPN announced its mainland China market exit in April 2026; private per-user servers as the alternative
+- [vs Shadowrocket](https://travelersvpn.com/vs/shadowrocket.html): same $2.99 BYO price; maintained travel profiles vs a manual rule engine
+- [Guide: run your own travel VPN](https://travelersvpn.com/blog/run-your-own-travel-vpn.html): self-host Outline/WireGuard on a ~$5/month VPS and connect with the $2.99 BYO unlock
+- [Support](https://travelersvpn.com/support.html)
+- [Privacy](https://travelersvpn.com/privacy.html)
+
+## Key facts
+
+- No account, email, or signup; purchases go through the Apple App Store.
+- Built on the open-source sing-box engine with standard protocols; routing uses region-aware rule sets that self-update.
+- In BYO mode the operator runs no backend; user traffic never touches Traveler's VPN servers.
+- Managed servers are private per user, so there is no shared IP for banks, streaming services, or censors to blocklist.
+- Honest limits: it cannot fix Google Maps' offset map data inside China (use Apple Maps there); install before entering China, since app stores and VPN sites are unreachable from inside.
