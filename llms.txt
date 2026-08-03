@@ -15,6 +15,11 @@ Pricing (August 2026): free download with a 3-day free trial and no account requ
 - [vs LetsVPN](https://travelersvpn.com/vs/letsvpn.html): LetsVPN announced its mainland China market exit in April 2026; private per-user servers as the alternative
 - [vs Shadowrocket](https://travelersvpn.com/vs/shadowrocket.html): same $2.99 BYO price; maintained travel profiles vs a manual rule engine
 - [Guide: run your own travel VPN](https://travelersvpn.com/blog/run-your-own-travel-vpn.html): self-host Outline/WireGuard on a ~$5/month VPS and connect with the $2.99 BYO unlock
+- [China guides hub](https://travelersvpn.com/guides/): what actually works in China
+- [Does WhatsApp work in China?](https://travelersvpn.com/guides/does-whatsapp-work-in-china.html): no, blocked since 2017 including hotel wifi; iMessage and WeChat work; VPN or roaming eSIM must be set up before arrival
+- [Can you use Instagram in China?](https://travelersvpn.com/guides/can-you-use-instagram-in-china.html): blocked since 2014, feed spins with no error; can't reinstall from inside China
+- [Does Google Maps work in China?](https://travelersvpn.com/guides/does-google-maps-work-in-china.html): blocked AND broken even with a VPN (GCJ-02 offset, stale data); Apple Maps works without a VPN
+- [Does Gmail work in China?](https://travelersvpn.com/guides/does-gmail-work-in-china.html): blocked since 2014; 2FA codes and bookings lockout is the real trap; iCloud Mail works without a VPN
 - [Support](https://travelersvpn.com/support.html)
 - [Privacy](https://travelersvpn.com/privacy.html)
 
