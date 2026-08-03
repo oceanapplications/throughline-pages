@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-30DPQBZDT0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-30DPQBZDT0');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>The State of Split Tunneling on iOS (2026 report)</title>
+  <meta name="description" content="As of August 2026, none of the four largest consumer VPNs can exclude an app from the tunnel on iPhone. Sourced entirely from the vendors' own documentation: ExpressVPN, NordVPN, Surfshark, Astrill compared, with the technical reason it's possible anyway.">
+  <meta property="og:title" content="The State of Split Tunneling on iOS: 2026 report">
+  <meta property="og:description" content="ExpressVPN: single IPs only. NordVPN: nothing on iOS or macOS. Surfshark: websites only. Astrill: desktop and Android only. Every claim sourced from the vendors' own docs.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://travelersvpn.com/research/ios-split-tunneling-2026.html">
+  <meta property="og:image" content="https://travelersvpn.com/assets/og-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://travelersvpn.com/research/ios-split-tunneling-2026.html">
+  <link rel="icon" type="image/png" href="/assets/icon-512.png">
+  <style>
+    :root {
+      --bg: #07122B;
+      --bg-2: #0B1B3D;
+      --surface: #0E1E45;
+      --border: #1E2C50;
+      --text: #F4F7FB;
+      --text-dim: #9FB0D1;
+      --cyan: #7DE0F2;
+      --cyan-2: #5BC9E0;
+      --green: #4ADE80;
+      --red: #FF6B6B;
+      --radius: 16px;
+      --maxw: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    nav.top {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: saturate(140%) blur(14px);
+      background: rgba(7, 18, 43, 0.75);
+      border-bottom: 1px solid var(--border);
+    }
+    nav.top .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    nav.top .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: -0.3px; color: var(--text); }
+    nav.top .brand img { width: 28px; height: 28px; border-radius: 7px; }
+    nav.top .links a { color: var(--text-dim); margin-left: 22px; font-size: 14px; font-weight: 500; }
+    nav.top .links a:hover { color: var(--text); text-decoration: none; }
+    nav.top .cta { background: var(--cyan); color: #062041 !important; padding: 8px 14px; border-radius: 10px; font-weight: 700; }
+    nav.top .cta:hover { text-decoration: none; background: var(--cyan-2); }
+
+    article { max-width: 800px; margin: 0 auto; padding: 72px 24px 40px; }
+    .eyebrow {
+      display: inline-block; padding: 6px 12px; border-radius: 999px;
+      background: rgba(125, 224, 242, 0.12); color: var(--cyan);
+      font-size: 13px; font-weight: 600; letter-spacing: 0.2px;
+      border: 1px solid rgba(125, 224, 242, 0.2);
+    }
+    article h1 { font-size: clamp(32px, 5vw, 50px); line-height: 1.08; letter-spacing: -1.5px; font-weight: 800; margin: 20px 0 14px; }
+    article .byline { font-size: 13.5px; color: #6E7FA0; margin-bottom: 28px; }
+    .answer {
+      background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--cyan);
+      border-radius: 12px; padding: 18px 22px; margin: 0 0 34px;
+    }
+    .answer p { margin: 0; font-size: 17.5px; color: var(--text); }
+    article h2 { font-size: 26px; letter-spacing: -0.6px; margin: 40px 0 12px; font-weight: 800; }
+    article h2 .accent { color: var(--cyan); }
+    article h3 { font-size: 20px; letter-spacing: -0.4px; margin: 30px 0 8px; }
+    article p, article li { color: var(--text-dim); font-size: 16.5px; }
+    article ul, article ol { padding-left: 22px; }
+    article li { margin: 8px 0; }
+    article strong { color: var(--text); }
+    article blockquote {
+      margin: 16px 0; padding: 12px 18px; border-left: 3px solid var(--border);
+      background: var(--surface); border-radius: 0 10px 10px 0;
+      color: var(--text-dim); font-size: 15.5px; font-style: italic;
+    }
+    .table-wrap {
+      overflow-x: auto; border: 1px solid var(--border); border-radius: 12px;
+      background: var(--surface); margin: 20px 0;
+    }
+    table { border-collapse: collapse; width: 100%; min-width: 640px; font-size: 14.5px; }
+    th, td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+    tr:last-child th, tr:last-child td { border-bottom: none; }
+    thead th { font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-dim); background: rgba(7, 18, 43, 0.5); }
+    tbody th { font-weight: 600; color: var(--text); font-size: 14px; white-space: nowrap; }
+    td { color: var(--text-dim); }
+    td.yes { color: var(--green); font-weight: 600; }
+    td.no { color: var(--red); font-weight: 600; }
+    td.partial { color: #FBBF24; font-weight: 600; }
+    .table-note { color: #6E7FA0; font-size: 12.5px; margin-top: -8px; margin-bottom: 20px; }
+    .callout {
+      background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--green);
+      border-radius: 12px; padding: 16px 20px; margin: 24px 0;
+    }
+    .callout p { margin: 0; font-size: 15.5px; }
+
+    .cta-band { text-align: center; padding: 40px 24px 88px; max-width: 760px; margin: 0 auto; }
+    .cta-band h2 { font-size: clamp(26px, 4vw, 36px); letter-spacing: -1px; font-weight: 800; margin: 0 0 12px; }
+    .cta-band h2 .accent { color: var(--cyan); }
+    .cta-band .sub { color: var(--text-dim); font-size: 17px; margin: 0 0 24px; }
+    .store-badge { display: inline-block; }
+    .store-badge img { height: 56px; width: auto; display: block; margin: 0 auto; }
+    .cta-band .meta { margin-top: 16px; color: var(--text-dim); font-size: 14px; }
+
+    footer { border-top: 1px solid var(--border); padding: 48px 0 64px; color: var(--text-dim); font-size: 14px; }
+    footer .container { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    footer .footer-brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; }
+    footer .footer-brand img { width: 24px; height: 24px; border-radius: 6px; }
+    footer .links a { color: var(--text-dim); margin-left: 18px; }
+    footer .links a:hover { color: var(--text); }
+    footer .small { display: block; margin-top: 14px; color: #6E7FA0; font-size: 12px; }
+    @media (max-width: 640px) { nav.top .links a:not(.cta) { display: none; } }
+  </style>
+</head>
+<body>
+
+  <nav class="top">
+    <div class="container">
+      <a href="/" class="brand">
+        <img src="/assets/icon-512.png" alt="">
+        Traveler's VPN
+      </a>
+      <div class="links">
+        <a href="/#why">Why</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/vs/">Compare</a>
+        <a href="/support.html">Support</a>
+        <a href="https://apps.apple.com/us/app/travelers-vpn/id6764288591" class="cta">Get the app</a>
+      </div>
+    </div>
+  </nav>
+
+  <article>
+    <span class="eyebrow">Research · August 2026</span>
+    <h1>The State of Split Tunneling on iOS: 2026</h1>
+    <p class="byline">Compiled from vendor documentation, August 3, 2026 · travelersvpn.com · corrections welcome via <a href="/support.html">support</a></p>
+
+    <div class="answer">
+      <p><strong>Finding: as of August 2026, none of the four largest consumer VPNs can exclude an app from the VPN tunnel on iPhone.</strong> ExpressVPN offers split tunneling by single IP address only. NordVPN offers no split tunneling on iOS (or macOS) at all. Surfshark's Bypasser on iOS is website-only. Astrill's per-app filter exists on desktop and Android only. Every claim below is sourced from the vendor's own published documentation, and the common excuse (that Apple forbids it) is only half true.</p>
+    </div>
+
+    <h2>Why this matters</h2>
+    <p>Split tunneling decides which traffic goes through the VPN and which reaches the internet directly. On a phone abroad, it's the difference between a device that works and one that fights you: with everything tunneled, local maps, ride-hailing, payment apps, and banking apps see a foreign or shared datacenter IP and misbehave, so users toggle the VPN off and on all day. iPhone is where this hurts most, and iPhone is exactly where the major vendors offer the least.</p>
+
+    <h2>The matrix</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>VPN</th>
+            <th>iOS: exclude an app</th>
+            <th>iOS: anything else</th>
+            <th>macOS</th>
+            <th>Windows / Android</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>ExpressVPN</th>
+            <td class="no">No</td>
+            <td class="partial">Single IP addresses only; vendor's own doc warns it "will not work reliably for large websites"</td>
+            <td class="partial">Per-app rules returned late 2025 via the new Qt app</td>
+            <td class="yes">Per-app supported</td>
+          </tr>
+          <tr>
+            <th>NordVPN</th>
+            <td class="no">No</td>
+            <td class="no">Nothing; iOS absent from vendor's split-tunneling documentation</td>
+            <td class="no">Not supported</td>
+            <td class="yes">Per-app on Windows, Android, Android TV</td>
+          </tr>
+          <tr>
+            <th>Surfshark</th>
+            <td class="no">No</td>
+            <td class="partial">Websites only: "only website bypassing is available" (vendor doc, June 2026)</td>
+            <td class="yes">Apps and websites (since April 2025)</td>
+            <td class="yes">Per-app supported</td>
+          </tr>
+          <tr>
+            <th>Astrill</th>
+            <td class="no">No</td>
+            <td class="partial">Smart Mode (website-region routing, OpenWeb protocol only) and a manual site list</td>
+            <td class="yes">Per-app Application Filter</td>
+            <td class="yes">Per-app supported</td>
+          </tr>
+          <tr>
+            <th>Shadowrocket</th>
+            <td class="partial">Effectively yes, via manually authored per-request rules</td>
+            <td class="yes">Full rule engine (domain, GeoIP, per-request)</td>
+            <td class="no">No native Mac app (iPad app on Apple Silicon only)</td>
+            <td class="no">iOS-family only</td>
+          </tr>
+          <tr>
+            <th>Traveler's VPN <span style="font-weight:400; color:#6E7FA0;">(ours)</span></th>
+            <td class="yes">Yes, automatic per-destination routing</td>
+            <td class="yes">Region-aware profiles, self-updating rule sets</td>
+            <td class="yes">Same engine, native menu-bar app</td>
+            <td class="no">Apple platforms only</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Statuses as of August 3, 2026. Sources: each vendor's published support documentation; links in the vendor sections below.</p>
+
+    <h2>Vendor by vendor, from their own docs</h2>
+
+    <h3>ExpressVPN</h3>
+    <p>ExpressVPN's iOS split tunneling (iOS 15+) accepts <strong>individual IPv4 addresses only</strong>: no apps, no domains, no ranges. Its own support page cautions that the feature "will not work reliably for large websites" (which resolve to many rotating IPs) and that it's incompatible with the Advanced Kill Switch. Per-app split tunneling exists on Windows, Android, Linux, and, since the Qt-based desktop rewrite entered beta in late 2025, on macOS again after years of absence. Source: ExpressVPN support, "How to use split tunneling on iOS" and "Split tunneling on desktop."</p>
+
+    <h3>NordVPN</h3>
+    <p>NordVPN's support article "What is Split Tunneling and how to use it" lists app-based split tunneling for <strong>Windows, Android, and Android TV</strong>, with a port/subnet allowlist on Linux. iOS and macOS do not appear in the document at all. On Apple platforms, NordVPN is a single switch. Source: NordVPN support documentation, retrieved August 2026.</p>
+
+    <h3>Surfshark</h3>
+    <p>Surfshark's Bypasser is real split tunneling on most platforms, including macOS since April 2025. On iOS, the vendor's own doc (updated June 5, 2026) states: <strong>"Currently, only website bypassing is available on the Surfshark app for iOS."</strong> A user cannot exclude a banking or ride-hailing app; they can only enumerate websites by hand. Source: Surfshark support, "How to use Bypasser for iOS."</p>
+
+    <h3>Astrill</h3>
+    <p>Astrill's per-app Application Filter is <strong>desktop and Android only</strong>. On iOS, users get Smart Mode, which routes by website region and works only over Astrill's OpenWeb protocol, plus a manual website list on other protocols. Apps cannot be excluded on iPhone. Source: Astrill's feature documentation for Smart Mode and Application Filter.</p>
+
+    <h3>The exceptions that prove it's possible</h3>
+    <p>Shadowrocket, the $2.99 power-user client, has offered per-request rule-based routing on iOS since 2015: by domain, domain suffix, GeoIP, and more. It requires users to author or import rule configurations, but it demonstrates the capability plainly. Our own app does the same class of routing with bundled automatic profiles. The capability exists on iOS; the big vendors simply haven't shipped it.</p>
+
+    <h2>"Apple doesn't allow it" is <span class="accent">half true</span></h2>
+    <p>Vendors sometimes attribute the gap to iOS restrictions. The precise version: Apple's <em>per-app VPN</em> API (excluding a specific app at the OS level) is genuinely reserved for managed enterprise devices via MDM. But that's not the only road. An iOS VPN app runs a Network Extension (<code>NEPacketTunnelProvider</code>) that receives the device's traffic and is free to decide, per connection and per destination, what goes through the tunnel and what routes directly. Destination-based split tunneling, which is what travelers actually need (local services direct, blocked services tunneled), is fully implementable on stock iOS. Shadowrocket, Surge, Quantumult X, and Traveler's VPN all ship it today.</p>
+    <p>What's fair to say: destination-routing takes real engineering (rule sets, DNS handling, per-region maintenance) that an on/off tunnel doesn't. What's not accurate is the claim that iPhone split tunneling is impossible.</p>
+
+    <div class="callout">
+      <p><strong>Methodology and corrections.</strong> This report deliberately uses only vendor-published documentation, retrieved August 3, 2026, no lab testing and no third-party reviews, so every claim is checkable against the vendor's own words. Vendors ship changes; if a linked doc has changed or we've misread something, tell us via <a href="/support.html">support</a> and we'll correct it with a changelog note. This page is free to cite with attribution.</p>
+    </div>
+
+    <h2>What travelers should take from this</h2>
+    <ul>
+      <li>If you carry an iPhone and expect "split tunneling" from a major VPN because their site advertises it, check the platform fine print; on iOS you're likely getting an on/off switch.</li>
+      <li>The practical consequences abroad: local apps slow or break while connected, banks see shared datacenter IPs, and the workflow becomes manual toggling.</li>
+      <li>Rule-based clients (Shadowrocket if you like configuring, <a href="/">Traveler's VPN</a> if you want it automatic) are currently the only way to get true destination-based routing on iPhone.</li>
+    </ul>
+
+    <p class="byline" style="margin-top:34px;">Disclosure: this report is published by the developer of Traveler's VPN, which appears in the comparison. That's exactly why the methodology is vendor-docs-only: check every claim yourself. Related: <a href="/vs/">our full comparison pages</a> · <a href="/guides/">China travel guides</a></p>
+  </article>
+
+  <div class="cta-band">
+    <h2>Split tunneling on iPhone, <span class="accent">without the rule-writing.</span></h2>
+    <p class="sub">Traveler's VPN routes per destination automatically: local apps stay direct, blocked apps tunnel. Free 3-day trial, $9.99 for a 7-day trip, or $2.99 with your own server.</p>
+    <a class="store-badge" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591"><img src="/assets/app-store-badge.svg" alt="Download on the App Store"></a>
+    <p class="meta">iPhone · iPad · Mac · One purchase, Family Sharing supported</p>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div>
+        <div class="footer-brand">
+          <img src="/assets/icon-512.png" alt="">
+          Traveler's VPN
+        </div>
+        <span class="small">Built by an indie developer who travels too much. © 2026 Supra Applications Inc.</span>
+        <span class="small">All product names are trademarks of their respective owners. Data from vendor documentation, August 2026.</span>
+      </div>
+      <div class="links">
+        <a href="/vs/">Compare</a>
+        <a href="/guides/">Guides</a>
+        <a href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">App Store</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/support.html">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The State of Split Tunneling on iOS: 2026",
+    "description": "As of August 2026, none of the four largest consumer VPNs can exclude an app from the tunnel on iPhone. Compiled entirely from vendor documentation.",
+    "datePublished": "2026-08-04",
+    "dateModified": "2026-08-04",
+    "author": { "@type": "Organization", "name": "Traveler's VPN" },
+    "publisher": { "@type": "Organization", "name": "Supra Applications Inc." },
+    "mainEntityOfPage": "https://travelersvpn.com/research/ios-split-tunneling-2026.html"
+  }
+  </script>
+
+</body>
+</html>

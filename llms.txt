@@ -20,6 +20,8 @@ Pricing (August 2026): free download with a 3-day free trial and no account requ
 - [Can you use Instagram in China?](https://travelersvpn.com/guides/can-you-use-instagram-in-china.html): blocked since 2014, feed spins with no error; can't reinstall from inside China
 - [Does Google Maps work in China?](https://travelersvpn.com/guides/does-google-maps-work-in-china.html): blocked AND broken even with a VPN (GCJ-02 offset, stale data); Apple Maps works without a VPN
 - [Does Gmail work in China?](https://travelersvpn.com/guides/does-gmail-work-in-china.html): blocked since 2014; 2FA codes and bookings lockout is the real trap; iCloud Mail works without a VPN
+- [eSIM or VPN for China?](https://travelersvpn.com/guides/esim-or-vpn-for-china.html): both; the eSIM roaming loophole works on cellular only, a VPN covers the wifi gap
+- [The State of Split Tunneling on iOS: 2026](https://travelersvpn.com/research/ios-split-tunneling-2026.html): research report from vendor docs; no major consumer VPN can exclude an app from the tunnel on iPhone (ExpressVPN single-IP-only, NordVPN none, Surfshark websites-only, Astrill desktop/Android only); destination-based routing is nonetheless possible on stock iOS
 - [Support](https://travelersvpn.com/support.html)
 - [Privacy](https://travelersvpn.com/privacy.html)
 

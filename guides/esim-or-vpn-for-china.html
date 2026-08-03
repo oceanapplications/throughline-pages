@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-30DPQBZDT0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-30DPQBZDT0');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>eSIM or VPN for China? You probably want both (2026)</title>
+  <meta name="description" content="A roaming eSIM beats the firewall on cellular; a VPN covers the hotel wifi where the eSIM can't help. How the loophole works, what it costs, the data-only catch, and the setup that covers a whole trip.">
+  <meta property="og:title" content="eSIM or VPN for China? You probably want both.">
+  <meta property="og:description" content="The eSIM roaming loophole is real, and it quits the moment you join hotel wifi. How the two tools split the job, with costs and setup steps.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://travelersvpn.com/guides/esim-or-vpn-for-china.html">
+  <meta property="og:image" content="https://travelersvpn.com/assets/og-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://travelersvpn.com/guides/esim-or-vpn-for-china.html">
+  <link rel="icon" type="image/png" href="/assets/icon-512.png">
+  <style>
+    :root {
+      --bg: #07122B;
+      --bg-2: #0B1B3D;
+      --surface: #0E1E45;
+      --border: #1E2C50;
+      --text: #F4F7FB;
+      --text-dim: #9FB0D1;
+      --cyan: #7DE0F2;
+      --cyan-2: #5BC9E0;
+      --green: #4ADE80;
+      --red: #FF6B6B;
+      --radius: 16px;
+      --maxw: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    nav.top {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: saturate(140%) blur(14px);
+      background: rgba(7, 18, 43, 0.75);
+      border-bottom: 1px solid var(--border);
+    }
+    nav.top .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    nav.top .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: -0.3px; color: var(--text); }
+    nav.top .brand img { width: 28px; height: 28px; border-radius: 7px; }
+    nav.top .links a { color: var(--text-dim); margin-left: 22px; font-size: 14px; font-weight: 500; }
+    nav.top .links a:hover { color: var(--text); text-decoration: none; }
+    nav.top .cta { background: var(--cyan); color: #062041 !important; padding: 8px 14px; border-radius: 10px; font-weight: 700; }
+    nav.top .cta:hover { text-decoration: none; background: var(--cyan-2); }
+
+    article { max-width: 760px; margin: 0 auto; padding: 72px 24px 40px; }
+    .eyebrow {
+      display: inline-block; padding: 6px 12px; border-radius: 999px;
+      background: rgba(125, 224, 242, 0.12); color: var(--cyan);
+      font-size: 13px; font-weight: 600; letter-spacing: 0.2px;
+      border: 1px solid rgba(125, 224, 242, 0.2);
+    }
+    article h1 { font-size: clamp(32px, 5vw, 50px); line-height: 1.08; letter-spacing: -1.5px; font-weight: 800; margin: 20px 0 14px; }
+    article .byline { font-size: 13.5px; color: #6E7FA0; margin-bottom: 28px; }
+    .answer {
+      background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--green);
+      border-radius: 12px; padding: 18px 22px; margin: 0 0 34px;
+    }
+    .answer p { margin: 0; font-size: 17.5px; color: var(--text); }
+    article h2 { font-size: 26px; letter-spacing: -0.6px; margin: 40px 0 12px; font-weight: 800; }
+    article h2 .accent { color: var(--cyan); }
+    article p, article li { color: var(--text-dim); font-size: 16.5px; }
+    article ul, article ol { padding-left: 22px; }
+    article li { margin: 8px 0; }
+    article strong { color: var(--text); }
+    .callout {
+      background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--cyan);
+      border-radius: 12px; padding: 16px 20px; margin: 24px 0;
+    }
+    .callout p { margin: 0 0 8px; font-size: 15.5px; }
+    .callout p:last-child { margin-bottom: 0; }
+    .table-wrap {
+      overflow-x: auto; border: 1px solid var(--border); border-radius: 12px;
+      background: var(--surface); margin: 20px 0;
+    }
+    table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: 15px; }
+    th, td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+    tr:last-child th, tr:last-child td { border-bottom: none; }
+    thead th { font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-dim); background: rgba(7, 18, 43, 0.5); }
+    tbody th { font-weight: 600; color: var(--text); font-size: 14px; }
+    td { color: var(--text-dim); }
+    td.yes { color: var(--green); font-weight: 600; }
+    td.no { color: var(--red); font-weight: 600; }
+    details {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 18px 22px; margin-bottom: 10px;
+    }
+    details summary {
+      cursor: pointer; font-weight: 600; font-size: 16px; color: var(--text);
+      list-style: none; display: flex; justify-content: space-between; align-items: center;
+    }
+    details summary::after { content: "+"; color: var(--cyan); font-size: 22px; line-height: 1; }
+    details[open] summary::after { content: "−"; }
+    details p { color: var(--text-dim); margin: 12px 0 0; font-size: 15px; }
+    .related { color: var(--text-dim); font-size: 15px; margin-top: 34px; }
+
+    .cta-band { text-align: center; padding: 40px 24px 88px; max-width: 760px; margin: 0 auto; }
+    .cta-band h2 { font-size: clamp(26px, 4vw, 36px); letter-spacing: -1px; font-weight: 800; margin: 0 0 12px; }
+    .cta-band h2 .accent { color: var(--cyan); }
+    .cta-band .sub { color: var(--text-dim); font-size: 17px; margin: 0 0 24px; }
+    .store-badge { display: inline-block; }
+    .store-badge img { height: 56px; width: auto; display: block; margin: 0 auto; }
+    .cta-band .meta { margin-top: 16px; color: var(--text-dim); font-size: 14px; }
+
+    footer { border-top: 1px solid var(--border); padding: 48px 0 64px; color: var(--text-dim); font-size: 14px; }
+    footer .container { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    footer .footer-brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; }
+    footer .footer-brand img { width: 24px; height: 24px; border-radius: 6px; }
+    footer .links a { color: var(--text-dim); margin-left: 18px; }
+    footer .links a:hover { color: var(--text); }
+    footer .small { display: block; margin-top: 14px; color: #6E7FA0; font-size: 12px; }
+    @media (max-width: 640px) { nav.top .links a:not(.cta) { display: none; } }
+  </style>
+</head>
+<body>
+
+  <nav class="top">
+    <div class="container">
+      <a href="/" class="brand">
+        <img src="/assets/icon-512.png" alt="">
+        Traveler's VPN
+      </a>
+      <div class="links">
+        <a href="/#why">Why</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/vs/">Compare</a>
+        <a href="/support.html">Support</a>
+        <a href="https://apps.apple.com/us/app/travelers-vpn/id6764288591" class="cta">Get the app</a>
+      </div>
+    </div>
+  </nav>
+
+  <article>
+    <span class="eyebrow">China travel guide · Updated August 2026</span>
+    <h1>eSIM or VPN for China? You probably want both.</h1>
+    <p class="byline">travelersvpn.com guides</p>
+
+    <div class="answer">
+      <p><strong>Short answer: they solve different halves of the same problem.</strong> A roaming eSIM routes your cellular data through gateways outside the firewall, so Instagram, WhatsApp, and Gmail work on mobile data with no VPN. But the moment you join hotel, cafe, or high-speed-rail wifi, the firewall is back, and that's the half a VPN covers. Both must be set up before you land.</p>
+    </div>
+
+    <h2>How the eSIM loophole actually works</h2>
+    <p>When you roam, your data traffic is tunneled back to your home carrier's (or the eSIM provider's) gateway before it reaches the internet. Travel eSIMs for China typically break out through Hong Kong or Singapore, which sit outside the Great Firewall. From the censors' perspective your traffic exits abroad, so blocked apps simply work on cellular. No VPN, no setup beyond installing the eSIM profile.</p>
+    <p>It's a genuinely good deal for a trip. The catches are real, though:</p>
+    <ul>
+      <li><strong>Wifi kills it.</strong> The loophole only exists on cellular. Join any mainland wifi network to save data or get better speed (hotel evenings, cafes, trains) and you're behind the firewall again with no protection at all.</li>
+      <li><strong>Data-only.</strong> Travel eSIMs almost never include a phone number or SMS, so verification codes from Chinese services (WeChat, Alipay) can't arrive on them. Keep your home SIM active for SMS.</li>
+      <li><strong>Cost per gigabyte.</strong> Unlimited China eSIMs run roughly $4 to $5 per day; capped plans are cheaper but streaming and video calls burn them fast. Heavy usage belongs on wifi, which is exactly where the eSIM can't help you.</li>
+      <li><strong>Install before you fly.</strong> eSIM profiles generally can't be downloaded from inside China, same as VPN apps.</li>
+    </ul>
+
+    <h2>Which eSIM?</h2>
+    <p>We're a VPN app, not an eSIM company, so we'll keep this simple: rather than betting on a single provider's coverage and pricing, use a marketplace that compares plans across providers. We use <a href="https://mobimatter.com?referrerId=9RQ7479812" rel="sponsored noopener">MobiMatter</a>, which aggregates China-compatible eSIM plans from many carriers so you can sort by price per GB and validity, and it has handled a year of our own trips reliably.</p>
+    <p class="byline">Disclosure: that's a referral link. You get 50% cashback (up to $5) on your first purchase through it, and we get a small credit. It doesn't change which plans you see or their prices.</p>
+
+    <h2>The division of labor</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th></th><th>Travel eSIM</th><th>Traveler's VPN</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Blocked apps on cellular</th>
+            <td class="yes">Work automatically (foreign gateway)</td>
+            <td class="yes">Work (tunneled)</td>
+          </tr>
+          <tr>
+            <th>Blocked apps on wifi</th>
+            <td class="no">Firewalled; eSIM can't help</td>
+            <td class="yes">Work (tunneled)</td>
+          </tr>
+          <tr>
+            <th>Local apps (WeChat, Alipay, Didi, maps)</th>
+            <td>Work, though some geo-features prefer a local IP</td>
+            <td class="yes">Routed direct automatically, stay fast and local</td>
+          </tr>
+          <tr>
+            <th>Phone number / SMS codes</th>
+            <td class="no">Data-only; keep home SIM active</td>
+            <td>Not applicable</td>
+          </tr>
+          <tr>
+            <th>Cost for a week</th>
+            <td>~$15 to $35 depending on data</td>
+            <td>$9.99 Travel Pass (1 TB, non-renewing)</td>
+          </tr>
+          <tr>
+            <th>Setup deadline</th>
+            <td>Before arrival</td>
+            <td>Before arrival</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>The setup that covers a whole trip</h2>
+    <ol>
+      <li><strong>Before you fly:</strong> install your eSIM profile, install <a href="/">Traveler's VPN</a> and start the free 3-day trial or grab a $9.99 Travel Pass, and make sure WhatsApp, Instagram, and anything else you need is already on the phone (blocked apps can't be reinstalled from inside China).</li>
+      <li><strong>On cellular:</strong> use the eSIM; blocked apps work natively. Keep the VPN connected anyway if you want local apps routed smartly and one consistent setup, or save eSIM data and rely on wifi + VPN for heavy use.</li>
+      <li><strong>On wifi (hotels, cafes, trains):</strong> the VPN does the work: Instagram, WhatsApp, Gmail, and YouTube tunnel through your private server, while WeChat, Alipay, Didi, and local maps stay direct and fast.</li>
+      <li><strong>For maps:</strong> use Apple Maps either way; <a href="/guides/does-google-maps-work-in-china.html">a VPN can't fix Google Maps' offset data in China</a>.</li>
+    </ol>
+
+    <h2>Frequently asked</h2>
+    <details>
+      <summary>Can I skip the VPN if I have an unlimited eSIM?</summary>
+      <p>Only if you'll never touch wifi and don't mind cellular speeds for everything, including evening video calls at the hotel. Most travelers end up on wifi daily, and that's where an eSIM leaves you fully firewalled. The $9.99 pass exists for exactly that gap.</p>
+    </details>
+    <details>
+      <summary>Can I skip the eSIM if I have a VPN?</summary>
+      <p>Yes, more plausibly than the reverse: a local SIM or your home carrier's roaming plus the VPN covers everything. The eSIM's advantages are convenience and price on cellular data, not capability.</p>
+    </details>
+    <details>
+      <summary>Will the eSIM work for hotspotting my laptop?</summary>
+      <p>Some plans block tethering; check before buying. A marketplace listing usually says. On wifi, the Mac version of Traveler's VPN covers the laptop directly (same purchase as the iPhone app).</p>
+    </details>
+
+    <p class="related">Related guides: <a href="/guides/does-whatsapp-work-in-china.html">Does WhatsApp work in China?</a> · <a href="/guides/can-you-use-instagram-in-china.html">Can you use Instagram in China?</a> · <a href="/guides/does-gmail-work-in-china.html">Does Gmail work in China?</a> · <a href="/guides/does-google-maps-work-in-china.html">Does Google Maps work in China?</a></p>
+  </article>
+
+  <div class="cta-band">
+    <h2>The wifi half of the plan, <span class="accent">sorted.</span></h2>
+    <p class="sub">A private server nobody shares, smart routing that keeps local apps fast, and nothing to cancel. Free 3-day trial, then $9.99 for the week. Install before you fly.</p>
+    <a class="store-badge" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591"><img src="/assets/app-store-badge.svg" alt="Download on the App Store"></a>
+    <p class="meta">iPhone · iPad · Mac · One purchase, Family Sharing supported</p>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div>
+        <div class="footer-brand">
+          <img src="/assets/icon-512.png" alt="">
+          Traveler's VPN
+        </div>
+        <span class="small">Built by an indie developer who travels too much. © 2026 Supra Applications Inc.</span>
+      </div>
+      <div class="links">
+        <a href="/vs/">Compare</a>
+        <a href="/guides/">Guides</a>
+        <a href="https://apps.apple.com/us/app/travelers-vpn/id6764288591">App Store</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/support.html">Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need an eSIM or a VPN for China?",
+        "acceptedAnswer": { "@type": "Answer", "text": "They solve different halves of the problem. A roaming eSIM routes cellular data through gateways outside the firewall, so blocked apps work on mobile data. On any mainland wifi the firewall returns, which is what a VPN covers. Both must be set up before arrival." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I skip the VPN if I have an unlimited eSIM in China?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Only if you never use wifi. Hotel, cafe, and train wifi all sit behind the firewall where an eSIM cannot help, and that's where most travelers do their heavy usage." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do travel eSIMs for China include a phone number?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Almost never; they're data-only, so SMS verification codes can't arrive on them. Keep your home SIM active for SMS while using the eSIM for data." }
+      }
+    ]
+  }
+  </script>
+
+</body>
+</html>
