@@ -217,6 +217,23 @@
     details[open] summary::after { content: "−"; }
     details p { color: var(--text-dim); margin: 12px 0 0; font-size: 15px; }
 
+    .reading {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 18px;
+      margin-top: 44px; text-align: left;
+    }
+    @media (max-width: 720px) { .reading { grid-template-columns: 1fr; } }
+    .reading .col {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 28px;
+    }
+    .reading h3 { margin: 0 0 6px; font-size: 19px; letter-spacing: -0.3px; }
+    .reading .col > p { color: var(--text-dim); font-size: 14px; margin: 0 0 16px; }
+    .reading ul { list-style: none; padding: 0; margin: 0; }
+    .reading li { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 15px; }
+    .reading li:last-child { border-bottom: none; }
+    .reading li a { font-weight: 600; }
+    .reading li span { display: block; color: var(--text-dim); font-size: 13px; margin-top: 2px; }
+
     footer {
       border-top: 1px solid var(--border); padding: 48px 0 64px;
       color: var(--text-dim); font-size: 14px;
@@ -250,6 +267,7 @@
         <a href="#why">Why</a>
         <a href="#pricing">Pricing</a>
         <a href="/vs/">Compare</a>
+        <a href="/guides/">Guides</a>
         <a href="/support.html">Support</a>
         <a href="https://apps.apple.com/us/app/travelers-vpn/id6764288591" class="cta">Get the app</a>
       </div>
@@ -410,6 +428,41 @@
         <summary>Can I cancel?</summary>
         <p>Anytime. The managed subscription cancels like any other App Store subscription, in Settings &rarr; your name &rarr; Subscriptions. The travel pass never auto-renews, so there's nothing to cancel. The bring-your-own unlock is a one-time purchase.</p>
       </details>
+    </div>
+  </section>
+
+  <section id="reading" class="alt">
+    <div class="container center">
+      <h2>Before you <span class="accent">fly.</span></h2>
+      <p class="sub">Honest answers about what actually works abroad, and how we compare to the VPNs you've heard of.</p>
+      <div class="reading">
+
+        <div class="col">
+          <h3>China travel guides</h3>
+          <p>What's blocked, what still works, and what to set up before you leave. <a href="/guides/">All guides</a>.</p>
+          <ul>
+            <li><a href="/guides/does-whatsapp-work-in-china.html">Does WhatsApp work in China?</a><span>No, and it's been blocked since 2017, hotel wifi included.</span></li>
+            <li><a href="/guides/can-you-use-instagram-in-china.html">Can you use Instagram in China?</a><span>Not without help. How travelers and creators still post.</span></li>
+            <li><a href="/guides/does-gmail-work-in-china.html">Does Gmail work in China?</a><span>No, and the real danger is the 2FA codes you can't reach.</span></li>
+            <li><a href="/guides/does-google-maps-work-in-china.html">Does Google Maps work in China?</a><span>No, and a VPN won't really fix it. Use Apple Maps instead.</span></li>
+            <li><a href="/guides/esim-or-vpn-for-china.html">eSIM or VPN for China?</a><span>You probably want both. How the roaming loophole works.</span></li>
+          </ul>
+        </div>
+
+        <div class="col">
+          <h3>How we compare</h3>
+          <p>Honest comparisons, including what each one does better than us. <a href="/vs/">All comparisons</a>.</p>
+          <ul>
+            <li><a href="/vs/expressvpn.html">vs ExpressVPN</a><span>Fast and polished, but no per-app split tunneling on iPhone.</span></li>
+            <li><a href="/vs/nordvpn.html">vs NordVPN</a><span>Zero split tunneling on iPhone and Mac.</span></li>
+            <li><a href="/vs/surfshark.html">vs Surfshark</a><span>Cheap on a 2-year contract, but a trip isn't a contract.</span></li>
+            <li><a href="/vs/astrill.html">vs Astrill</a><span>The China expat standard at $30/month, with no refunds.</span></li>
+            <li><a href="/vs/letsvpn.html">vs LetsVPN</a><span>After its April 2026 exit from the mainland market.</span></li>
+            <li><a href="/vs/shadowrocket.html">vs Shadowrocket</a><span>Same $2.99 price, very different philosophy.</span></li>
+          </ul>
+        </div>
+
+      </div>
     </div>
   </section>
 
