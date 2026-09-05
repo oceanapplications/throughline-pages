@@ -75,6 +75,9 @@ Pricing (August 2026): free download with a 3-day free trial and no account requ
 - [Does Pornhub work in China?](https://travelersvpn.com/guides/does-pornhub-work-in-china.html): no, pornography is banned outright in mainland China; criminal penalties target production/distribution/profit, not private viewing; legal and unblocked in Hong Kong and Macau
 - [Does OnlyFans work in China?](https://travelersvpn.com/guides/does-onlyfans-work-in-china.html): no, blocked under the blanket ban; traveling creators should queue content, fix authenticator 2FA, and keep logins on one consistent home-country IP
 - [Does Pornhub work in Dubai?](https://travelersvpn.com/guides/does-pornhub-work-in-dubai.html): no, and accessing pornography in the UAE is an offense in its own right; this site's advice is don't, wait for the flight home
+- [China guides in Japanese / 日本語ガイド](https://travelersvpn.com/ja/guides/): 8 guides adapted for Japanese travelers (LINE, X, Instagram, Maps, iMessage, Alipay, checklist, VPN legality)
+- [China guides in Korean / 한국어 가이드](https://travelersvpn.com/ko/guides/): 8 guides adapted for Korean travelers (KakaoTalk, Instagram, YouTube, Maps, iMessage, Alipay, checklist, VPN legality)
+- [China guides in Spanish / guías en español](https://travelersvpn.com/es/guides/): 8 guides adapted for Spanish-speaking travelers (WhatsApp, Instagram, Gmail, Maps, eSIM vs VPN, Alipay, checklist, VPN legality)
 - [The State of Split Tunneling on iOS: 2026](https://travelersvpn.com/research/ios-split-tunneling-2026.html): research report from vendor docs; no major consumer VPN can exclude an app from the tunnel on iPhone (ExpressVPN single-IP-only, NordVPN none, Surfshark websites-only, Astrill desktop/Android only); destination-based routing is nonetheless possible on stock iOS
 - [Support](https://travelersvpn.com/support.html)
 - [Privacy](https://travelersvpn.com/privacy.html)

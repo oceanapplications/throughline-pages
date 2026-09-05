@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 <head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-30DPQBZDT0"></script>
@@ -12,19 +12,18 @@
   </script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Does iMessage work in China? (2026 answer)</title>
-  <meta name="description" content="Yes. iMessage and FaceTime work normally in mainland China with no VPN, because Apple operates there. The catch: a normal VPN can slow them down. What works, what to check before you fly, and the split-tunnel fix.">
-  <meta property="og:title" content="Does iMessage work in China? Yes, and FaceTime too.">
-  <meta property="og:description" content="iMessage and FaceTime work in mainland China without a VPN. The green-bubble trap, the VPN slowdown, and what to check before your flight.">
+  <title>¿eSIM o VPN para China? (respuesta 2026)</title>
+  <meta name="description" content="Probablemente las dos. El truco del roaming vence al cortafuegos en datos móviles y muere en cuanto tocas el wifi del hotel; la VPN cubre ese hueco. Cómo se reparten el trabajo y qué configurar antes de volar.">
+  <meta property="og:title" content="¿eSIM o VPN para China? Probablemente las dos.">
+  <meta property="og:description" content="El roaming vence al cortafuegos en datos móviles; la VPN cubre el wifi. Cómo se reparten el trabajo.">
   <meta property="og:type" content="article">
-  <meta property="og:url" content="https://travelersvpn.com/guides/does-imessage-work-in-china.html">
-  <meta property="og:image" content="https://travelersvpn.com/assets/og/does-imessage-work-in-china.png">
+  <meta property="og:url" content="https://travelersvpn.com/es/guides/esim-or-vpn-for-china.html">
+  <meta property="og:image" content="https://travelersvpn.com/assets/og/es/esim-or-vpn-for-china.png">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="https://travelersvpn.com/guides/does-imessage-work-in-china.html">
-  <link rel="alternate" hreflang="en" href="https://travelersvpn.com/guides/does-imessage-work-in-china.html">
-  <link rel="alternate" hreflang="ja" href="https://travelersvpn.com/ja/guides/does-imessage-work-in-china.html">
-  <link rel="alternate" hreflang="ko" href="https://travelersvpn.com/ko/guides/does-imessage-work-in-china.html">
-  <link rel="alternate" hreflang="x-default" href="https://travelersvpn.com/guides/does-imessage-work-in-china.html">
+  <link rel="canonical" href="https://travelersvpn.com/es/guides/esim-or-vpn-for-china.html">
+  <link rel="alternate" hreflang="en" href="https://travelersvpn.com/guides/esim-or-vpn-for-china.html">
+  <link rel="alternate" hreflang="es" href="https://travelersvpn.com/es/guides/esim-or-vpn-for-china.html">
+  <link rel="alternate" hreflang="x-default" href="https://travelersvpn.com/guides/esim-or-vpn-for-china.html">
   <link rel="icon" type="image/png" href="/assets/icon-512.png">
   <style>
     :root {
@@ -78,7 +77,7 @@
     article h1 { font-size: clamp(32px, 5vw, 50px); line-height: 1.08; letter-spacing: -1.5px; font-weight: 800; margin: 20px 0 14px; }
     article .byline { font-size: 13.5px; color: #6E7FA0; margin-bottom: 28px; }
     .answer {
-      background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--green);
+      background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--cyan);
       border-radius: 12px; padding: 18px 22px; margin: 0 0 34px;
     }
     .answer p { margin: 0; font-size: 17.5px; color: var(--text); }
@@ -145,60 +144,44 @@
   </nav>
 
   <article>
-    <span class="eyebrow">China travel guide · Updated September 2026</span>
-    <h1>Does iMessage work in China?</h1>
-    <p class="byline">travelersvpn.com guides</p>
+    <span class="eyebrow">Guía de viaje a China · Actualizado septiembre 2026</span>
+    <h1>¿eSIM o VPN para China?</h1>
+    <p class="byline">guías de travelersvpn.com</p>
 
     <div class="answer">
-      <p><strong>Yes.</strong> iMessage and FaceTime both work normally in mainland China with no VPN, because Apple operates inside the country. Blue-bubble messages, photos, group chats, and one-on-one and group FaceTime calls all go through on hotel wifi and cellular. The catches are smaller: green-bubble SMS to home costs roaming rates, and a badly set up VPN can actually make iMessage slower. Details below.</p>
+      <p><strong>Probablemente las dos, porque resuelven mitades distintas del problema.</strong> Una eSIM de viaje (Airalo, Holafly…) saca tus datos por Hong Kong o Singapur: WhatsApp e Instagram funcionan en datos móviles sin VPN. Pero es solo datos, cuesta ~$4/día con límites de velocidad, y <strong>muere en el momento en que te conectas al wifi del hotel</strong>, que es donde pasas las noches. La VPN cubre exactamente ese hueco, y con servidor privado funciona en todas las redes. La combinación gana.</p>
     </div>
 
-    <h2>Why it works when everything else doesn't</h2>
-    <p>Apple runs real infrastructure inside China, so iMessage and FaceTime traffic never has to cross the Great Firewall at all. While <a href="/guides/does-whatsapp-work-in-china.html">WhatsApp</a>, <a href="/guides/does-facebook-work-in-china.html">Messenger</a>, and <a href="/guides/does-telegram-work-in-china.html">Telegram</a> hang on the sending spinner, blue bubbles deliver like you're at home. For travelers whose family group chat is already an iMessage thread, this is the single most reassuring fact about a China trip: your lifeline works out of the box.</p>
-    <p>The trap is the <strong>green bubble</strong>. When the other person isn't on an iPhone, your message falls back to SMS over roaming, at your carrier's rates, and their replies come the same way. Android friends are effectively on <a href="/guides/does-whatsapp-work-in-china.html">WhatsApp</a>, which is blocked. Sort out who's blue and who's green before you fly.</p>
-
-    <h2>What to check <span class="accent">before</span> you fly</h2>
-    <ul>
-      <li><strong>Turn on wifi calling and confirm iMessage activates over wifi</strong>, so you're not dependent on your roaming SIM being alive.</li>
-      <li><strong>iCloud works in China</strong> for foreign Apple IDs, so Messages in iCloud, backups, and shared albums keep syncing.</li>
-      <li><strong>FaceTime audio is the free international call.</strong> Any iPhone-to-iPhone call costs nothing but data, on hotel wifi too.</li>
-      <li><strong>The one asterisk:</strong> traffic to and from Chinese-account users routes through Apple's China partner, and content rules apply there. For a foreign account texting home, nothing changes.</li>
-    </ul>
-
-    <h2>The VPN trap: don't let the tunnel <span class="accent">slow down</span> the thing that works</h2>
-    <p>Here's the counterintuitive part. You'll be running a VPN in China anyway, for Instagram, Gmail, and Google Maps. A normal single-switch VPN routes <em>everything</em> through a server abroad, including iMessage and FaceTime, which were working perfectly on Apple's fast in-country route. Result: photos that sent instantly now crawl, and FaceTime calls that were smooth over hotel wifi stutter through a detour in Frankfurt. Travelers blame China for what their own VPN is doing.</p>
-    <p><a href="/">Traveler's VPN</a> is built to avoid exactly this: it routes per destination, simultaneously. Instagram, Gmail, and Google go through the tunnel on a private server with an IP only you use, while iMessage, FaceTime, WeChat, and Apple Maps stay direct on the routes that were already fast. Nothing to toggle before a call, and the apps that work in China keep working at full speed while the blocked ones come back to life.</p>
-
+    <h2>El truco del roaming, explicado</h2>
+    <p>Cuando usas datos en roaming, tu tráfico sale del país por la pasarela de tu operador de origen: técnicamente navegas desde fuera del cortafuegos. Por eso una eSIM de viaje hace que WhatsApp, Instagram y Google funcionen en datos móviles sin más. Sus límites son reales: es solo datos (los SMS de verificación no llegan), los planes "ilimitados" se estrangulan tras 1–2 GB diarios (unos 40 minutos de vídeo), hay que instalarla antes de llegar, y no hace nada en wifi.</p>
+    <h2>Dónde entra la VPN</h2>
+    <p>Las noches en el hotel, el portátil, el iPad, los días de mucho consumo: todo eso pasa por wifi, y el wifi del continente está filtrado entero. Una VPN instalada antes de volar cubre ese hueco. La diferencia entre VPNs está en la infraestructura: los servidores compartidos de las marcas famosas viven en rangos de IP que los censores bloquean por lotes; <a href="/">Traveler's VPN</a> te da <strong>un servidor privado con una IP que solo usas tú</strong>, y enruta por destino: lo bloqueado por el túnel, WeChat, Alipay y los mapas directos.</p>
     <div class="callout">
-      <p><strong>Family check before the flight:</strong> send a test iMessage to everyone you'll want to reach and confirm the bubbles are blue. Anyone green needs a plan: WhatsApp-over-VPN on your end, or an agreement to use email.</p>
+      <p><strong>El reparto que funciona:</strong> eSIM para la calle (mapas, mensajes, buscar el restaurante) y VPN para el hotel y el wifi. Juntas cuestan menos que un solo día de disgustos.</p>
     </div>
 
-    <h2>Frequently asked</h2>
+    <h2>Preguntas frecuentes</h2>
     <details>
-      <summary>Does FaceTime work in China?</summary>
-      <p>Yes, video and audio, one-on-one and group, over wifi and cellular, with no VPN. FaceTime audio is the free way to call home from any iPhone.</p>
+      <summary>¿La eSIM funciona en el wifi del hotel?</summary>
+      <p>No. La eSIM solo actúa sobre los datos móviles. En cualquier wifi del continente vuelves a estar detrás del cortafuegos, y ahí solo la VPN ayuda.</p>
     </details>
     <details>
-      <summary>Why is iMessage slow in China even though it works?</summary>
-      <p>Usually because a single-switch VPN is routing it through a server abroad. iMessage is fast on Apple's in-country route; a split-tunnel VPN keeps it direct while blocked apps go through the tunnel.</p>
+      <summary>¿Puedo comprar la eSIM ya estando en China?</summary>
+      <p>A veces: el QR de la eSIM llega por correo, así que si tu correo abre (iCloud u Outlook, no Gmail), es la única compra de este tipo que se puede rescatar desde dentro. Mejor no jugársela: instálala en casa.</p>
     </details>
     <details>
-      <summary>Do SMS messages work in China?</summary>
-      <p>Yes, over roaming at your carrier's rates, in both directions. Green-bubble conversations fall back to SMS, so heavy texting with Android friends gets expensive; move those chats to WhatsApp plus a VPN.</p>
-    </details>
-    <details>
-      <summary>Is iMessage private in China?</summary>
-      <p>iMessage is end-to-end encrypted everywhere. Traffic involving China-region Apple accounts is hosted with Apple's Chinese partner under local rules; a foreign Apple ID messaging other foreign accounts works the same as at home.</p>
+      <summary>¿Con la eSIM me llegan los SMS de verificación?</summary>
+      <p>No: las eSIM de viaje son solo datos. Mantén tu SIM de siempre activa en roaming para los SMS del banco, o pasa lo crítico a una app de autenticación.</p>
     </details>
 
-    <p class="related">Related guides: <a href="/guides/does-whatsapp-work-in-china.html">Does WhatsApp work in China?</a> · <a href="/guides/does-signal-work-in-china.html">Does Signal work in China?</a> · <a href="/guides/does-zoom-work-in-china.html">Does Zoom work in China?</a> · <a href="/guides/">all China guides</a><br>Picking a VPN: <a href="/vs/nordvpn.html">vs NordVPN</a> · <a href="/vs/astrill.html">vs Astrill</a> · <a href="/vs/">all comparisons</a></p>
+    <p class="related">Guías relacionadas: <a href="/es/guides/does-whatsapp-work-in-china.html">¿Funciona WhatsApp en China?</a> · <a href="/es/guides/are-vpns-legal-in-china.html">¿Son legales las VPN en China?</a> · <a href="/es/guides/china-pre-flight-checklist.html">Checklist antes de volar a China</a> · <a href="/es/guides/">Todas las guías en inglés</a></p>
   </article>
 
   <div class="cta-band">
-    <h2>iMessage stays direct. <span class="accent">Instagram goes through the tunnel.</span></h2>
-    <p class="sub">Traveler's VPN routes per destination, at the same time: blocked apps through a private server nobody shares, iMessage and FaceTime direct at full speed. Free 3-day trial, $9.99 for a 7-day trip.</p>
+    <h2>La eSIM para la calle. <span class="accent">El túnel para el hotel.</span></h2>
+    <p class="sub">Traveler's VPN enruta por destino en un servidor privado que nadie comparte: WhatsApp e Instagram por el túnel, WeChat, Alipay y los mapas directos y rápidos. Prueba gratis de 3 días, $9.99 por un viaje de 7 días, sin crear cuenta. Instálala antes de volar.</p>
     <a class="store-badge" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591"><img src="/assets/app-store-badge.svg" alt="Download on the App Store"></a>
-    <p class="meta">iPhone · iPad · Mac · One purchase, Family Sharing supported</p>
+    <p class="meta">iPhone · iPad · Mac · Una sola compra, con Compartir en familia</p>
   </div>
 
   <footer>
@@ -231,34 +214,34 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Does iMessage work in China?",
+        "name": "¿eSIM o VPN para China?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. iMessage and FaceTime work normally in mainland China with no VPN, because Apple operates inside the country. Blue-bubble messages, photos, group chats, and FaceTime calls all go through on hotel wifi and cellular."
+          "text": "Probablemente las dos. La eSIM de roaming vence al cortafuegos solo en datos móviles (~$4/día, sin SMS) y deja de ayudar en el wifi del hotel; la VPN cubre ese hueco y funciona en todas las redes. La mayoría de los viajeros combina ambas."
         }
       },
       {
         "@type": "Question",
-        "name": "Does FaceTime work in China?",
+        "name": "¿La eSIM funciona en el wifi del hotel?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, video and audio, one-on-one and group, with no VPN needed."
+          "text": "No, solo actúa en datos móviles. En wifi hace falta la VPN."
         }
       },
       {
         "@type": "Question",
-        "name": "Why is iMessage slow in China even though it works?",
+        "name": "¿Puedo comprar la eSIM ya estando en China?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Usually because a single-switch VPN is routing it abroad. A split-tunnel VPN keeps iMessage direct while blocked apps tunnel."
+          "text": "A veces, porque el QR llega por correo. Mejor instalarla en casa."
         }
       },
       {
         "@type": "Question",
-        "name": "Do SMS messages work in China?",
+        "name": "¿Con la eSIM me llegan los SMS de verificación?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, over roaming at your carrier's rates. Green-bubble chats fall back to SMS, which adds up."
+          "text": "No, son solo datos. Mantén tu SIM habitual en roaming para los SMS."
         }
       }
     ]
@@ -268,10 +251,11 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Does iMessage work in China?",
-    "description": "iMessage and FaceTime work in mainland China without a VPN. What to check before you fly, the green-bubble trap, and why split tunneling keeps them fast.",
+    "headline": "¿eSIM o VPN para China?",
+    "description": "Probablemente las dos. El truco del roaming vence al cortafuegos en datos móviles y muere en cuanto tocas el wifi del hotel; la VPN cubre ese hueco. Cómo se reparten el trabajo y qué configurar antes de volar.",
     "datePublished": "2026-09-05",
     "dateModified": "2026-09-05",
+    "inLanguage": "es",
     "author": {
       "@type": "Organization",
       "name": "Traveler's VPN"
@@ -280,7 +264,7 @@
       "@type": "Organization",
       "name": "Supra Applications Inc."
     },
-    "mainEntityOfPage": "https://travelersvpn.com/guides/does-imessage-work-in-china.html"
+    "mainEntityOfPage": "https://travelersvpn.com/es/guides/esim-or-vpn-for-china.html"
   }
   </script>
 
