@@ -59,5 +59,13 @@
     </div>
   </footer>
 
-    </body>
+      <script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href*="apps.apple.com"]');
+    if (!a || typeof gtag !== 'function') return;
+    var placement = a.closest('nav') ? 'nav' : a.closest('footer') ? 'footer' : a.closest('.cta-band') ? 'cta_band' : 'body';
+    gtag('event', 'app_store_click', { placement: placement, page_slug: location.pathname });
+  });
+  </script>
+</body>
     </html>

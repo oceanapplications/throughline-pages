@@ -441,6 +441,7 @@
           <h3>China travel guides</h3>
           <p>What's blocked, what still works, and what to set up before you leave. <a href="/guides/">All guides</a>.</p>
           <ul>
+            <li><a href="/guides/china-pre-flight-checklist.html">The China pre-flight checklist</a><span>7 setup steps, 90 minutes, a smooth trip. Start here.</span></li>
             <li><a href="/guides/does-whatsapp-work-in-china.html">Does WhatsApp work in China?</a><span>No, and it's been blocked since 2017, hotel wifi included.</span></li>
             <li><a href="/guides/can-you-use-instagram-in-china.html">Can you use Instagram in China?</a><span>Not without help. How travelers and creators still post.</span></li>
             <li><a href="/guides/does-gmail-work-in-china.html">Does Gmail work in China?</a><span>No, and the real danger is the 2FA codes you can't reach.</span></li>
@@ -526,5 +527,13 @@
   }
   </script>
 
+  <script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href*="apps.apple.com"]');
+    if (!a || typeof gtag !== 'function') return;
+    var placement = a.closest('nav') ? 'nav' : a.closest('footer') ? 'footer' : a.closest('.cta-band') ? 'cta_band' : 'body';
+    gtag('event', 'app_store_click', { placement: placement, page_slug: location.pathname });
+  });
+  </script>
 </body>
 </html>

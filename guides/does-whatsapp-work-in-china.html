@@ -18,7 +18,7 @@
   <meta property="og:description" content="WhatsApp is blocked in mainland China, including on hotel wifi. The fixes that work, the ones that don't, and what to set up before your flight.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://travelersvpn.com/guides/does-whatsapp-work-in-china.html">
-  <meta property="og:image" content="https://travelersvpn.com/assets/og-card.png">
+  <meta property="og:image" content="https://travelersvpn.com/assets/og/does-whatsapp-work-in-china.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://travelersvpn.com/guides/does-whatsapp-work-in-china.html">
   <link rel="icon" type="image/png" href="/assets/icon-512.png">
@@ -183,7 +183,7 @@
     </details>
     <details>
       <summary>Is using a VPN for WhatsApp legal in China as a tourist?</summary>
-      <p>Individual VPN use sits in a legal grey area. Documented enforcement has targeted sellers and, occasionally, residents; tourists checking messages are not the focus. We can't promise legality, and neither honestly can anyone else.</p>
+      <p>Individual VPN use sits in a <a href="/guides/are-vpns-legal-in-china.html">legal grey area</a>. Documented enforcement has targeted sellers and, occasionally, residents; tourists checking messages are not the focus. We can't promise legality, and neither honestly can anyone else.</p>
     </details>
 
     <p class="related">Related guides: <a href="/guides/can-you-use-instagram-in-china.html">Can you use Instagram in China?</a> · <a href="/guides/does-google-maps-work-in-china.html">Does Google Maps work in China?</a> · <a href="/guides/does-gmail-work-in-china.html">Does Gmail work in China?</a> · <a href="/guides/">all China guides</a><br>Picking a VPN: <a href="/vs/nordvpn.html">vs NordVPN</a> · <a href="/vs/astrill.html">vs Astrill</a> · <a href="/vs/surfshark.html">vs Surfshark</a> · <a href="/vs/">all comparisons</a></p>
@@ -261,5 +261,13 @@
   }
   </script>
 
+  <script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href*="apps.apple.com"]');
+    if (!a || typeof gtag !== 'function') return;
+    var placement = a.closest('nav') ? 'nav' : a.closest('footer') ? 'footer' : a.closest('.cta-band') ? 'cta_band' : 'body';
+    gtag('event', 'app_store_click', { placement: placement, page_slug: location.pathname });
+  });
+  </script>
 </body>
 </html>

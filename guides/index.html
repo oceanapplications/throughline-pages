@@ -91,6 +91,15 @@
     .card p { color: var(--text-dim); margin: 0 0 18px; font-size: 14.5px; flex: 1; }
     .card .go { color: var(--cyan); font-weight: 700; font-size: 14px; }
     .more { text-align: center; color: var(--text-dim); font-size: 15px; margin-top: 34px; }
+    .section-title { text-align: center; font-size: 28px; letter-spacing: -0.6px; margin: 64px 0 20px; font-weight: 800; }
+    .section-title .accent { color: var(--cyan); }
+    .filter { max-width: 560px; margin: 0 auto 28px; }
+    .filter input {
+      width: 100%; padding: 14px 18px; border-radius: 12px; font-size: 16px;
+      background: var(--surface); border: 1px solid var(--border); color: var(--text); outline: none;
+    }
+    .filter input:focus { border-color: rgba(125, 224, 242, 0.55); }
+    .no-results { display: none; text-align: center; color: var(--text-dim); margin: 26px auto 0; max-width: 560px; }
 
     footer { border-top: 1px solid var(--border); padding: 48px 0 64px; color: var(--text-dim); font-size: 14px; }
     footer .container { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
@@ -132,7 +141,16 @@
 
   <section>
     <div class="container">
-      <div class="cards">
+      <div class="filter">
+        <input id="guide-search" type="search" placeholder="Type any app or site… WhatsApp, Netflix, Alipay, banking" aria-label="Search the guides">
+      </div>
+      <div class="cards" id="china-cards">
+        <a class="card" href="/guides/china-pre-flight-checklist.html">
+          <span class="verdict">Start here · 7 steps</span>
+          <h2>The China pre-flight checklist</h2>
+          <p>All 50+ guides condensed into the ninety minutes of setup that make the whole trip run smoothly. Print it or save it offline.</p>
+          <span class="go">Read the answer →</span>
+        </a>
         <a class="card" href="/guides/does-whatsapp-work-in-china.html">
           <span class="verdict">Blocked since 2017</span>
           <h2>Does WhatsApp work in China?</h2>
@@ -446,6 +464,29 @@
           <span class="go">Read the answer →</span>
         </a>
       </div>
+      <p class="no-results" id="no-results">No guide for that one yet. The general rule: Western social, Google, and messaging are blocked; Apple and Microsoft services work. <a href="/guides/china-pre-flight-checklist.html">Start with the checklist</a> or <a href="/support.html">ask us</a>.</p>
+
+      <h2 class="section-title">Beyond China: <span class="accent">Dubai &amp; the UAE</span></h2>
+      <div class="cards">
+        <a class="card" href="/guides/does-whatsapp-calling-work-in-dubai.html">
+          <span class="verdict">Texts yes, calls no</span>
+          <h2>Does WhatsApp calling work in Dubai?</h2>
+          <p>The UAE's signature split: messages flow, calls die. Botim, the Zoom loophole, and what travelers actually do.</p>
+          <span class="go">Read the answer →</span>
+        </a>
+        <a class="card" href="/guides/does-facetime-work-in-dubai.html">
+          <span class="verdict">Don't count on it</span>
+          <h2>Does FaceTime work in Dubai?</h2>
+          <p>Blocked for years, occasionally easing, never dependable, and UAE-bought iPhones may lack the app entirely.</p>
+          <span class="go">Read the answer →</span>
+        </a>
+        <a class="card" href="/guides/are-vpns-legal-in-dubai.html">
+          <span class="verdict">Legal to use, illegal to misuse</span>
+          <h2>Are VPNs legal in Dubai?</h2>
+          <p>Sharper law, milder blocking: the honest read on the UAE's misuse clause, letter versus enforcement record.</p>
+          <span class="go">Read the answer →</span>
+        </a>
+      </div>
       <p class="more">Also: <a href="/research/ios-split-tunneling-2026.html">The State of Split Tunneling on iOS: 2026 report</a> · <a href="/blog/run-your-own-travel-vpn.html">run your own travel VPN for ~$5/month</a> · <a href="/vs/">how Traveler's VPN compares to ExpressVPN, NordVPN, Astrill, and more</a></p>
     </div>
   </section>
@@ -473,5 +514,31 @@
     </div>
   </footer>
 
+  <script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href*="apps.apple.com"]');
+    if (!a || typeof gtag !== 'function') return;
+    var placement = a.closest('nav') ? 'nav' : a.closest('footer') ? 'footer' : a.closest('.cta-band') ? 'cta_band' : 'body';
+    gtag('event', 'app_store_click', { placement: placement, page_slug: location.pathname });
+  });
+  </script>
+  <script>
+  (function () {
+    var input = document.getElementById('guide-search');
+    var cards = Array.prototype.slice.call(document.querySelectorAll('#china-cards .card'));
+    var empty = document.getElementById('no-results');
+    input.addEventListener('input', function () {
+      var q = input.value.trim().toLowerCase();
+      var shown = 0;
+      cards.forEach(function (c) {
+        var hit = !q || c.textContent.toLowerCase().indexOf(q) !== -1;
+        c.style.display = hit ? '' : 'none';
+        if (hit) shown++;
+      });
+      empty.style.display = shown ? 'none' : 'block';
+      if (q && window.gtag) gtag('event', 'guide_search', { search_term: q, results: shown });
+    });
+  })();
+  </script>
 </body>
 </html>

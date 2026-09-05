@@ -18,7 +18,7 @@
   <meta property="og:description" content="Viber is blocked in mainland China, including on hotel wifi. What travelers from Eastern Europe and the Middle East should set up before flying.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://travelersvpn.com/guides/does-viber-work-in-china.html">
-  <meta property="og:image" content="https://travelersvpn.com/assets/og-card.png">
+  <meta property="og:image" content="https://travelersvpn.com/assets/og/does-viber-work-in-china.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://travelersvpn.com/guides/does-viber-work-in-china.html">
   <link rel="icon" type="image/png" href="/assets/icon-512.png">
@@ -157,7 +157,7 @@
     <ul>
       <li><strong>iMessage and FaceTime</strong>, if both ends have iPhones, which is less common in Viber country, so check before assuming.</li>
       <li><strong>SMS and regular calls</strong> over roaming, at your carrier's rates; workable for logistics, brutal for the daily family thread.</li>
-      <li><strong>WeChat</strong>, installable by anyone abroad, if you can talk one relative into it for two weeks.</li>
+      <li><strong><a href="/guides/can-tourists-use-wechat.html">WeChat</a></strong>, installable by anyone abroad, if you can talk one relative into it for two weeks.</li>
     </ul>
 
     <h2>How to keep Viber alive: two real options</h2>
@@ -279,5 +279,13 @@
   }
   </script>
 
+  <script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href*="apps.apple.com"]');
+    if (!a || typeof gtag !== 'function') return;
+    var placement = a.closest('nav') ? 'nav' : a.closest('footer') ? 'footer' : a.closest('.cta-band') ? 'cta_band' : 'body';
+    gtag('event', 'app_store_click', { placement: placement, page_slug: location.pathname });
+  });
+  </script>
 </body>
 </html>

@@ -18,7 +18,7 @@
   <meta property="og:description" content="Signal has been blocked in mainland China since March 2021, including on hotel wifi. The proxy feature, the VPN fix, and what to set up before your flight.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://travelersvpn.com/guides/does-signal-work-in-china.html">
-  <meta property="og:image" content="https://travelersvpn.com/assets/og-card.png">
+  <meta property="og:image" content="https://travelersvpn.com/assets/og/does-signal-work-in-china.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://travelersvpn.com/guides/does-signal-work-in-china.html">
   <link rel="icon" type="image/png" href="/assets/icon-512.png">
@@ -160,7 +160,7 @@
     <ul>
       <li><strong>iMessage and FaceTime</strong>, which are end-to-end encrypted and work in China because Apple operates there. For most travelers this is the closest substitute.</li>
       <li><strong>SMS and regular calls</strong> over roaming, unencrypted, at your carrier's rates.</li>
-      <li><strong>WeChat</strong>, which is not private in any sense you'd care about if you're a Signal user, but is how you'll reach anyone local.</li>
+      <li><strong><a href="/guides/can-tourists-use-wechat.html">WeChat</a></strong>, which is not private in any sense you'd care about if you're a Signal user, but is how you'll reach anyone local.</li>
     </ul>
 
     <h2>How to make Signal work: two real options</h2>
@@ -282,5 +282,13 @@
   }
   </script>
 
+  <script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href*="apps.apple.com"]');
+    if (!a || typeof gtag !== 'function') return;
+    var placement = a.closest('nav') ? 'nav' : a.closest('footer') ? 'footer' : a.closest('.cta-band') ? 'cta_band' : 'body';
+    gtag('event', 'app_store_click', { placement: placement, page_slug: location.pathname });
+  });
+  </script>
 </body>
 </html>

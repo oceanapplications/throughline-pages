@@ -18,7 +18,7 @@
   <meta property="og:description" content="Discord is blocked in mainland China, including on hotel wifi. The fixes that work for text and voice, and what to set up before your flight.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://travelersvpn.com/guides/does-discord-work-in-china.html">
-  <meta property="og:image" content="https://travelersvpn.com/assets/og-card.png">
+  <meta property="og:image" content="https://travelersvpn.com/assets/og/does-discord-work-in-china.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://travelersvpn.com/guides/does-discord-work-in-china.html">
   <link rel="icon" type="image/png" href="/assets/icon-512.png">
@@ -156,7 +156,7 @@
     <h2>What still works <span class="accent">without</span> a VPN</h2>
     <ul>
       <li><strong>iMessage and FaceTime</strong>, including group FaceTime, because Apple operates in China.</li>
-      <li><strong>WeChat</strong> group chats and voice calls, which is what Chinese gamers use.</li>
+      <li><strong><a href="/guides/can-tourists-use-wechat.html">WeChat</a></strong> group chats and voice calls, which is what Chinese gamers use.</li>
       <li><strong>Steam and most game servers</strong>, which are usually reachable, if slow. Xbox Live and PlayStation Network are patchy.</li>
     </ul>
 
@@ -279,5 +279,13 @@
   }
   </script>
 
+  <script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href*="apps.apple.com"]');
+    if (!a || typeof gtag !== 'function') return;
+    var placement = a.closest('nav') ? 'nav' : a.closest('footer') ? 'footer' : a.closest('.cta-band') ? 'cta_band' : 'body';
+    gtag('event', 'app_store_click', { placement: placement, page_slug: location.pathname });
+  });
+  </script>
 </body>
 </html>

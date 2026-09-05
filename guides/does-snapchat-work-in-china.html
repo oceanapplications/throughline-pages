@@ -18,7 +18,7 @@
   <meta property="og:description" content="Snapchat is blocked in mainland China, including on hotel wifi. How to keep streaks alive, and what to set up before your flight.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://travelersvpn.com/guides/does-snapchat-work-in-china.html">
-  <meta property="og:image" content="https://travelersvpn.com/assets/og-card.png">
+  <meta property="og:image" content="https://travelersvpn.com/assets/og/does-snapchat-work-in-china.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://travelersvpn.com/guides/does-snapchat-work-in-china.html">
   <link rel="icon" type="image/png" href="/assets/icon-512.png">
@@ -155,7 +155,7 @@
     <h2>What still works <span class="accent">without</span> a VPN</h2>
     <ul>
       <li><strong>iMessage and FaceTime</strong>, since Apple operates in China. Not the same, but it's how your friends will know you're alive.</li>
-      <li><strong>WeChat</strong>, which has a Moments feed and disappearing-ish features of its own.</li>
+      <li><strong><a href="/guides/can-tourists-use-wechat.html">WeChat</a></strong>, which has a Moments feed and disappearing-ish features of its own.</li>
       <li><strong>Memories saved to your phone</strong> before the trip, which live locally.</li>
     </ul>
 
@@ -278,5 +278,13 @@
   }
   </script>
 
+  <script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href*="apps.apple.com"]');
+    if (!a || typeof gtag !== 'function') return;
+    var placement = a.closest('nav') ? 'nav' : a.closest('footer') ? 'footer' : a.closest('.cta-band') ? 'cta_band' : 'body';
+    gtag('event', 'app_store_click', { placement: placement, page_slug: location.pathname });
+  });
+  </script>
 </body>
 </html>

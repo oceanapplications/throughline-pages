@@ -18,7 +18,7 @@
   <meta property="og:description" content="Slack isn't formally blocked in China, but it's throttled to uselessness on most networks. What to set up before a work trip.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://travelersvpn.com/guides/does-slack-work-in-china.html">
-  <meta property="og:image" content="https://travelersvpn.com/assets/og-card.png">
+  <meta property="og:image" content="https://travelersvpn.com/assets/og/does-slack-work-in-china.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://travelersvpn.com/guides/does-slack-work-in-china.html">
   <link rel="icon" type="image/png" href="/assets/icon-512.png">
@@ -158,7 +158,7 @@
       <li><strong>Microsoft Teams</strong> mostly works, because Microsoft runs China infrastructure through a local partner. Quality varies, but chat and calls generally connect.</li>
       <li><strong><a href="/guides/does-zoom-work-in-china.html">Zoom</a></strong> works well; it maintains China connectivity through local partners.</li>
       <li><strong>Email</strong>, if it isn't Gmail. Outlook and iCloud Mail work; <a href="/guides/does-gmail-work-in-china.html">Gmail is blocked</a>.</li>
-      <li><strong>WeChat</strong>, which is how your Chinese colleagues and clients actually communicate, and which they'll expect you to have.</li>
+      <li><strong><a href="/guides/can-tourists-use-wechat.html">WeChat</a></strong>, which is how your Chinese colleagues and clients actually communicate, and which they'll expect you to have.</li>
     </ul>
 
     <h2>How to make Slack work on a work trip</h2>
@@ -280,5 +280,13 @@
   }
   </script>
 
+  <script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href*="apps.apple.com"]');
+    if (!a || typeof gtag !== 'function') return;
+    var placement = a.closest('nav') ? 'nav' : a.closest('footer') ? 'footer' : a.closest('.cta-band') ? 'cta_band' : 'body';
+    gtag('event', 'app_store_click', { placement: placement, page_slug: location.pathname });
+  });
+  </script>
 </body>
 </html>

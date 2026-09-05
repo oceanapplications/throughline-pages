@@ -18,7 +18,7 @@
   <meta property="og:description" content="The eSIM roaming loophole is real, and it quits the moment you join hotel wifi. How the two tools split the job, with costs and setup steps.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://travelersvpn.com/guides/esim-or-vpn-for-china.html">
-  <meta property="og:image" content="https://travelersvpn.com/assets/og-card.png">
+  <meta property="og:image" content="https://travelersvpn.com/assets/og/esim-or-vpn-for-china.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://travelersvpn.com/guides/esim-or-vpn-for-china.html">
   <link rel="icon" type="image/png" href="/assets/icon-512.png">
@@ -296,5 +296,13 @@
   }
   </script>
 
+  <script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href*="apps.apple.com"]');
+    if (!a || typeof gtag !== 'function') return;
+    var placement = a.closest('nav') ? 'nav' : a.closest('footer') ? 'footer' : a.closest('.cta-band') ? 'cta_band' : 'body';
+    gtag('event', 'app_store_click', { placement: placement, page_slug: location.pathname });
+  });
+  </script>
 </body>
 </html>

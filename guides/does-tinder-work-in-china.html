@@ -18,7 +18,7 @@
   <meta property="og:description" content="Tinder, Bumble, and Hinge are all blocked in mainland China. The login trap, what locals use, and what to set up before your flight.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://travelersvpn.com/guides/does-tinder-work-in-china.html">
-  <meta property="og:image" content="https://travelersvpn.com/assets/og-card.png">
+  <meta property="og:image" content="https://travelersvpn.com/assets/og/does-tinder-work-in-china.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://travelersvpn.com/guides/does-tinder-work-in-china.html">
   <link rel="icon" type="image/png" href="/assets/icon-512.png">
@@ -156,7 +156,7 @@
     <h2>What locals and long-term visitors use</h2>
     <ul>
       <li><strong>Tantan</strong>, the Chinese Tinder-alike, works without a VPN and has an English-friendly interface, though sign-up wants a working phone number.</li>
-      <li><strong>WeChat</strong> is where any promising conversation ends up anyway; "add me on WeChat" is the local exchange-of-numbers.</li>
+      <li><strong><a href="/guides/can-tourists-use-wechat.html">WeChat</a></strong> is where any promising conversation ends up anyway; "add me on WeChat" is the local exchange-of-numbers.</li>
       <li><strong>Expect verification friction:</strong> any dating app's SMS verification needs your roaming to work, so keep the home SIM alive.</li>
     </ul>
 
@@ -279,5 +279,13 @@
   }
   </script>
 
+  <script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href*="apps.apple.com"]');
+    if (!a || typeof gtag !== 'function') return;
+    var placement = a.closest('nav') ? 'nav' : a.closest('footer') ? 'footer' : a.closest('.cta-band') ? 'cta_band' : 'body';
+    gtag('event', 'app_store_click', { placement: placement, page_slug: location.pathname });
+  });
+  </script>
 </body>
 </html>

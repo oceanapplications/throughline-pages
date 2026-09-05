@@ -18,7 +18,7 @@
   <meta property="og:description" content="Threads is blocked in mainland China like every Meta app. The fixes that work and what to set up before your flight.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://travelersvpn.com/guides/does-threads-work-in-china.html">
-  <meta property="og:image" content="https://travelersvpn.com/assets/og-card.png">
+  <meta property="og:image" content="https://travelersvpn.com/assets/og/does-threads-work-in-china.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://travelersvpn.com/guides/does-threads-work-in-china.html">
   <link rel="icon" type="image/png" href="/assets/icon-512.png">
@@ -156,7 +156,7 @@
     <h2>What still works <span class="accent">without</span> a VPN</h2>
     <ul>
       <li><strong>iMessage and FaceTime</strong>, because Apple operates in China.</li>
-      <li><strong>WeChat</strong>, including its Moments feed, which is the closest local analog to a text-first social feed.</li>
+      <li><strong><a href="/guides/can-tourists-use-wechat.html">WeChat</a></strong>, including its Moments feed, which is the closest local analog to a text-first social feed.</li>
       <li><strong>Xiaohongshu and Weibo</strong>, if you want to watch the local conversation, with translation doing heavy lifting.</li>
     </ul>
 
@@ -279,5 +279,13 @@
   }
   </script>
 
+  <script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href*="apps.apple.com"]');
+    if (!a || typeof gtag !== 'function') return;
+    var placement = a.closest('nav') ? 'nav' : a.closest('footer') ? 'footer' : a.closest('.cta-band') ? 'cta_band' : 'body';
+    gtag('event', 'app_store_click', { placement: placement, page_slug: location.pathname });
+  });
+  </script>
 </body>
 </html>

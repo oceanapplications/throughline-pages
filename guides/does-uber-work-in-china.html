@@ -18,7 +18,7 @@
   <meta property="og:description" content="Uber has no drivers in mainland China since selling to Didi in 2016. The honest answer is Didi, which has an English mode and takes foreign cards.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://travelersvpn.com/guides/does-uber-work-in-china.html">
-  <meta property="og:image" content="https://travelersvpn.com/assets/og-card.png">
+  <meta property="og:image" content="https://travelersvpn.com/assets/og/does-uber-work-in-china.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="canonical" href="https://travelersvpn.com/guides/does-uber-work-in-china.html">
   <link rel="icon" type="image/png" href="/assets/icon-512.png">
@@ -155,7 +155,7 @@
     <h2>What to use instead: <span class="accent">Didi</span></h2>
     <ul>
       <li><strong>Install Didi before you fly</strong> (search "DiDi" on the App Store; it's on the international store, and it's also a mini-program inside WeChat and Alipay). It has an English mode, and you can register with a foreign phone number.</li>
-      <li><strong>Add a foreign Visa or Mastercard</strong> in the app, or link it to Alipay or WeChat Pay, both of which now accept international cards. Set this up at home; it's harder from a taxi rank.</li>
+      <li><strong>Add a foreign Visa or Mastercard</strong> in the app, or link it to <a href="/guides/how-to-set-up-alipay-as-a-tourist.html">Alipay</a> or WeChat Pay, both of which now accept international cards. Set this up at home; it's harder from a taxi rank.</li>
       <li><strong>Apple Maps and Amap</strong> can both hand off to Didi for ride-hailing, and Apple Maps works in China without a VPN, which makes it a decent way to point at a destination and request a car.</li>
       <li><strong>Regular taxis</strong> are everywhere and cheap, and the driver's phone will be running Didi anyway. Have the destination in Chinese characters on your screen.</li>
     </ul>
@@ -278,5 +278,13 @@
   }
   </script>
 
+  <script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href*="apps.apple.com"]');
+    if (!a || typeof gtag !== 'function') return;
+    var placement = a.closest('nav') ? 'nav' : a.closest('footer') ? 'footer' : a.closest('.cta-band') ? 'cta_band' : 'body';
+    gtag('event', 'app_store_click', { placement: placement, page_slug: location.pathname });
+  });
+  </script>
 </body>
 </html>
