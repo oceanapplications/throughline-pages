@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-30DPQBZDT0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-30DPQBZDT0');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Does GitHub work in China? (2026 answer)</title>
+  <meta name="description" content="Mostly yes, but slowly. GitHub isn't blocked in China, but it's throttled: pages crawl, clones stall, and raw file downloads often fail. Why it survives the firewall, and how a split tunnel makes it fast again.">
+  <meta property="og:title" content="Does GitHub work in China? Yes, but at dial-up speed.">
+  <meta property="og:description" content="GitHub isn't blocked in China, but it's throttled: slow pages, stalling clones, failing raw downloads. The split-tunnel fix for developers.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://travelersvpn.com/guides/does-github-work-in-china.html">
+  <meta property="og:image" content="https://travelersvpn.com/assets/og-card.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://travelersvpn.com/guides/does-github-work-in-china.html">
+  <link rel="icon" type="image/png" href="/assets/icon-512.png">
+  <style>
+    :root {
+      --bg: #07122B;
+      --bg-2: #0B1B3D;
+      --surface: #0E1E45;
+      --border: #1E2C50;
+      --text: #F4F7FB;
+      --text-dim: #9FB0D1;
+      --cyan: #7DE0F2;
+      --cyan-2: #5BC9E0;
+      --green: #4ADE80;
+      --red: #FF6B6B;
+      --radius: 16px;
+      --maxw: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    nav.top {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: saturate(140%) blur(14px);
+      background: rgba(7, 18, 43, 0.75);
+      border-bottom: 1px solid var(--border);
+    }
+    nav.top .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    nav.top .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: -0.3px; color: var(--text); }
+    nav.top .brand img { width: 28px; height: 28px; border-radius: 7px; }
+    nav.top .links a { color: var(--text-dim); margin-left: 22px; font-size: 14px; font-weight: 500; }
+    nav.top .links a:hover { color: var(--text); text-decoration: none; }
+    nav.top .cta { background: var(--cyan); color: #062041 !important; padding: 8px 14px; border-radius: 10px; font-weight: 700; }
+    nav.top .cta:hover { text-decoration: none; background: var(--cyan-2); }
+
+    article { max-width: 760px; margin: 0 auto; padding: 72px 24px 40px; }
+    .eyebrow {
+      display: inline-block; padding: 6px 12px; border-radius: 999px;
+      background: rgba(125, 224, 242, 0.12); color: var(--cyan);
+      font-size: 13px; font-weight: 600; letter-spacing: 0.2px;
+      border: 1px solid rgba(125, 224, 242, 0.2);
+    }
+    article h1 { font-size: clamp(32px, 5vw, 50px); line-height: 1.08; letter-spacing: -1.5px; font-weight: 800; margin: 20px 0 14px; }
+    article .byline { font-size: 13.5px; color: #6E7FA0; margin-bottom: 28px; }
+    .answer {
+      background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--cyan);
+      border-radius: 12px; padding: 18px 22px; margin: 0 0 34px;
+    }
+    .answer p { margin: 0; font-size: 17.5px; color: var(--text); }
+    article h2 { font-size: 26px; letter-spacing: -0.6px; margin: 40px 0 12px; font-weight: 800; }
+    article h2 .accent { color: var(--cyan); }
+    article p, article li { color: var(--text-dim); font-size: 16.5px; }
+    article ul, article ol { padding-left: 22px; }
+    article li { margin: 8px 0; }
+    article strong { color: var(--text); }
+    .callout {
+      background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--cyan);
+      border-radius: 12px; padding: 16px 20px; margin: 24px 0;
+    }
+    .callout p { margin: 0; font-size: 15.5px; }
+    details {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 18px 22px; margin-bottom: 10px;
+    }
+    details summary {
+      cursor: pointer; font-weight: 600; font-size: 16px; color: var(--text);
+      list-style: none; display: flex; justify-content: space-between; align-items: center;
+    }
+    details summary::after { content: "+"; color: var(--cyan); font-size: 22px; line-height: 1; }
+    details[open] summary::after { content: "−"; }
+    details p { color: var(--text-dim); margin: 12px 0 0; font-size: 15px; }
+    .related { color: var(--text-dim); font-size: 15px; margin-top: 34px; }
+
+    .cta-band { text-align: center; padding: 40px 24px 88px; max-width: 760px; margin: 0 auto; }
+    .cta-band h2 { font-size: clamp(26px, 4vw, 36px); letter-spacing: -1px; font-weight: 800; margin: 0 0 12px; }
+    .cta-band h2 .accent { color: var(--cyan); }
+    .cta-band .sub { color: var(--text-dim); font-size: 17px; margin: 0 0 24px; }
+    .store-badge { display: inline-block; }
+    .store-badge img { height: 56px; width: auto; display: block; margin: 0 auto; }
+    .cta-band .meta { margin-top: 16px; color: var(--text-dim); font-size: 14px; }
+
+    footer { border-top: 1px solid var(--border); padding: 48px 0 64px; color: var(--text-dim); font-size: 14px; }
+    footer .container { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    footer .footer-brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; }
+    footer .footer-brand img { width: 24px; height: 24px; border-radius: 6px; }
+    footer .links a { color: var(--text-dim); margin-left: 18px; }
+    footer .links a:hover { color: var(--text); }
+    footer .small { display: block; margin-top: 14px; color: #6E7FA0; font-size: 12px; }
+    @media (max-width: 640px) { nav.top .links a:not(.cta) { display: none; } }
+      footer .store-badge { display: inline-block; margin-top: 16px; }
+    footer .store-badge img { height: 40px; width: auto; display: block; }
+</style>
+</head>
+<body>
+
+  <nav class="top">
+    <div class="container">
+      <a href="/" class="brand">
+        <img src="/assets/icon-512.png" alt="">
+        Traveler's VPN
+      </a>
+      <div class="links">
+        <a href="/#why">Why</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/vs/">Compare</a>
+        <a href="/support.html">Support</a>
+        <a href="https://apps.apple.com/us/app/travelers-vpn/id6764288591" class="cta">Get the app</a>
+      </div>
+    </div>
+  </nav>
+
+  <article>
+    <span class="eyebrow">China travel guide · Updated September 2026</span>
+    <h1>Does GitHub work in China?</h1>
+    <p class="byline">travelersvpn.com guides</p>
+
+    <div class="answer">
+      <p><strong>Mostly yes, but slowly.</strong> GitHub is one of the few Western platforms not blocked in mainland China; too much of the Chinese tech industry runs on it. But it's heavily throttled: pages take ten seconds, clones stall mid-transfer, images break, and raw.githubusercontent.com downloads fail outright more often than not. It works at full speed in Hong Kong and Macau. For actual work on the mainland, a VPN routing GitHub through the tunnel turns it from dial-up back into GitHub.</p>
+    </div>
+
+    <h2>What actually happens when you try</h2>
+    <p>GitHub loads. Eventually. The repo page takes ten seconds, avatars and README images come up broken, and a <code>git clone</code> starts at a decent clip, sags to a few KB/s, and sometimes dies with a reset connection, worse in the evening, better at 7 a.m. The support domains fare worse than the main site: <strong>raw.githubusercontent.com</strong>, which half the world's install scripts curl from, fails more often than it works, which is why a one-line installer that runs fine at home dies mysteriously in a Shanghai hotel.</p>
+    <p>Why isn't it just blocked? Because Chinese companies depend on it. GitHub sits in a deliberate grey zone: reachable enough that industry functions, degraded enough that it's painful, with occasional regional interference on top. The result for a visiting developer is the least predictable service in this whole series.</p>
+
+    <h2>What works <span class="accent">without</span> a VPN</h2>
+    <ul>
+      <li><strong>Git over SSH</strong> tends to survive better than HTTPS clones. If you're stuck, switching remotes to SSH is the first free fix.</li>
+      <li><strong>Shallow clones</strong> (<code>--depth 1</code>) finish where full ones stall.</li>
+      <li><strong>Gitee</strong>, the domestic GitHub, mirrors many major open-source repos at full speed if you just need source.</li>
+      <li><strong>VS Code, npm, and PyPI</strong> are their own adventure: partially reachable, often via Chinese mirrors. Assume every registry needs either a mirror or the tunnel.</li>
+    </ul>
+
+    <h2>The fix: put GitHub in the tunnel, leave the rest alone</h2>
+    <p>This is the mostly-works case where split tunneling matters most. You don't want a single-switch VPN dragging <em>everything</em> through a foreign server all day, slowing WeChat, Didi, and every Chinese site your work trip depends on, just to make git usable. <a href="/">Traveler's VPN</a> routes per destination: GitHub, raw.githubusercontent.com, npm, and Google go through the tunnel on a private server with an IP only you use, while local apps and Chinese endpoints stay direct. Clones run at normal speed, install scripts stop dying, and nothing else on your machine pays for it. That's the difference between a VPN you toggle in frustration and one you forget is on.</p>
+
+    <div class="callout">
+      <p><strong>Corporate note:</strong> if you're on a company device, your employer's VPN likely already covers this, and mixing personal VPNs with corporate MDM is a conversation with IT, not a download. The personal-device setup is where Traveler's VPN fits.</p>
+    </div>
+
+    <h2>Frequently asked</h2>
+    <details>
+      <summary>Is GitHub blocked in China?</summary>
+      <p>No, and it's one of very few Western platforms that isn't, because Chinese industry depends on it. It is heavily throttled, and its raw-file and asset domains fail frequently, so it often feels blocked in practice.</p>
+    </details>
+    <details>
+      <summary>Why do install scripts and raw downloads fail in China?</summary>
+      <p>Most fetch from raw.githubusercontent.com or GitHub release assets, which are far less reliable than the main site from inside China. Run them through a VPN, or download the files before you fly.</p>
+    </details>
+    <details>
+      <summary>Does GitHub Copilot work in China?</summary>
+      <p>Not reliably without a VPN; its endpoints suffer the same throttling and resets. Through the tunnel it behaves normally.</p>
+    </details>
+    <details>
+      <summary>Should I route everything through a VPN to fix GitHub?</summary>
+      <p>You can, but a split tunnel is better: GitHub and package registries through the tunnel, Chinese apps and sites direct. A full tunnel slows the local half of your work trip for no benefit.</p>
+    </details>
+
+    <p class="related">Related guides: <a href="/guides/does-google-work-in-china.html">Does Google work in China?</a> · <a href="/guides/does-slack-work-in-china.html">Does Slack work in China?</a> · <a href="/guides/does-zoom-work-in-china.html">Does Zoom work in China?</a> · <a href="/guides/">all China guides</a><br>Picking a VPN: <a href="/vs/nordvpn.html">vs NordVPN</a> · <a href="/vs/astrill.html">vs Astrill</a> · <a href="/vs/">all comparisons</a></p>
+  </article>
+
+  <div class="cta-band">
+    <h2>GitHub at full speed in the tunnel. <span class="accent">Everything local stays direct.</span></h2>
+    <p class="sub">Traveler's VPN routes per destination, at the same time: GitHub and npm through a private server nobody shares, WeChat and Chinese endpoints direct. Free 3-day trial, $9.99 for a 7-day trip.</p>
+    <a class="store-badge" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591"><img src="/assets/app-store-badge.svg" alt="Download on the App Store"></a>
+    <p class="meta">iPhone · iPad · Mac · One purchase, Family Sharing supported</p>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div>
+        <div class="footer-brand">
+          <img src="/assets/icon-512.png" alt="">
+          Traveler's VPN
+        </div>
+        <span class="small">Built by an indie developer who travels too much. © 2026 Supra Applications Inc.</span>
+        <a class="store-badge" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591"><img src="/assets/app-store-badge.svg" alt="Download on the App Store"></a>
+      </div>
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/vs/">Compare</a>
+        <a href="/guides/">Guides</a>
+        <a href="/research/ios-split-tunneling-2026.html">Research</a>
+        <a href="/support.html">Support</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/conditions.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does GitHub work in China?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Mostly yes, but slowly. GitHub isn't blocked in mainland China, but it's heavily throttled: slow pages, stalling clones, and raw.githubusercontent.com downloads that often fail. A VPN routing GitHub through the tunnel restores normal speed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is GitHub blocked in China?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, but it's heavily throttled and its raw-file domains fail frequently, so it often feels blocked in practice."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why do install scripts and raw downloads fail in China?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "They fetch from raw.githubusercontent.com or release assets, which are unreliable from inside China. Use a VPN or predownload."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does GitHub Copilot work in China?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not reliably without a VPN. Through the tunnel it behaves normally."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Does GitHub work in China?",
+    "description": "GitHub isn't blocked in China but is throttled to frustration: slow pages, stalling clones, failing raw downloads. The developer's setup that fixes it.",
+    "datePublished": "2026-09-05",
+    "dateModified": "2026-09-05",
+    "author": {
+      "@type": "Organization",
+      "name": "Traveler's VPN"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Supra Applications Inc."
+    },
+    "mainEntityOfPage": "https://travelersvpn.com/guides/does-github-work-in-china.html"
+  }
+  </script>
+
+</body>
+</html>
