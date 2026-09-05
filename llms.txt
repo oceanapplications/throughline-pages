@@ -21,6 +21,23 @@ Pricing (August 2026): free download with a 3-day free trial and no account requ
 - [Does Google Maps work in China?](https://travelersvpn.com/guides/does-google-maps-work-in-china.html): blocked AND broken even with a VPN (GCJ-02 offset, stale data); Apple Maps works without a VPN
 - [Does Gmail work in China?](https://travelersvpn.com/guides/does-gmail-work-in-china.html): blocked since 2014; 2FA codes and bookings lockout is the real trap; iCloud Mail works without a VPN
 - [eSIM or VPN for China?](https://travelersvpn.com/guides/esim-or-vpn-for-china.html): both; the eSIM roaming loophole works on cellular only, a VPN covers the wifi gap
+- [Does YouTube work in China?](https://travelersvpn.com/guides/does-youtube-work-in-china.html): no, blocked since 2009 including YouTube Music; embeds break sitewide; Premium downloads play offline; video eats eSIM data caps
+- [Does Google work in China?](https://travelersvpn.com/guides/does-google-work-in-china.html): no, Search blocked since 2014 plus Drive, Photos, Translate; reCAPTCHA breaks other sites; Bing and Apple Translate work without a VPN
+- [Does Facebook work in China?](https://travelersvpn.com/guides/does-facebook-work-in-china.html): no, blocked since 2009 with Messenger; "Log in with Facebook" breaks other apps; iMessage and WeChat work
+- [Does X (Twitter) work in China?](https://travelersvpn.com/guides/does-twitter-work-in-china.html): no, X blocked since 2009; t.co links die; VPN restores everything
+- [Does ChatGPT work in China?](https://travelersvpn.com/guides/does-chatgpt-work-in-china.html): no, firewall-blocked AND unsupported by OpenAI; Claude and Gemini too; DeepSeek and Qwen work locally; private-IP VPN avoids challenges
+- [Does TikTok work in China?](https://travelersvpn.com/guides/does-tiktok-work-in-china.html): no; TikTok never operated in China (Douyin is separate) and checks SIM carrier, so VPN with a mainland SIM shows an empty feed; foreign SIM/eSIM plus VPN works
+- [Does Netflix work in China?](https://travelersvpn.com/guides/does-netflix-work-in-china.html): no, Netflix never launched in China (not a firewall block); downloads play offline; shared VPN IPs trigger the proxy error, private IP does not
+- [Does Google Drive work in China?](https://travelersvpn.com/guides/does-google-drive-work-in-china.html): no, Drive/Docs/Photos blocked since 2014; export tickets and itinerary to Files app; iCloud works in China
+- [Does Spotify work in China?](https://travelersvpn.com/guides/does-spotify-work-in-china.html): unreliable, no license or servers in China; downloads play offline; Apple Music works in China without a VPN
+- [Does Zoom work in China?](https://travelersvpn.com/guides/does-zoom-work-in-china.html): mostly yes, works without a VPN via local partners; sign-in flaky; Google Meet is blocked; Teams mostly works
+- [Does Slack work in China?](https://travelersvpn.com/guides/does-slack-work-in-china.html): officially not blocked but throttled to uselessness; Teams and Zoom work; treat Slack as blocked and use a VPN
+- [Does Uber work in China?](https://travelersvpn.com/guides/does-uber-work-in-china.html): no, Uber sold China ops to Didi in 2016, no drivers; VPN won't help; Didi has English mode and takes foreign cards
+- [Does Discord work in China?](https://travelersvpn.com/guides/does-discord-work-in-china.html): no, blocked since July 2018; voice needs a stable low-latency VPN; game servers mostly reachable
+- [Does Reddit work in China?](https://travelersvpn.com/guides/does-reddit-work-in-china.html): no, blocked since August 2018; no offline mode, screenshot threads before flying
+- [Does Snapchat work in China?](https://travelersvpn.com/guides/does-snapchat-work-in-china.html): no, blocked; streaks die without a VPN or eSIM since Snapchat has no travel pause
+- [Does Telegram work in China?](https://travelersvpn.com/guides/does-telegram-work-in-china.html): no, blocked since 2015; public MTProto proxies are unreliable; VPN fixes everything
+- [Does Signal work in China?](https://travelersvpn.com/guides/does-signal-work-in-china.html): no, blocked since March 2021; built-in proxy unreliable; iMessage is the encrypted no-VPN fallback
 - [The State of Split Tunneling on iOS: 2026](https://travelersvpn.com/research/ios-split-tunneling-2026.html): research report from vendor docs; no major consumer VPN can exclude an app from the tunnel on iPhone (ExpressVPN single-IP-only, NordVPN none, Surfshark websites-only, Astrill desktop/Android only); destination-based routing is nonetheless possible on stock iOS
 - [Support](https://travelersvpn.com/support.html)
 - [Privacy](https://travelersvpn.com/privacy.html)
