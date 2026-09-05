@@ -161,8 +161,9 @@
       <li><strong>Ask organizers to use Zoom, not Meet.</strong> A Google Meet invite means a VPN or nothing.</li>
     </ul>
 
-    <h2>When a VPN still helps</h2>
-    <p>You don't need a VPN for Zoom itself. Two situations call for one anyway. First, everything around the meeting: the Gmail with the agenda, the Google Doc you're presenting, the Slack thread where the decision gets made. Second, Google Meet, which some organizers won't budge on. <a href="/">Traveler's VPN</a> handles both without touching Zoom: its smart routing sends Google, Slack, and Meet through a private server with an IP only you use, while Zoom, WeChat, and Didi stay direct, so the thing that already works isn't slowed down by the tunnel. Also worth knowing: if Zoom's quality collapses on a bad hotel network, switching it into the tunnel sometimes helps, because the tunnel bypasses the throttling.</p>
+    <h2>The VPN trap that <span class="accent">breaks</span> Zoom, and the one that doesn't</h2>
+    <p>Here's the part most travelers learn mid-meeting. You don't need a VPN for Zoom, but in China you absolutely need one for everything around the meeting: the Gmail with the agenda, the Google Doc you're presenting, the Slack thread where the decision gets made. So you'll have a VPN running. And a normal single-switch VPN drags <em>all</em> your traffic through a server abroad, Zoom included, which means the one app that had a fast, direct, locally-optimized route now takes a detour through Frankfurt or Tokyo. Latency and jitter go up, and the call that worked perfectly yesterday starts freezing the moment you turn the VPN on to open the agenda. People end up toggling the VPN off for calls and on between them, and forgetting, in both directions.</p>
+    <p>This is exactly what split tunneling exists for, and it's the difference in reliability that matters more than any speed number. <a href="/">Traveler's VPN</a> routes per destination, simultaneously: Gmail, Docs, Slack, and Google Meet go through the tunnel on a private server with an IP only you use, while Zoom, WeChat, and Didi stay direct on their fast local routes. Nothing to toggle, nothing to remember before a call, and the VPN never gets between Zoom and the local infrastructure that makes it work. One exception worth knowing: if a hotel network is throttling Zoom specifically, flipping Zoom <em>into</em> the tunnel bypasses the throttling, and with per-app routing that's a one-line change instead of an all-or-nothing switch.</p>
 
     <div class="callout">
       <p><strong>Hosting from China:</strong> hosting a meeting works, but paid Zoom accounts with a China billing address are routed differently and some features are limited. A foreign account visiting China isn't affected.</p>
@@ -171,7 +172,7 @@
     <h2>Frequently asked</h2>
     <details>
       <summary>Do I need a VPN for Zoom in China?</summary>
-      <p>Usually not. Zoom maintains mainland connectivity through local partners, so joining meetings works without a VPN. A VPN is still useful for Gmail, Google Docs, Slack, and Google Meet, and can improve quality on a throttled hotel network.</p>
+      <p>Not for Zoom itself, but you'll be running one for Gmail, Docs, and Slack anyway, and a single-switch VPN degrades Zoom by tunneling it too. A split-tunnel VPN keeps Zoom direct while the blocked apps route through the tunnel, so quality doesn't drop when the VPN is on.</p>
     </details>
     <details>
       <summary>Does Google Meet work in China?</summary>
@@ -191,7 +192,7 @@
 
   <div class="cta-band">
     <h2>Zoom stays direct. <span class="accent">Gmail and Meet go through the tunnel.</span></h2>
-    <p class="sub">Traveler's VPN routes per destination on a private server nobody shares: the blocked apps through the tunnel, the ones that already work left alone. Free 3-day trial, $9.99 for a 7-day trip, no account to make.</p>
+    <p class="sub">Traveler's VPN routes per destination, at the same time: Gmail and Slack through a private server nobody shares, Zoom direct at full speed. No toggling before calls. Free 3-day trial, $9.99 for a 7-day trip, no account to make.</p>
     <a class="store-badge" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591"><img src="/assets/app-store-badge.svg" alt="Download on the App Store"></a>
     <p class="meta">iPhone · iPad · Mac · One purchase, Family Sharing supported</p>
   </div>
@@ -237,7 +238,7 @@
         "name": "Do I need a VPN for Zoom in China?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Usually not. Zoom works in China without a VPN. A VPN is still useful for Gmail, Docs, Slack, and Google Meet."
+          "text": "Not for Zoom itself, but you'll run one for Gmail and Slack anyway. A split-tunnel VPN keeps Zoom direct while blocked apps tunnel, so call quality doesn't drop."
         }
       },
       {
