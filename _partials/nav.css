@@ -1,0 +1,15 @@
+  <style>
+    :root { --bg: #07122B; --border: #1E2C50; --text: #F4F7FB; --text-dim: #9FB0D1; --cyan: #7DE0F2; --cyan-2: #5BC9E0; --maxw: 1120px; }
+    body { max-width: none; padding: 0; margin: 0; }
+    main.page { max-width: 760px; margin: 0 auto; padding: 1em; line-height: 1.55; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    nav.top { position: sticky; top: 0; z-index: 50; backdrop-filter: saturate(140%) blur(14px); background: rgba(7, 18, 43, 0.92); border-bottom: 1px solid var(--border); font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif; }
+    nav.top .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    nav.top .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: -0.3px; color: var(--text); text-decoration: none; }
+    nav.top .brand img { width: 28px; height: 28px; border-radius: 7px; }
+    nav.top .links a { color: var(--text-dim); margin-left: 22px; font-size: 14px; font-weight: 500; text-decoration: none; }
+    nav.top .links a:hover { color: var(--text); }
+    nav.top .cta { background: var(--cyan); color: #062041 !important; padding: 8px 14px; border-radius: 10px; font-weight: 700; }
+    nav.top .cta:hover { background: var(--cyan-2); }
+    @media (max-width: 640px) { nav.top .links a:not(.cta) { display: none; } }
+  </style>
