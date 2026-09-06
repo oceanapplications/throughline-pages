@@ -597,6 +597,7 @@
         </a>
       </div>
 
+      <p class="more">Just want the app for a destination? <a href="/china-vpn/">VPN for China</a> · <a href="/japan-vpn/">VPN for Japan</a></p>
       <p class="more">Also in: <a href="/ja/guides/">日本語</a> · <a href="/ko/guides/">한국어</a> · <a href="/es/guides/">Español</a></p>
       <p class="more">Also: <a href="/research/ios-split-tunneling-2026.html">The State of Split Tunneling on iOS: 2026 report</a> · <a href="/blog/run-your-own-travel-vpn.html">run your own travel VPN for ~$5/month</a> · <a href="/vs/">how Traveler's VPN compares to ExpressVPN, NordVPN, Astrill, and more</a></p>
     </div>
@@ -638,7 +639,7 @@
     var input = document.getElementById('guide-search');
     var cards = Array.prototype.slice.call(document.querySelectorAll('#china-cards .card'));
     var empty = document.getElementById('no-results');
-    input.addEventListener('input', function () {
+    function run() {
       var q = input.value.trim().toLowerCase();
       var shown = 0;
       cards.forEach(function (c) {
@@ -648,7 +649,10 @@
       });
       empty.style.display = shown ? 'none' : 'block';
       if (q && window.gtag) gtag('event', 'guide_search', { search_term: q, results: shown });
-    });
+    }
+    input.addEventListener('input', run);
+    var q0 = new URLSearchParams(location.search).get('q');
+    if (q0) { input.value = q0; run(); input.focus(); }
   })();
   </script>
 </body>

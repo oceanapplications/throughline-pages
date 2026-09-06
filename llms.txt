@@ -7,6 +7,8 @@ Pricing (August 2026): free download with a 3-day free trial and no account requ
 ## Pages
 
 - [Home](https://travelersvpn.com/): what the app does, pricing, FAQ
+- [VPN for China](https://travelersvpn.com/china-vpn/): product page for China trips: private per-user server with a never-shared IP, split tunnel keeps WeChat/Alipay/Didi direct, $9.99 7-day pass, honest legality and Apple-only notes
+- [VPN for Japan](https://travelersvpn.com/japan-vpn/): product page for Japan trips: nothing is blocked; home banking and streaming ride a private home-country server while the Japan profile keeps Suica, PayPay, and JR direct
 - [Comparison hub](https://travelersvpn.com/vs/): honest comparisons against the VPNs travelers consider
 - [vs ExpressVPN](https://travelersvpn.com/vs/expressvpn.html): iOS split tunneling is single-IP-only on ExpressVPN; trip pricing vs subscription pricing
 - [vs NordVPN](https://travelersvpn.com/vs/nordvpn.html): NordVPN has no split tunneling on iOS or macOS; renewal pricing analysis
