@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-30DPQBZDT0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-30DPQBZDT0');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>NordVPN not working in China? Why, and what to do (2026)</title>
+  <meta name="description" content="NordVPN usually fails in China for one reason: its servers' IP ranges are shared by thousands of users and China blocklists them. What to try tonight, what won't help, and the structural fix if you're preparing for the next trip.">
+  <meta property="og:title" content="NordVPN not working in China? Here's why.">
+  <meta property="og:description" content="Shared IP ranges get blocklisted; that's the whole story. What to try tonight, and the private-server fix for next time.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://travelersvpn.com/guides/nordvpn-not-working-in-china.html">
+  <meta property="og:image" content="https://travelersvpn.com/assets/og/nordvpn-not-working-in-china.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://travelersvpn.com/guides/nordvpn-not-working-in-china.html">
+  <link rel="alternate" hreflang="en" href="https://travelersvpn.com/guides/does-whatsapp-work-in-china.html">
+  <link rel="alternate" hreflang="es" href="https://travelersvpn.com/es/guides/does-whatsapp-work-in-china.html">
+  <link rel="alternate" hreflang="x-default" href="https://travelersvpn.com/guides/does-whatsapp-work-in-china.html">
+  <link rel="icon" type="image/png" href="/assets/icon-512.png">
+  <style>
+    :root {
+      --bg: #07122B;
+      --bg-2: #0B1B3D;
+      --surface: #0E1E45;
+      --border: #1E2C50;
+      --text: #F4F7FB;
+      --text-dim: #9FB0D1;
+      --cyan: #7DE0F2;
+      --cyan-2: #5BC9E0;
+      --green: #4ADE80;
+      --red: #FF6B6B;
+      --radius: 16px;
+      --maxw: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    nav.top {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: saturate(140%) blur(14px);
+      background: rgba(7, 18, 43, 0.75);
+      border-bottom: 1px solid var(--border);
+    }
+    nav.top .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    nav.top .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: -0.3px; color: var(--text); }
+    nav.top .brand img { width: 28px; height: 28px; border-radius: 7px; }
+    nav.top .links a { color: var(--text-dim); margin-left: 22px; font-size: 14px; font-weight: 500; }
+    nav.top .links a:hover { color: var(--text); text-decoration: none; }
+    nav.top .cta { background: var(--cyan); color: #062041 !important; padding: 8px 14px; border-radius: 10px; font-weight: 700; }
+    nav.top .cta:hover { text-decoration: none; background: var(--cyan-2); }
+
+    article { max-width: 760px; margin: 0 auto; padding: 72px 24px 40px; }
+    .eyebrow {
+      display: inline-block; padding: 6px 12px; border-radius: 999px;
+      background: rgba(125, 224, 242, 0.12); color: var(--cyan);
+      font-size: 13px; font-weight: 600; letter-spacing: 0.2px;
+      border: 1px solid rgba(125, 224, 242, 0.2);
+    }
+    article h1 { font-size: clamp(32px, 5vw, 50px); line-height: 1.08; letter-spacing: -1.5px; font-weight: 800; margin: 20px 0 14px; }
+    article .byline { font-size: 13.5px; color: #6E7FA0; margin-bottom: 28px; }
+    .answer {
+      background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--red);
+      border-radius: 12px; padding: 18px 22px; margin: 0 0 34px;
+    }
+    .answer p { margin: 0; font-size: 17.5px; color: var(--text); }
+    article h2 { font-size: 26px; letter-spacing: -0.6px; margin: 40px 0 12px; font-weight: 800; }
+    article h2 .accent { color: var(--cyan); }
+    article p, article li { color: var(--text-dim); font-size: 16.5px; }
+    article ul, article ol { padding-left: 22px; }
+    article li { margin: 8px 0; }
+    article strong { color: var(--text); }
+    .callout {
+      background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--cyan);
+      border-radius: 12px; padding: 16px 20px; margin: 24px 0;
+    }
+    .callout p { margin: 0; font-size: 15.5px; }
+    details {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 18px 22px; margin-bottom: 10px;
+    }
+    details summary {
+      cursor: pointer; font-weight: 600; font-size: 16px; color: var(--text);
+      list-style: none; display: flex; justify-content: space-between; align-items: center;
+    }
+    details summary::after { content: "+"; color: var(--cyan); font-size: 22px; line-height: 1; }
+    details[open] summary::after { content: "−"; }
+    details p { color: var(--text-dim); margin: 12px 0 0; font-size: 15px; }
+    .related { color: var(--text-dim); font-size: 15px; margin-top: 34px; }
+
+    .cta-band { text-align: center; padding: 40px 24px 88px; max-width: 760px; margin: 0 auto; }
+    .cta-band h2 { font-size: clamp(26px, 4vw, 36px); letter-spacing: -1px; font-weight: 800; margin: 0 0 12px; }
+    .cta-band h2 .accent { color: var(--cyan); }
+    .cta-band .sub { color: var(--text-dim); font-size: 17px; margin: 0 0 24px; }
+    .store-badge { display: inline-block; }
+    .store-badge img { height: 56px; width: auto; display: block; margin: 0 auto; }
+    .cta-band .meta { margin-top: 16px; color: var(--text-dim); font-size: 14px; }
+
+    footer { border-top: 1px solid var(--border); padding: 48px 0 64px; color: var(--text-dim); font-size: 14px; }
+    footer .container { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    footer .footer-brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; }
+    footer .footer-brand img { width: 24px; height: 24px; border-radius: 6px; }
+    footer .links a { color: var(--text-dim); margin-left: 18px; }
+    footer .links a:hover { color: var(--text); }
+    footer .small { display: block; margin-top: 14px; color: #6E7FA0; font-size: 12px; }
+    @media (max-width: 640px) { nav.top .links a:not(.cta) { display: none; } }
+      footer .store-badge { display: inline-block; margin-top: 16px; }
+    footer .store-badge img { height: 40px; width: auto; display: block; }
+</style>
+</head>
+<body>
+
+  <nav class="top">
+    <div class="container">
+      <a href="/" class="brand">
+        <img src="/assets/icon-512.png" alt="">
+        Traveler's VPN
+      </a>
+      <div class="links">
+        <a href="/#why">Why</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/vs/">Compare</a>
+        <a href="/guides/">Guides</a>
+        <a href="/support.html">Support</a>
+        <a href="https://apps.apple.com/us/app/travelers-vpn/id6764288591" class="cta">Get the app</a>
+      </div>
+    </div>
+  </nav>
+
+  <article>
+    <span class="eyebrow">China travel guide · Updated September 2026</span>
+    <h1>NordVPN not working in China?</h1>
+    <p class="byline">travelersvpn.com guides</p>
+
+    <div class="answer">
+      <p><strong>You're not doing anything wrong; you're on a list.</strong> NordVPN runs thousands of servers shared by millions of users, and China's censors subscribe to the same service you do, so every one of those IP addresses eventually lands on the Great Firewall's blocklist. When NordVPN stops connecting in China, that's almost always what happened: the servers you can reach are known, and the ones that still work are being found. Below: what to try right now, what's a waste of time, and the structural fix, which is not another shared VPN.</p>
+    </div>
+
+    <h2>Why it stopped working</h2>
+    <p>The Great Firewall doesn't break encryption; it keeps lists. Commercial VPNs advertise their server locations, run them on identifiable data-center ranges, and share each IP among thousands of subscribers. Censors sign up, connect, note the address, and block it, at scale, continuously. NordVPN also gets fingerprinted at the protocol level, which is why its obfuscation modes exist and why they degrade as the fingerprinting catches up. The app that connected in March fails in June not because it broke but because the list grew. NordVPN is excellent almost everywhere else and its own support pages are candid that China is not guaranteed; it has no split tunneling on iOS or macOS at all, so when it works, your WeChat and Alipay slow down with everything else.</p>
+
+    <h2>What to try tonight</h2>
+    <ul>
+      <li><strong>Switch protocols</strong> in settings, then <strong>switch server locations</strong>: Hong Kong, Japan, Singapore, and US-West are usually the best bets from China, and the newest or least-advertised servers last longest.</li>
+      <li><strong>Turn on the obfuscation or stealth option</strong> if your plan has one; it disguises VPN traffic and sometimes buys days.</li>
+      <li><strong>Switch networks:</strong> hotel wifi and cellular are filtered differently. Try both, and try roaming data on your home SIM, which exits through your home carrier and bypasses the firewall on cellular entirely.</li>
+      <li><strong>Don't reinstall or update.</strong> The App Store and NordVPN's own site are unreachable from inside China; an uninstall is permanent until you leave.</li>
+    </ul>
+
+    <h2>What won't help</h2>
+    <p>Reinstalling (you can't), waiting for a fix (the provider is playing whack-a-mole too), and switching to another big-brand VPN from inside China (you can't download it, and it has the same shared-IP problem anyway). If NordVPN has fallen over for you, a roaming eSIM purchased over hotel wifi is the one genuinely new option available from inside, since the QR arrives by email; see <a href="/guides/esim-or-vpn-for-china.html">eSIM or VPN for China</a>.</p>
+
+    <h2>The structural fix, for next time</h2>
+    <p>The setups that keep working in China share one property: <strong>you're not on an IP address that thousands of strangers also use</strong>. Self-hosting gives you that (<a href="/blog/run-your-own-travel-vpn.html">our guide</a>, ~$5/month, some tinkering). <a href="/">Traveler's VPN</a> gives you that without the tinkering: a private server provisioned for you alone, an IP no one else has, so there's nothing for the blocklist to have learned. Its routing also sends only blocked apps through the tunnel, while WeChat, Alipay, and Didi stay direct, which NordVPN's single-switch iOS app can't do. Our <a href="/vs/nordvpn.html">full comparison with NordVPN</a> is here, and it's honest about where NordVPN is the better choice.</p>
+
+    <div class="callout">
+      <p><strong>Legality note:</strong> troubleshooting a VPN inside China is what millions of expats do daily; the enforcement record concerns sellers, not users. Our <a href="/guides/are-vpns-legal-in-china.html">honest legality page</a> has the details.</p>
+    </div>
+
+    <h2>Frequently asked</h2>
+    <details>
+      <summary>Why does NordVPN work in some cities and not others?</summary>
+      <p>Blocking is applied unevenly across networks and regions, and updates roll out over days. A server dead on Shanghai hotel wifi may still work on a Chengdu cellular network. It's noise, not a pattern you can rely on.</p>
+    </details>
+    <details>
+      <summary>Can I get a refund from NordVPN for China?</summary>
+      <p>Check NordVPN's money-back window and its China support wording; most big providers say China isn't guaranteed. Ask, but don't count on it.</p>
+    </details>
+    <details>
+      <summary>Do NordVPN's obfuscated servers work in China?</summary>
+      <p>Sometimes, on the platforms and protocols where they're still offered. Availability has changed across app versions; check what your current app exposes and try it, then try the newest regular servers nearby.</p>
+    </details>
+    <details>
+      <summary>Should I just switch to a private server?</summary>
+      <p>For China specifically, a server with an IP nobody else uses is the reliability difference. Traveler's VPN provisions one per user; self-hosting does the same for the technically inclined.</p>
+    </details>
+
+    <p class="related">Related guides: <a href="/guides/best-vpn-for-china.html">Best VPN for China in 2026</a> · <a href="/guides/esim-or-vpn-for-china.html">eSIM or VPN for China?</a> · <a href="/guides/are-vpns-legal-in-china.html">Are VPNs legal in China?</a> · <a href="/guides/">all China guides</a><br>Picking a VPN: <a href="/vs/nordvpn.html">vs NordVPN</a> · <a href="/vs/astrill.html">vs Astrill</a> · <a href="/vs/">all comparisons</a></p>
+  </article>
+
+  <div class="cta-band">
+    <h2>An IP no blocklist has ever seen. <span class="accent">Install it before the next trip.</span></h2>
+    <p class="sub">Traveler's VPN provisions a private server nobody shares, and keeps WeChat and Alipay direct. Free 3-day trial, $9.99 for a 7-day trip, no account to make.</p>
+    <a class="store-badge" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591"><img src="/assets/app-store-badge.svg" alt="Download on the App Store"></a>
+    <p class="meta">iPhone · iPad · Mac · One purchase, Family Sharing supported</p>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div>
+        <div class="footer-brand">
+          <img src="/assets/icon-512.png" alt="">
+          Traveler's VPN
+        </div>
+        <span class="small">Built by an indie developer who travels too much. © 2026 Supra Applications Inc.</span>
+        <a class="store-badge" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591"><img src="/assets/app-store-badge.svg" alt="Download on the App Store"></a>
+      </div>
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/vs/">Compare</a>
+        <a href="/guides/">Guides</a>
+        <a href="/research/ios-split-tunneling-2026.html">Research</a>
+        <a href="/support.html">Support</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/conditions.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "NordVPN not working in China?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NordVPN usually fails in China because its servers' IP ranges are shared by thousands of users and the Great Firewall blocklists them. Try switching protocols and servers, use the provider's obfuscation option, and expect mixed results; the structural fix is a server whose IP isn't shared."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does NordVPN work in some cities and not others?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Blocking is applied unevenly across networks and regions. It's noise, not a reliable pattern."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I get a refund from NordVPN for China?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Check NordVPN's refund window; most big providers say China isn't guaranteed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do NordVPN's obfuscated servers work in China?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sometimes, where still offered. Try them, then the newest nearby regular servers."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "NordVPN not working in China?",
+    "description": "Why NordVPN fails in China (shared, blocklisted IP ranges), what to try tonight, and the private-server fix for next time.",
+    "datePublished": "2026-09-06",
+    "dateModified": "2026-09-06",
+    "author": {
+      "@type": "Organization",
+      "name": "Traveler's VPN"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Supra Applications Inc."
+    },
+    "mainEntityOfPage": "https://travelersvpn.com/guides/nordvpn-not-working-in-china.html"
+  }
+  </script>
+
+  <script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href*="apps.apple.com"]');
+    if (!a || typeof gtag !== 'function') return;
+    var placement = a.closest('nav') ? 'nav' : a.closest('footer') ? 'footer' : a.closest('.cta-band') ? 'cta_band' : 'body';
+    gtag('event', 'app_store_click', { placement: placement, page_slug: location.pathname });
+  });
+  </script>
+</body>
+</html>

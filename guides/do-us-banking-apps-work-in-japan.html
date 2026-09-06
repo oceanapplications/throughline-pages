@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-30DPQBZDT0"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-30DPQBZDT0');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Do US banking apps work in Japan? Chase, BofA, Amex (2026)</title>
+  <meta name="description" content="They load fine; Japan blocks nothing. The problem is your bank's fraud model seeing a Japanese IP and freezing the account, plus SMS codes that need roaming. The setup that keeps logins boring, and Suica running.">
+  <meta property="og:title" content="Do US banking apps work in Japan? Yes, until fraud detection notices.">
+  <meta property="og:description" content="Banks aren't blocked in Japan. Your bank's fraud model is the problem. One consistent private home IP fixes it.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://travelersvpn.com/guides/do-us-banking-apps-work-in-japan.html">
+  <meta property="og:image" content="https://travelersvpn.com/assets/og/do-us-banking-apps-work-in-japan.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://travelersvpn.com/guides/do-us-banking-apps-work-in-japan.html">
+  <link rel="alternate" hreflang="en" href="https://travelersvpn.com/guides/does-whatsapp-work-in-china.html">
+  <link rel="alternate" hreflang="es" href="https://travelersvpn.com/es/guides/does-whatsapp-work-in-china.html">
+  <link rel="alternate" hreflang="x-default" href="https://travelersvpn.com/guides/does-whatsapp-work-in-china.html">
+  <link rel="icon" type="image/png" href="/assets/icon-512.png">
+  <style>
+    :root {
+      --bg: #07122B;
+      --bg-2: #0B1B3D;
+      --surface: #0E1E45;
+      --border: #1E2C50;
+      --text: #F4F7FB;
+      --text-dim: #9FB0D1;
+      --cyan: #7DE0F2;
+      --cyan-2: #5BC9E0;
+      --green: #4ADE80;
+      --red: #FF6B6B;
+      --radius: 16px;
+      --maxw: 1120px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.6;
+    }
+    a { color: var(--cyan); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    nav.top {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: saturate(140%) blur(14px);
+      background: rgba(7, 18, 43, 0.75);
+      border-bottom: 1px solid var(--border);
+    }
+    nav.top .container { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    nav.top .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: -0.3px; color: var(--text); }
+    nav.top .brand img { width: 28px; height: 28px; border-radius: 7px; }
+    nav.top .links a { color: var(--text-dim); margin-left: 22px; font-size: 14px; font-weight: 500; }
+    nav.top .links a:hover { color: var(--text); text-decoration: none; }
+    nav.top .cta { background: var(--cyan); color: #062041 !important; padding: 8px 14px; border-radius: 10px; font-weight: 700; }
+    nav.top .cta:hover { text-decoration: none; background: var(--cyan-2); }
+
+    article { max-width: 760px; margin: 0 auto; padding: 72px 24px 40px; }
+    .eyebrow {
+      display: inline-block; padding: 6px 12px; border-radius: 999px;
+      background: rgba(125, 224, 242, 0.12); color: var(--cyan);
+      font-size: 13px; font-weight: 600; letter-spacing: 0.2px;
+      border: 1px solid rgba(125, 224, 242, 0.2);
+    }
+    article h1 { font-size: clamp(32px, 5vw, 50px); line-height: 1.08; letter-spacing: -1.5px; font-weight: 800; margin: 20px 0 14px; }
+    article .byline { font-size: 13.5px; color: #6E7FA0; margin-bottom: 28px; }
+    .answer {
+      background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--green);
+      border-radius: 12px; padding: 18px 22px; margin: 0 0 34px;
+    }
+    .answer p { margin: 0; font-size: 17.5px; color: var(--text); }
+    article h2 { font-size: 26px; letter-spacing: -0.6px; margin: 40px 0 12px; font-weight: 800; }
+    article h2 .accent { color: var(--cyan); }
+    article p, article li { color: var(--text-dim); font-size: 16.5px; }
+    article ul, article ol { padding-left: 22px; }
+    article li { margin: 8px 0; }
+    article strong { color: var(--text); }
+    .callout {
+      background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--cyan);
+      border-radius: 12px; padding: 16px 20px; margin: 24px 0;
+    }
+    .callout p { margin: 0; font-size: 15.5px; }
+    details {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 18px 22px; margin-bottom: 10px;
+    }
+    details summary {
+      cursor: pointer; font-weight: 600; font-size: 16px; color: var(--text);
+      list-style: none; display: flex; justify-content: space-between; align-items: center;
+    }
+    details summary::after { content: "+"; color: var(--cyan); font-size: 22px; line-height: 1; }
+    details[open] summary::after { content: "−"; }
+    details p { color: var(--text-dim); margin: 12px 0 0; font-size: 15px; }
+    .related { color: var(--text-dim); font-size: 15px; margin-top: 34px; }
+
+    .cta-band { text-align: center; padding: 40px 24px 88px; max-width: 760px; margin: 0 auto; }
+    .cta-band h2 { font-size: clamp(26px, 4vw, 36px); letter-spacing: -1px; font-weight: 800; margin: 0 0 12px; }
+    .cta-band h2 .accent { color: var(--cyan); }
+    .cta-band .sub { color: var(--text-dim); font-size: 17px; margin: 0 0 24px; }
+    .store-badge { display: inline-block; }
+    .store-badge img { height: 56px; width: auto; display: block; margin: 0 auto; }
+    .cta-band .meta { margin-top: 16px; color: var(--text-dim); font-size: 14px; }
+
+    footer { border-top: 1px solid var(--border); padding: 48px 0 64px; color: var(--text-dim); font-size: 14px; }
+    footer .container { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+    footer .footer-brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 700; }
+    footer .footer-brand img { width: 24px; height: 24px; border-radius: 6px; }
+    footer .links a { color: var(--text-dim); margin-left: 18px; }
+    footer .links a:hover { color: var(--text); }
+    footer .small { display: block; margin-top: 14px; color: #6E7FA0; font-size: 12px; }
+    @media (max-width: 640px) { nav.top .links a:not(.cta) { display: none; } }
+      footer .store-badge { display: inline-block; margin-top: 16px; }
+    footer .store-badge img { height: 40px; width: auto; display: block; }
+</style>
+</head>
+<body>
+
+  <nav class="top">
+    <div class="container">
+      <a href="/" class="brand">
+        <img src="/assets/icon-512.png" alt="">
+        Traveler's VPN
+      </a>
+      <div class="links">
+        <a href="/#why">Why</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/vs/">Compare</a>
+        <a href="/guides/">Guides</a>
+        <a href="/support.html">Support</a>
+        <a href="https://apps.apple.com/us/app/travelers-vpn/id6764288591" class="cta">Get the app</a>
+      </div>
+    </div>
+  </nav>
+
+  <article>
+    <span class="eyebrow">Japan travel guide · Updated September 2026</span>
+    <h1>Do US banking apps work in Japan?</h1>
+    <p class="byline">travelersvpn.com guides</p>
+
+    <div class="answer">
+      <p><strong>Yes, until your bank's fraud model notices where you are.</strong> Japan blocks nothing, so Chase, Bank of America, Citi, Amex, and every banking app open normally. The lockouts come from your side: a login from an unfamiliar Japanese IP on top of yen charges, a verification code texted to a phone whose roaming isn't set up, a "call us to verify" on a toll-free number that won't dial from Kyoto. All avoidable, and the fix has a Japan-specific wrinkle: it must not break Suica.</p>
+    </div>
+
+    <h2>What actually happens</h2>
+    <p>Day one goes fine: you check a balance on hotel wifi and nothing objects. Day three, after a few yen charges, you log in from a different network and the app wants a code, or simply locks and asks you to call. To the fraud model you look like a stolen phone in Osaka. Brokerages do the same. It's not Japan, and it's not a block: it's your bank protecting you from your own trip, on a schedule you can't predict.</p>
+
+    <h2>What to set up <span class="accent">before</span> you fly</h2>
+    <ul>
+      <li><strong>Confirm roaming SMS works</strong> or switch 2FA to the bank's app approvals or an authenticator, which work anywhere.</li>
+      <li><strong>Set travel notices</strong> where still offered, and unfreeze cards you keep locked.</li>
+      <li><strong>Log into every financial app at home</strong> so the device is trusted before Japan.</li>
+      <li><strong>Save each bank's international collect number</strong>; toll-free lines don't dial from abroad.</li>
+      <li><strong>Add a card to Suica in Apple Wallet</strong> before you land; it's the one Japanese payment that just works for visitors.</li>
+    </ul>
+
+    <h2>One clean home IP, without breaking Suica</h2>
+    <p>The fix for the fraud model is to look like you never left: every banking login from the same clean home-country IP, all trip. A shared commercial VPN exit doesn't do that; banks flag heavily shared ranges just as hard. <a href="/">Traveler's VPN</a> gives you a private server in your home country with an IP only you use, so your logins tell one boring story. The Japan-specific part is what stays <em>out</em> of the tunnel: its Japan profile keeps Suica, PayPay, JR, and Japanese sites on Japanese routes, because a full-tunnel VPN that fixes Chase and then makes the ticket gate reject your phone has solved nothing.</p>
+
+    <div class="callout">
+      <p><strong>ATMs:</strong> 7-Eleven and Japan Post ATMs take foreign cards and have English menus. Cash still matters in Japan more than in China, and the ATM works regardless of any of the above.</p>
+    </div>
+
+    <h2>Frequently asked</h2>
+    <details>
+      <summary>Are banking apps blocked in Japan?</summary>
+      <p>No. Nothing is blocked in Japan. Account locks come from your bank's fraud detection reacting to a Japanese IP and foreign charges, not from any network restriction.</p>
+    </details>
+    <details>
+      <summary>Should I use a VPN for banking in Japan?</summary>
+      <p>A shared VPN can make it worse. A private server with a home-country IP only you use makes logins look local and consistent, and a split tunnel keeps Suica and PayPay working at the same time.</p>
+    </details>
+    <details>
+      <summary>Does Suica work with a foreign card?</summary>
+      <p>Yes. Add Suica to Apple Wallet with a foreign Visa, Mastercard, or Amex before you land; it works on trains, buses, and konbini registers nationwide.</p>
+    </details>
+    <details>
+      <summary>Do bank SMS codes arrive in Japan?</summary>
+      <p>Yes if roaming SMS is enabled on your home number. Verify before you fly, or switch to app-based approvals.</p>
+    </details>
+
+    <p class="related">Related guides: <a href="/guides/do-i-need-a-vpn-in-japan.html">Do I need a VPN in Japan?</a> · <a href="/guides/do-us-banking-apps-work-in-china.html">Do US banking apps work in China?</a> · <a href="/guides/does-hulu-work-in-japan.html">Does Hulu work in Japan?</a> · <a href="/guides/">all China guides</a><br>Picking a VPN: <a href="/vs/nordvpn.html">vs NordVPN</a> · <a href="/vs/astrill.html">vs Astrill</a> · <a href="/vs/">all comparisons</a></p>
+  </article>
+
+  <div class="cta-band">
+    <h2>One home IP for the bank. <span class="accent">Japan stays direct.</span></h2>
+    <p class="sub">Traveler's VPN has a built-in Japan profile: Suica, PayPay, LINE, and Japanese sites stay direct, while your US streaming and banking ride a private server with a home-country IP nobody shares. Free 3-day trial, $9.99 for a 7-day trip.</p>
+    <a class="store-badge" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591"><img src="/assets/app-store-badge.svg" alt="Download on the App Store"></a>
+    <p class="meta">iPhone · iPad · Mac · One purchase, Family Sharing supported</p>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div>
+        <div class="footer-brand">
+          <img src="/assets/icon-512.png" alt="">
+          Traveler's VPN
+        </div>
+        <span class="small">Built by an indie developer who travels too much. © 2026 Supra Applications Inc.</span>
+        <a class="store-badge" href="https://apps.apple.com/us/app/travelers-vpn/id6764288591"><img src="/assets/app-store-badge.svg" alt="Download on the App Store"></a>
+      </div>
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/#pricing">Pricing</a>
+        <a href="/vs/">Compare</a>
+        <a href="/guides/">Guides</a>
+        <a href="/research/ios-split-tunneling-2026.html">Research</a>
+        <a href="/support.html">Support</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/conditions.html">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do US banking apps work in Japan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Japan blocks nothing, so US banking apps open normally. Lockouts come from bank fraud models reacting to a Japanese IP plus foreign charges, and from SMS codes that need working roaming. A consistent private home-country IP for logins avoids the flag, and a split tunnel keeps Suica and PayPay on Japanese routes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are banking apps blocked in Japan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Locks come from your bank's fraud detection, not from any block."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I use a VPN for banking in Japan?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A shared VPN can make it worse. A private home-country IP plus a split tunnel is the right shape."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Suica work with a foreign card?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, via Apple Wallet with a foreign card."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Do US banking apps work in Japan?",
+    "description": "US banking apps load in Japan; fraud models and SMS 2FA are the traps. The private-home-IP setup that keeps logins boring and Suica running.",
+    "datePublished": "2026-09-06",
+    "dateModified": "2026-09-06",
+    "author": {
+      "@type": "Organization",
+      "name": "Traveler's VPN"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Supra Applications Inc."
+    },
+    "mainEntityOfPage": "https://travelersvpn.com/guides/do-us-banking-apps-work-in-japan.html"
+  }
+  </script>
+
+  <script>
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href*="apps.apple.com"]');
+    if (!a || typeof gtag !== 'function') return;
+    var placement = a.closest('nav') ? 'nav' : a.closest('footer') ? 'footer' : a.closest('.cta-band') ? 'cta_band' : 'body';
+    gtag('event', 'app_store_click', { placement: placement, page_slug: location.pathname });
+  });
+  </script>
+</body>
+</html>
